@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title></title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap4/css/bootstrap.css" crossorigin="anonymous">
+
+    <style>
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        /*************CARDS LISTADO**********/
+
+        .tarjeta_partidos {
+            padding: 8px 12px 6px 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-align: left
+        }
+
+        .tarjeta_fecha {
+            font-size: 13px;
+            text-align: right;
+            margin-top: -20px;
+        }
+
+        .tarjeta_club {
+            font-size: 15px;
+            margin-top: -25px;
+            margin-left: 70px;
+        }
+
+        .tarjeta_club1 {
+            font-size: 15px;
+            color: white;
+            line-height: 18px;
+            margin: -35px 0px 0px 70px;
+        }
+
+        .titulo_clubs {
+            font-size: 17px;
+            color: white;
+            font-weight: 500;
+        }
+
+        /**************END CARDS**************/
+
+
+
+
+        /*************** The switch - the box around the slider **********/
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 55px;
+            height: 34px;
+            /* float: right;*/
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            display: none;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input.default:checked+.slider {
+            background-color: #444;
+        }
+
+        input.primary:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input.success:checked+.slider {
+            background-color: #7bd2fd;
+        }
+
+        input.info:checked+.slider {
+            background-color: #3de0f5;
+        }
+
+        input.warning:checked+.slider {
+            background-color: #FFC107;
+        }
+
+        input.danger:checked+.slider {
+            background-color: #f44336;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="col-md-12" style="text-align: center; margin-top: 100px">
+
+        <label class='switch'>
+            <input id="1" type='checkbox' class='success micheckbox' value='15'>
+            <span class='slider round'></span>
+        </label>
+
+        <label class='switch'>
+            <input id="2" type='checkbox' class='success micheckbox' value='3'>
+            <span class='slider round'></span>
+        </label>
+        
+        <label class='switch'>
+            <input id="3" type='checkbox' class='success micheckbox' value='7'>
+            <span class='slider round'></span>
+        </label>
+
+        <label class='switch'>
+            <input id="4" type='checkbox' class='success micheckbox' value='5'>
+            <span class='slider round'></span>
+        </label>
+
+    </div>
+
+    <div class="col-md-12" style="text-align: center; margin-top: 100px">
+        <button id="borrar" type="button" class="btn btn-dark" style="font-size:12px"><img src="img/ico-basura.png" /> Borrar Partido</button>
+    </div>
+
+
+    <!-- modal borrar partido-->
+    <div class="modal fade" id="mensaje_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">COMPARATIVA
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="exampleModalLabel" style="font-size: 15px">¿Deseas analizar la comparativa?</h5>
+                </div>
+                <div class="modal-footer">
+                    <button id="cancelar" type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                    <button id="aceptar" type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end modal -->
+
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.js"></script>
+
+    <script>
+        var cont_id = 0;
+        var id_ab = []
+        var id_a = 0;
+        var id_b = 0;
+
+        $('.micheckbox').on('click', function() {
+            if ($(this).is(':checked')) {
+                // checkbox ha sido seleccionado
+                //alert("El checkbox con valor " + $(this).val() + " ha sido seleccionado");
+                
+                cont_id++;
+                if (cont_id >= 2) {
+
+                    $('#mensaje_1').modal({
+                        backdrop: 'static'
+                    });
+                }
+                id_ab[cont_id] = $(this).attr('id'); 
+                
+                
+            } else {
+                // checkbox ha sido deseleccionado
+                //alert("El checkbox con valor " + $(this).val() + " ha sido deseleccionado");
+
+                cont_id--;
+                if (cont_id <= 0) {
+                    cont_id = 0;
+                }
+            }
+        });
+
+
+       // $(".micheckbox").prop("checked", true);
+
+        //aparece pantalla modal
+        $('#cancelar').on("click", function() {
+            $("#"+id_ab[2]).prop("checked", false);
+           cont_id--;
+                if (cont_id <= 0) {
+                    cont_id = 0;
+                }
+        });
+
+        //carga pagina comparativa y pasa id
+        $('#aceptar').on("click", function() {
+           alert("aceptar" +id_ab[1]+id_ab[2] );
+            
+        });
+
+
+
+        /*   var a_arr_g_dere = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+           var v_derechas = [];
+           var divisores = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+           v_derechas[0] = "29, 25, 12, 18, 30, 21, 16, 24, 36, 22, 0, 0,";
+           v_derechas[1] = "29, 25, 12, 18, 30, 21, 16, 24, 0, 0, 0, 0,";
+           v_derechas[2] = "29, 25, 12, 18, 30, 21, 16, 24, 36, 22, 10, 0,";
+           v_derechas[3] = "29, 25, 12, 18, 30, 21, 16, 24, 36, 22, 10, 15,";
+
+
+
+           for (i = 0; i < v_derechas.length; i++) {
+
+               var eventual = v_derechas[i].split(",");
+
+               for (ii = 0; ii < eventual.length; ii++) {
+
+                   eventual[ii] = Number(eventual[ii]);
+
+                   a_arr_g_dere[ii] += eventual[ii];
+
+                   if (eventual[ii] != 0) {
+                       divisores[ii]++;
+                   }
+               }
+           }
+
+           for (i = 0; i < 12; i++) {
+
+               a_arr_g_dere[i] = a_arr_g_dere[i] / divisores[i];
+               console.log(i);
+
+           }
+
+
+           console.log(a_arr_g_dere);
+           console.log(divisores);
+           
+           */
+
+    </script>
+
+
+</body>
+
+</html>

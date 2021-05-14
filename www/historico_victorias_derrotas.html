@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Bootstrap 4 Template with Sidebar Menu</title>
+
+    <!-- CSS -->
+
+
+    <link rel="stylesheet" href="assets/vendor/bootstrap4/css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css">
+    <link rel="stylesheet" href="assets/css/material-dashboard.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <link rel="stylesheet" href="assets/vendor/morris/morris.css" />
+
+
+
+    <style>
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        /*************CARDS LISTADO**********/
+
+        .tj_partidos {
+            padding: 14px 12px 0px 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+            background-color:
+                white;
+            border-left:
+                3px solid #0088cc;
+        }
+
+        .tj_cat {
+            font-size: 40px;
+            color: #0088cc;
+        }
+
+        .tj_titulo {
+            font-size: 17px;
+            margin-left: 60px;
+            margin-top: 0px;
+        }
+
+        .tj_dato {
+            color: black;
+            font-size: 18px;
+            text-align: right;
+            margin-top: -20px;
+            margin-right: 25px;
+        }
+
+        .tj_dato_medias {
+            color: black;
+            font-size: 18px;
+            text-align: right;
+            margin-top: -10px;
+            margin-right: 25px;
+            line-height: 25px;
+            /*border: 1px solid #000;*/
+        }
+
+        .tj_icono {
+            font-size: 40px;
+            color: #0088cc;
+        }
+
+        .tam_txt {
+            font-size: 14px;
+            color: #555555;
+            font-style: italic;
+        }
+        
+        li{
+            margin-top: -8px;
+        }
+
+
+
+        .sombra {
+            -webkit-box-shadow: 10px 10px 8px -7px rgba(0, 0, 0, 0.37);
+            -moz-box-shadow: 10px 10px 8px -7px rgba(0, 0, 0, 0.37);
+            box-shadow: 10px 10px 8px -7px rgba(0, 0, 0, 0.37);
+        }
+
+
+        /**************END CARDS**************/
+
+
+        hr.style3 {
+            border-top: 1px dashed #8c8b8b;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar" style="margin-top: 80px;">
+
+            <!-- close sidebar menu -->
+            <div class="dismiss">
+                <img src="img/ico-arrow-left.png" />
+            </div>
+
+
+            <ul class="list-unstyled menu-elements" style="margin-top: -5px">
+                <li>
+                    <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
+                </li>
+                <li>
+                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                </li>
+                <li>
+                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                </li>
+                <li>
+                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                </li>
+                <li>
+                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                </li>
+                <li>
+                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                </li>
+                <li class="active">
+                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                </li>
+                <li>
+                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                </li>
+                <li>
+                    <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                </li>
+
+            </ul>
+            <div class="col-8 offset-2" style="margin-top: 35x">
+                <img class="img-fluid " src="img/logo_gts_alta_blanco.png" alt="Logo gaftaf Sport" />
+            </div>
+
+        </nav>
+        <!-- End sidebar -->
+
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- open sidebar menu -->
+
+
+            <div id="desconectar" class="fixed-top bg-dark" style="height: 80px;">
+                <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                    <img src="img/ico-menu.png" /> <span>Menu</span>
+                </a>
+                <div style="position: absolute; margin-top:27px;right: 10px;">
+                    <img class="img-fluid " src="assets/img/logo.png" alt="Logo gaftaf Sport" />
+                </div>
+            </div>
+
+
+
+            <!-- Nuevo Partido 1 -->
+
+            <div class="container">
+                <div class="row" style="background-color: #292d32">
+                    <div class="col-md-8" style="margin-top: 80px;color:white">
+                        <h1 style="color:white;text-align: center">Victorias vs Derrotas</h1>
+                        <p style="line-height: 23px;margin-top: -10px">Relación entre victorias y derrotas.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- Section 1 -->
+            <div class="container">
+                <div class="row" style="margin-top: 25px">
+                    <div class="col-lg-12">
+                        <div class="card card-stats">
+                            <div class="card-header card-header-icon">
+                                <div class="card-icon sombra" style="background-color: #0088cc">
+
+                                    <img class="img-fluid" src="img/ico_victorias_derrotas_blanco.png" />
+                                </div>
+                                <p class="card-category">Victorias vs Derrotas</p>
+                            </div>
+
+                            <h1 style="font-size: 28px">Victorias</h1>
+
+                            <i class="fa fa-trophy float-left tj_cat tj_icono"></i>
+
+                            <p style="font-size: 20px;margin-top:10px;">Total victorias, <span id="d1">-</span></p>
+
+                            <hr class="style3" style="margin: 0px 50px 0px 50px;">
+
+                            <h1 style="font-size: 28px">Derrotas</h1>
+
+                            <i class="fa fa-thumbs-down float-left tj_cat" style="color: grey"></i>
+                            <p style="font-size: 20px;margin-top:10px;">Total derrotas, <span id="d2">-</span></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1><b>RESUMEN</b></h1>
+
+            <div class="col-md-12">
+                <div class="tj_partidos shadow-sm">
+                    <img style="float: left" src="img/ico_partidos.png">
+                    <h3 class="tj_titulo">Total partidos jugados:</h3>
+                    <h1 class="tj_dato" id="d3">-</h1>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
+                    <img style="float: left" src="img/ico_indoor.png">
+                    <h3 class="tj_titulo">INDOOR:</h3>
+                    <p class="tj_dato_medias">
+                        <b><span class="tam_txt">Partidos disputados en Indoor:</span> <span id="d4">-</span></b><br>
+                        <b><span class="tam_txt">Victorias indoor:</span> <span id="d5">-</span></b><br>
+                        <b><span class="tam_txt">Derrotas indoor:</span> <span id="d6">-</span></b>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
+                    <img style="float: left" src="img/ico_outdoor.png">
+                    <h3 class="tj_titulo">OUTDOOR:</h3>
+                    <p class="tj_dato_medias">
+                        <b><span class="tam_txt">Partidos disputados en Outdoor:</span> <span id="d7">-</span></b><br>
+                        <b><span class="tam_txt">Victorias outdoor:</span> <span id="d8">-</span></b><br>
+                        <b><span class="tam_txt">Derrotas outdoor:</span> <span id="d9">-</span></b>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
+                    <i class="fa fa-trophy float-left tj_cat tj_icono"></i>
+                    <h3 class="tj_titulo">Victorias por Set:</h3>
+                    <p class="tj_dato_medias">
+                        <b><span class="tam_txt">Victorias en 2 set:</span> <span id="d10">-</span></b><br>
+                        <b><span class="tam_txt">Victorias en 3 set:</span> <span id="d11">-</span></b>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
+                    <i class="fa fa-thumbs-down float-left tj_cat"></i>
+                    <h3 class="tj_titulo">Derrotas por Set:</h3>
+                    <p class="tj_dato_medias">
+                        <b><span class="tam_txt">Derrotas en 2 set:</span> <span id="d12">-</span></b><br>
+                        <b><span class="tam_txt">Derrotas en 3 set:</span> <span id="d13">-</span></b>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
+                    <i class="fa fa-trophy float-left tj_cat tj_icono"></i>
+                    <h3 class="tj_titulo">Victorias por Franja Horaria:</h3>
+                    <p class="tj_dato_medias">
+                        <b><span class="tam_txt">Partidos jugados mañana:</span> <span class="pm">-</span></b><br>
+                        <b><span class="tam_txt">Victorias mañana:</span> <span id="d14">-</span></b><br>
+                        <b><span class="tam_txt">Partidos jugados tarde:</span> <span class="pt">-</span></b><br>
+                        <b><span class="tam_txt">Victorias tarde:</span> <span id="d15">-</span></b><br>
+                        <b><span class="tam_txt">Partidos jugados noche:</span> <span class="pn">-</span></b><br>
+                        <b><span class="tam_txt">Victorias noche:</span> <span id="d16">-</span></b>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
+                    <i class="fa fa-thumbs-down float-left tj_cat"></i>
+                    <h3 class="tj_titulo">Derrotas por Franja Horaria:</h3>
+                    <p class="tj_dato_medias">
+                        <b><span class="tam_txt">Partidos jugados mañana:</span> <span class="pm">-</span></b><br>
+                        <b><span class="tam_txt">Derrotas mañana:</span> <span id="d17">-</span></b><br>
+                        <b><span class="tam_txt">Partidos jugados tarde:</span> <span class="pt">-</span></b><br>
+                        <b><span class="tam_txt">Derrotas tarde:</span> <span id="d18">-</span></b><br>
+                        <b><span class="tam_txt">Partidos jugados noche:</span> <span class="pn">-</span></b><br>
+                        <b><span class="tam_txt">Derrotas noche:</span> <span id="d19">-</span></b>
+                    </p>
+                </div>
+            </div>
+
+
+
+
+            <!-- grafica 1 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <hr style="margin-top: 40px">
+                    <div style="margin: 0px 20px 0px 20px">
+                        <h1>Victorias vs Derrotas</h1>
+                        <h6 style="font-size:15px">Evolución de victorias sobre derrotas en el tiempo...</h6>
+                        <div style="font-size:12px">
+                            <i class="fa fa-square" style="color:#0b62a4"></i> <span> Victorias ascendente </span>
+                            <i class="fa fa-square" style="color:#0b62a4"></i> <span> Derrotas descendente</span></div>
+                    </div>
+
+                    <!-- Morris: Bar -->
+                    <div class="chart chart-md" id="graph" style="z-index: 1"></div>
+
+                </div>
+            </div>
+
+            <!-- grafica 2 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <hr style="margin-top: 40px">
+                    <div style="margin: 0px 20px 0px 20px">
+                        <h1>Victorias vs Derrotas</h1>
+                        <h6 style="font-size:15px">Evolución de resultados por diferentes categorías...</h6>
+                        <div style="font-size:12px">
+                            <i class="fa fa-square" style="color:#0088cc"></i> <span> Total partidos</span>
+                            <i class="fa fa-square" style="color:#34bcd5"></i> <span> Indoor</span>
+                            <i class="fa fa-square" style="color:#bf2222"></i> <span> Outdoor</span>
+                            <i class="fa fa-square" style="color:#e2b500"></i> <span> En 2 Sets</span><br>
+                            <i class="fa fa-square" style="color:#17c305"></i> <span> En 3 Sets</span>
+                        </div>
+                    </div>
+                    <!-- Morris: Line -->
+                    <div class="chart chart-md" id="morrisLine_2" style="z-index: 1"></div>
+                </div>
+            </div>
+
+            <!-- grafica 3 -->
+            <div class="row">
+                <div class="col-md-12">
+
+                    <hr style="margin-top: 40px">
+                    <div style="margin: 0px 20px 0px 20px">
+                        <h1>Victorias vs Derrotas</h1>
+                        <h6 style="font-size:15px">Comparativa de victorias y derrotas agrupadas por diferentes categorías...</h6>
+                        <div style="font-size:12px">
+                            <i class="fa fa-square" style="color:#0b62a4"></i> <span> Victorias</span>
+                            <i class="fa fa-square" style="color:#7a92a3"></i> <span> Derrotas</span><br>
+                            <span style="color:#000;font-size: 13px;font-weight: 400">Total Partidos - Indoor - Outdoor - 2 Sets - 3 Sets </span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Morris: Bar -->
+                <div class="chart chart-md" id="morrisBar" style="z-index: 1"></div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Footer -->
+        <footer class="footer-container" style="background-color: white">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        <img class="img-fluid " src="img/logo_gts_alta.png" alt="Logo gaftaf Sport" />
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col" style="font-size: 13px">
+                        La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                        <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+    <!-- End content -->
+
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+    <script src="assets/vendor/raphael/raphael.js"></script>
+    <script src="assets/javascripts/ui-elements/morris_barras_laterales.js"></script>
+
+
+
+    <script>
+        function calcular_victoria_derrota(set1, set2, set3) {
+
+            arr_set1 = set1.split("/");
+            s1 = arr_set1[0];
+            s1r = arr_set1[1];
+
+            arr_set2 = set2.split("/");
+            s2 = arr_set2[0];
+            s2r = arr_set2[1];
+
+            if (set3 == '' || set3 == '-/-' || set3 == null) {
+                s3 = 0;
+                s3r = 0;
+            } else {
+                arr_set3 = set3.split("/");
+                s3 = arr_set3[0];
+                s3r = arr_set3[1];
+            }
+
+
+            //calcular victoria o derrota
+
+            var vic = 0;
+            var der = 0;
+
+            if (s1 > s1r) {
+                vic = 1;
+            } else {
+                der = 1;
+            };
+
+            if (s2 > s2r) {
+                vic = vic + 1;
+            } else {
+                der = der + 1;
+            };
+
+            if (s3 > s3r) {
+                vic = vic + 1;
+            } else {
+                der = der + 1;
+            };
+
+
+            if (vic > der) {
+                return victoria = true;
+            } else {
+                return victoria = false;
+            }
+
+        }
+
+
+
+
+        /****************************************/
+
+
+
+
+
+
+
+
+        var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+
+        var seleccionar_partido = "SELECT * FROM Partidos ";
+
+        var arr_vic_der = new Array();
+        var arr_grafica = new Array();
+        var arr_grafica_2 = new Array();
+        var arr_grafica_3 = new Array();
+
+
+        function showRecords() {
+
+            var dataset;
+
+            db.transaction(function(tx) {
+
+                tx.executeSql(seleccionar_partido, [], function(tx, result) {
+
+                    dataset = result.rows;
+                    var item = null;
+
+                    for (var i = 0; i < dataset.length; i++) {
+
+                        item = dataset.item(i);
+
+
+
+                        if (item['tipo_pista'] == null || item['set1'] == null || item['set2'] == null || item['tipo_pista'] == "" || item['set1'] == "" || item['set2'] == "" || item['tipo_pista'] == undefined || item['set1'] == undefined || item['set2'] == undefined) {
+                            
+        
+                        } else {
+                            
+                            var set3;
+
+                            if (item['set3'] == null || item['set3'] == "" || item['set3'] == undefined) {
+                                set3 = '-/-';
+                            } else {
+                                set3 = item['set3'];
+                            }
+
+                            var res = calcular_victoria_derrota(item['set1'], item['set2'], set3);
+
+                            if (res) {
+                                res = 'v';
+                            } else {
+                                res = 'd';
+                            }
+
+                            if (item['set3'] == '' || item['set3'] == '-/-') {
+                                sets_jugados = 2;
+                            } else {
+                                sets_jugados = 3;
+                            }
+
+                            var hh = item['hora'].split(":");
+
+                            if (hh[0] >= 9 && hh[0] <= 12) {
+                                hora = 'm';
+                            }
+                            if (hh[0] >= 13 && hh[0] <= 19) {
+                                hora = 't';
+                            }
+                            if (hh[0] >= 20 && hh[0] <= 24) {
+                                hora = 'n';
+                            }
+
+                            arr_vic_der.push({
+                                fecha: item['fecha'],
+                                hora: hora,
+                                resultado: res,
+                                tipo_pista: item['tipo_pista'],
+                                sets_jugados: sets_jugados
+                            });
+                        }
+                    }
+
+                    calcular_datos_grafica();
+
+                });
+            });
+        }
+
+
+        var total_victorias = 0;
+        var total_derrotas = 0;
+        var indoor_victorias = 0;
+        var indoor_derrotas = 0;
+        var outdoor_victorias = 0;
+        var outdoor_derrotas = 0;
+        var sets2_victorias = 0;
+        var sets2_derrotas = 0;
+        var sets3_victorias = 0;
+        var sets3_derrotas = 0;
+        var m_victorias = 0;
+        var m_derrotas = 0;
+        var t_victorias = 0;
+        var t_derrotas = 0;
+        var n_victorias = 0;
+        var n_derrotas = 0;
+        var m_partidos = 0;
+        var t_partidos = 0;
+        var n_partidos = 0;
+
+        var resultado = 0;
+
+        var r1 = 0;
+        var r2 = 0;
+        var r3 = 0;
+        var r4 = 0;
+        var r5 = 0;
+
+
+        function calcular_datos_grafica() {
+
+
+            for (i = 0; i < arr_vic_der.length; i++) {
+
+                //total victorias
+                if (arr_vic_der[i].resultado == 'v') {
+                    total_victorias++;
+                    r1++;
+                } else {
+                    total_derrotas++;
+                    r1--;
+                }
+
+                //preparo datos grafica
+                //OJO MAXIMO 2 PARTIDOS POR DIA FALTA CREAR FILTRO Y VERIFICAR EN CASO DE LA MISMA FECHA CORREGIR EL RESULTADO
+                var ff = arr_vic_der[i].fecha.split('-');
+                var nueva_fecha = ff[2] + '-' + ff[1] + '-' + ff[0];
+
+                arr_grafica.push({
+                    period: nueva_fecha,
+                    a: r1
+                });
+
+                //indoor  outdoor
+                if (arr_vic_der[i].tipo_pista == 'indoor') {
+
+                    if (arr_vic_der[i].resultado == 'v') {
+                        indoor_victorias++;
+                        r2++;
+                    } else {
+                        indoor_derrotas++;
+                        r2--;
+                    }
+                }
+
+                if (arr_vic_der[i].tipo_pista == 'outdoor') {
+                    if (arr_vic_der[i].resultado == 'v') {
+                        outdoor_victorias++;
+                        r3++;
+                    } else {
+                        outdoor_derrotas++;
+                        r3--;
+                    }
+
+                }
+
+                //por set
+                if (arr_vic_der[i].sets_jugados == 2) {
+
+                    if (arr_vic_der[i].resultado == 'v') {
+                        sets2_victorias++;
+                        r4++;
+                    } else {
+                        sets2_derrotas++;
+                        r4--;
+                    }
+
+                }
+
+                if (arr_vic_der[i].sets_jugados == 3) {
+
+                    if (arr_vic_der[i].resultado == 'v') {
+                        sets3_victorias++;
+                        r5++;
+                    } else {
+                        sets3_derrotas++;
+                        r5--;
+                    }
+
+                }
+
+                //grafica2
+                arr_grafica_2.push({
+                    y: arr_vic_der[i].fecha,
+                    a: r1,
+                    b: r2,
+                    c: r3,
+                    d: r4,
+                    e: r5
+                });
+
+
+                //por franja horaria
+
+                if (arr_vic_der[i].hora == 'm') {
+
+                    m_partidos++;
+
+                    if (arr_vic_der[i].resultado == 'v') {
+                        m_victorias++;
+                    } else {
+                        m_derrotas++;
+                    }
+                }
+
+                if (arr_vic_der[i].hora == 't') {
+
+                    t_partidos++;
+
+                    if (arr_vic_der[i].resultado == 'v') {
+                        t_victorias++;
+                    } else {
+                        t_derrotas++;
+                    }
+                }
+
+                if (arr_vic_der[i].hora == 'n') {
+
+                    n_partidos++;
+
+                    if (arr_vic_der[i].resultado == 'v') {
+                        n_victorias++;
+                    } else {
+                        n_derrotas++;
+                    }
+                }
+
+            }
+
+
+            arr_grafica_3.push({
+                x: 'Total Partidos',
+                a: total_victorias,
+                b: total_derrotas
+            });
+
+            arr_grafica_3.push({
+                x: 'Indoor',
+                a: indoor_victorias,
+                b: indoor_derrotas
+            });
+
+            arr_grafica_3.push({
+                x: 'Outdoor',
+                a: outdoor_victorias,
+                b: outdoor_derrotas
+            });
+
+            arr_grafica_3.push({
+                x: 'En 2 Sets',
+                a: sets2_victorias,
+                b: sets2_derrotas
+            });
+
+            arr_grafica_3.push({
+                x: 'En 3 Sets',
+                a: sets3_victorias,
+                b: sets3_derrotas
+            });
+
+            mostrar_datos();
+
+        }
+
+
+        function onError(tx, error) { // Function for Hendeling Error...
+            alert(error.message);
+        }
+
+        /***********************************************/
+
+        function mostrar_datos() {
+
+            $("#d1").html(total_victorias);
+            $("#d2").html(total_derrotas);
+            $("#d3").html(total_victorias + total_derrotas); //total partidos jugados
+            $("#d4").html(indoor_victorias + indoor_derrotas);
+            $("#d5").html(indoor_victorias);
+            $("#d6").html(indoor_derrotas);
+            $("#d7").html(outdoor_victorias);
+            $("#d8").html(outdoor_victorias + outdoor_derrotas);
+            $("#d9").html(outdoor_derrotas);
+            $("#d10").html(sets2_victorias);
+            $("#d11").html(sets2_derrotas);
+            $("#d12").html(sets3_victorias);
+            $("#d13").html(sets3_derrotas);
+            $("#d14").html(m_victorias);
+            $("#d15").html(t_victorias);
+            $("#d16").html(n_victorias);
+            $("#d17").html(m_derrotas);
+            $("#d18").html(t_derrotas);
+            $("#d19").html(n_derrotas);
+
+            $(".pm").html(m_partidos);
+            $(".pt").html(t_partidos);
+            $(".pn").html(n_partidos);
+
+            //muestro datos grafica
+            graph();
+            grafica_2();
+            grafica_3();
+
+        }
+
+        /******************************************************/
+
+        function graph() {
+
+
+            Morris.Line({
+                element: 'graph',
+                data: arr_grafica,
+                xkey: 'period',
+                ykeys: ['a'],
+                labels: ['Pos:'],
+                resize: true
+            });
+        }
+
+        function grafica_2() {
+
+            Morris.Line({
+                resize: true,
+                element: 'morrisLine_2',
+                data: arr_grafica_2,
+                xkey: 'y',
+                ykeys: ['a', 'b', 'c', 'd', 'e'],
+                labels: ['Total partidos', 'Indoor', 'Outdoor', 'En 2 Sets', 'En 3 Sets'],
+                hideHover: true,
+                lineColors: ['#0088cc', '#34bcd5', '#bf2222', '#e2b500', '#17c305'],
+                lineWidth: ['3', '1', '1', '1', '1'],
+                parseTime: false
+            });
+
+        }
+
+        //grafica golpes
+        function grafica_3() {
+
+
+            Morris.Bar({
+                element: 'morrisBar',
+                resize: true,
+                data: arr_grafica_3,
+                xkey: 'x',
+                ykeys: ['a', 'b'],
+                labels: ['Victorias', 'Derrotas'],
+                barColors: ['#0b62a4', '#808080'],
+                hideHover: true,
+                smooth: false,
+                stacked: false
+            });
+
+        }
+
+
+        //https://pierresh.github.io/morris.js/lines.html
+
+        $(document).ready(function() {
+            showRecords();
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

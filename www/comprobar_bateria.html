@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Memory</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap4/css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+
+
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css">
+
+    <link rel="stylesheet" href="assets/css/material-dashboard.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <style>
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        /*************CARDS LISTADO**********/
+
+        .tj_partidos {
+            padding: 14px 12px 0px 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+            background-color:
+                white;
+            border-left:
+                3px solid #0088cc;
+        }
+
+        .tj_cat {
+            font-size: 40px;
+            color: #0088cc;
+        }
+
+        .tj_titulo {
+            font-size: 17px;
+            margin-left: 60px;
+            margin-top: 0px;
+        }
+
+        .tj_dato {
+            color: black;
+            font-size: 18px;
+            text-align: right;
+            margin-top: -20px;
+            margin-right: 25px;
+        }
+
+        .tj_icono {
+            font-size: 40px;
+            color: #0088cc;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+
+
+        .sombra {
+            -webkit-box-shadow: 10px 10px 8px -7px rgba(0, 0, 0, 0.37);
+            -moz-box-shadow: 10px 10px 8px -7px rgba(0, 0, 0, 0.37);
+            box-shadow: 10px 10px 8px -7px rgba(0, 0, 0, 0.37);
+        }
+
+
+        /**************END CARDS**************/
+        li{
+            margin-top: -8px;
+        }
+
+
+        hr.style3 {
+            border-top: 1px dashed #8c8b8b;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar" style="margin-top: 80px;">
+
+            <!-- close sidebar menu -->
+            <div class="dismiss">
+                <img src="img/ico-arrow-left.png" />
+            </div>
+
+
+            <ul class="list-unstyled menu-elements" style="margin-top: -5px">
+                <li>
+                    <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
+                </li>
+                <li>
+                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                </li>
+                <li>
+                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                </li>
+                <li>
+                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                </li>
+                <li>
+                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                </li>
+                <li>
+                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                </li>
+                <li>
+                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                </li>
+                <li>
+                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                </li>
+                <li class="active">
+                    <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                </li>
+
+            </ul>
+            <div class="col-8 offset-2" style="margin-top: 35x">
+                <img class="img-fluid " src="img/logo_gts_alta_blanco.png" alt="Logo gaftaf Sport" />
+            </div>
+
+        </nav>
+        <!-- End sidebar -->
+
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- open sidebar menu -->
+
+
+            <div class="fixed-top bg-dark" style="height: 80px;">
+                <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                    <img src="img/ico-menu.png" /> <span>Menu</span>
+                </a>
+                <div style="position: absolute; margin-top:27px;right: 10px;">
+                    <img class="img-fluid " src="assets/img/logo.png" alt="Logo gaftaf Sport" />
+                </div>
+            </div>
+
+
+
+            <!-- Nuevo Partido 1 -->
+
+            <div class="container">
+                <div class="row" style="background-color: #292d32">
+                    <div class="col-md-8" style="margin-top: 80px;color:white">
+                        <h1 style="color:white;text-align: center">Comprobar Batería</h1>
+                        <p style="line-height: 23px;margin-top: -10px">Conecta tu Móvil a la pala Memory y comprueba el nivel de carga de tu pala...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row" style="margin-top:50px;">
+                </div>
+            </div>
+
+
+            <!-- PANTALLA DE CONECTAR ID= p_iniciar -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card card-stats">
+                            <div class="card-header card-header-icon">
+                                <div class="card-icon sombra" style="background-color: #0088cc">
+                                    <img id="ico_conect" class="img-fluid" src="img/ico_pala-movil.png" />
+                                </div>
+                                <p class="card-category">Conectar</p>
+                            </div>
+                            <div id="menu_botones" class="col-md-12 text-center" style="margin: 20px 0px 20px 0px;background-color: #d7d7d7;padding-bottom: 5px; padding-top: 5px">
+                                <button id="refreshButton" type="button" class="btn btn-primary">Buscar</button>
+                                <button id="conectar" type="button" class="btn btn-primary">Conectar</button>
+                                <button id="disconnectButton" type="button" class="btn btn-secondary">Desconect</button>
+                            </div>
+
+
+                            <!-- DEVICE LIST MENSAJES -->
+
+                            <div id="deviceList" style="margin:  0px 30px 30px 30px; ">
+                                <h3 style="font-size:15px;margin-top: 17px;">COMPROBAR BATERÍA DE TU PALA MEMORY</h3>
+                                <hr class="style3" style="margin: 0px 10px 15px 10px;">
+                                <ol style="text-align: left; line-height: 26px;font-size:17px">
+                                    <li>Asegúrate de tener activado el <b>Bluetooth</b> de tu <b>Móvil</b></li>
+                                    <li>Mantén tu pala <b>Memory</b> dentro de un radio de 2 metros del móvil</li>
+                                    <li>Enciende tu pala <b>Memory</b></li>
+                                    <li>Pulsa el botón <b>"Buscar"</b> pala Memory":</li>
+                                </ol>
+                            </div>
+                            <!-- FIN DEVICE LIST MENSAJES-->
+
+                            <!-- DESCARGA DATOS -->
+
+                            <div id="descargar">
+                                <div id="titulos">
+                                    <h3 style="font-size:15px;margin-top: 17px">PALA MEMORY CONECTADA</h3>
+                                    <hr class="style3" style="margin: 0px 10px 15px 10px;">
+                                    <p style="text-align: center; font-size:17px">
+                                        Pulsa el botón para comprobar la carga de la batería de tu pala Memory
+                                    </p>
+                                </div>
+                                <p style="text-align: center" id="etiqueta">0% de CARGA</p>
+                                <div class="progress" style="margin: -15px 40px 10px 40px">
+                                    <div id="descarga" class="progress-bar progress-bar-striped progress-bar-animated"></div>
+                                </div>
+                                <div class="col-md-12 text-center" style="margin: 5px 0px 20px 0px;">
+                                    <button id="sendButton" type="button" class="btn btn-success"><img src="img/ico-bateria.png"> Comprobar Batería</button>
+                                </div>
+                            </div>
+
+                            <!-- FIN DESCARGA DATOS -->
+
+                            <!-- DESCARGA COMPLETADA -->
+
+                            <div id="descarga_completada" style="margin-bottom: 40px;">
+                                <hr class="style3" style="margin: 0px 10px 15px 10px;">
+                                <h1 style="text-align: center;margin-top: 3px;"><b>¡Batería comprobada!</b></h1>
+                                <p style="text-align: center" class="mensajes">-</p>
+                                <p style="line-height: 20px">Apaga tu pala Memory.</p>
+                            </div>
+
+                            <!-- FIN DESCARGA DATOS -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="ver" style="margin-bottom: 10px;margin-top: -20px">-</div>
+
+
+            <!-- Footer -->
+            <footer class="footer-container" style="background-color: white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            <img class="img-fluid " src="img/logo_gts_alta.png" alt="Logo gaftaf Sport" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="font-size: 13px">
+                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- End content -->
+
+    </div>
+    <!-- End wrapper -->
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script>
+        function fin_comprobar_bateria() {
+            mensaje_3();
+        }
+        
+        function onError(tx, error) { // Function for Hendeling Error...
+            alert(error.message);
+        }
+
+
+        /***************************************************/
+
+        var bateria = 0;
+        var porcentaje = 0;
+
+        /**************************************************/
+
+        var aa; //device name
+        var bb; //device rssi
+        var cc; //device id
+
+        /**************************************************/
+
+        function iniciar(){
+            $("#conectar").prop("disabled", true);
+            $("#conectar").css("background-color", "#6c757d");
+            $('#descargar').hide();
+            $('#descarga_completada').hide();
+        }
+
+        //*** CONTROL MENSAJES, BOTONES, INTERFAZ *****
+
+        //PALA MEMORY ENCONTRADA
+        function mensaje_1() {
+            $("#conectar").prop("disabled", false);
+            $("#conectar").css("background-color", "#f38400");
+            $("#deviceList").html(
+                '<h3 style="font-size:15px;margin-top: 17px;">PALA MEMORY ENCONTRADA</h3>' +
+                '<hr class="style3" style = "margin: 0px 10px 15px 10px;">' +
+                '<p style="text-align: center; line-height: 26px;font-size:17px">' +
+                'Pulsa el botón <b>"Conectar"</b></p>');
+            $(".card-icon").css("background-color", "#f38400");
+        }
+
+        //CONECTAR Y DESCARGAR DATOS
+        function mensaje_2() {
+            //$("#conectar").prop("disabled", true);
+            $('#menu_botones').hide();
+            $('#deviceList').hide();
+            $('#descargar').fadeIn(3000);
+            $("#ico_conect").attr("src", "img/ico_pala-conectada.png");
+            $(".card-icon").css("background-color", "#28a745");
+        }
+
+        //DATOS DESCARGADOS, IR A MIS PATIDOS
+        function mensaje_3() {
+            $('#descarga_completada').show();
+            var deviceId = cc;
+            ble.disconnect(deviceId, app.showMainPage, app.onError);
+        }
+
+        //*** FUNCION CONTROL BARRA DESCARGA DATOS 100% *****
+
+        $("#descarga").addClass("bg-success");
+
+        function barra_descarga_datos(porcentaje) {
+            porcentaje = Number(porcentaje);
+             if (porcentaje >= 50) {
+                $("#descarga").addClass("bg-success");
+                $(".mensajes").html('Batería cargada y lista para jugar partido.');
+            } 
+            if (porcentaje < 50) {
+                
+                $("#descarga").addClass("bg-danger");
+                $(".mensajes").html('Debes Cargar la Batería.');
+            }
+
+            $("#descarga").css("width", porcentaje + '%');
+            $("#etiqueta").html(porcentaje + ' % de CARGA');
+        };
+        
+      
+
+        //*** ACCIONES BOTONES **********************************
+
+        $("#disconnectButton").click(function() {
+            app.disconnect();
+        });
+
+        $("#conectar").click(function() {
+            // alert('Conectarse a' + aa);
+            mensaje_2();
+            app.connect();
+        });
+
+        $("#refreshButton").click(function() {
+            app.initialize();
+        });
+
+        function listado(a, b, c) {
+            aa = a;
+            bb = b;
+            cc = c;
+            mensaje_1();
+        }
+
+        /********************* TIPO DE BLUETOOTH LE 4.0 = bluetooth HM 10 *****************************/
+
+        // ASCII only
+        function bytesToString(buffer) {
+            return String.fromCharCode.apply(null, new Uint8Array(buffer));
+        }
+
+        // ASCII only
+        function stringToBytes(string) {
+            var array = new Uint8Array(string.length);
+            for (var i = 0, l = string.length; i < l; i++) {
+                array[i] = string.charCodeAt(i);
+            }
+            return array.buffer;
+        }
+
+        var ble_hm = {
+            serviceUUID: "0000FFE0-0000-1000-8000-00805F9B34FB",
+            txCharacteristic: "0000FFE1-0000-1000-8000-00805F9B34FB", // transmit is from the phone's perspective
+            rxCharacteristic: "0000FFE1-0000-1000-8000-00805F9B34FB" // receive is from the phone's perspective
+        };
+
+        var app = {
+            initialize: function() {
+                this.bindEvents();
+                document.addEventListener('deviceready', this.onDeviceReady, false);
+            },
+            bindEvents: function() {
+                sendButton.addEventListener('click', this.sendData, false);
+            },
+            onDeviceReady: function() {
+                app.refreshDeviceList();
+            },
+            refreshDeviceList: function() {
+                deviceList.innerHTML = ''; // empties the list
+                if (cordova.platformId === 'android') { // Android filtering is broken
+                    ble.scan([], 5, app.onDiscoverDevice, app.onError);
+                } else {
+                    ble.scan([ble_hm.serviceUUID], 5, app.onDiscoverDevice, app.onError);
+                }
+            },
+            onDiscoverDevice: function(device) {
+
+                if (device.name == "Memory") {
+                    listado(device.name, device.rssi, device.id);
+                }
+            },
+            connect: function(e) {
+
+                var deviceId = cc,
+                    onConnect = function() {
+                        ble.startNotification(deviceId, ble_hm.serviceUUID, ble_hm.rxCharacteristic, app.onData, app.onError);
+                        sendButton.dataset.deviceId = deviceId;
+                        disconnectButton.dataset.deviceId = deviceId;
+                    };
+
+                ble.connect(deviceId, onConnect, app.onError);
+               
+            },
+            onData: function(data) {
+
+                var dato_recibido = bytesToString(data);
+                var arr_data = dato_recibido.split(',');
+
+                if (arr_data[0] == 'bb') {
+                    porcentaje = arr_data[1];
+                    barra_descarga_datos(porcentaje);
+                    fin_comprobar_bateria();
+                }
+            },
+            sendData: function(event) {
+
+                var dator = 'b'; //BATERÍA
+                var success = function() {
+
+                    $("#ver").append("Porcentaje batería recibido");
+                    $("#sendButton").prop("disabled", true);
+                };
+
+                var failure = function() {
+                    alert("¡Inténtalo de nuevo pulsa comprobar batería!");
+                };
+
+                var data = stringToBytes(dator);
+                var deviceId = event.target.dataset.deviceId;
+                ble.writeWithoutResponse(deviceId, ble_hm.serviceUUID, ble_hm.txCharacteristic, data, success, failure);
+
+            },
+            disconnect: function() {
+                var deviceId = cc;
+                ble.disconnect(deviceId, app.showMainPage, app.onError);
+                alert("Pala Memory Desconectada");
+            },
+            showMainPage: function() {
+
+            },
+            showDetailPage: function() {
+
+            },
+            onError: function(reason) {
+                //alert("ERROR: deconectado:" + reason); // real apps should use notification.alert
+                alert("Pala Memory Desconectada e:e");
+            }
+        };
+        
+         $(document).ready(function() {
+            iniciar();
+        });
+
+    </script>
+
+
+</body>
+
+</html>

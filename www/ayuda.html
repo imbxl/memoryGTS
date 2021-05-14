@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Memory</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap4/css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+
+
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css">
+
+    <link rel="stylesheet" href="assets/css/material-dashboard.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <style>
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        hr.style3 {
+            border-top: 1px dashed #8c8b8b;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Inter", sans-serif;
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+        }
+
+        [data-ripple] {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple-effect {
+            position: absolute;
+            border-radius: 9999px;
+            animation: ripple-animation 2s;
+        }
+
+        @keyframes ripple-animation {
+            from {
+                transform: scale(1);
+                opacity: 0.4;
+            }
+
+            to {
+                transform: scale(100);
+                opacity: 0;
+            }
+        }
+
+        .aks-accordion {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .aks-accordion-row {}
+
+        .aks-accordion-item {
+            width: 100%;
+            border-bottom: 1px solid #e0e0e0;
+            padding-top: 20px;
+            padding-right: 5px;
+            padding-bottom: 12px;
+            padding-left: 5px;
+            cursor: pointer;
+        }
+
+        .aks-accordion-item-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .aks-accordion-item-icon {
+            width: 25px;
+            height: 25px;
+            background: #0088cc;
+            border-radius: 9999px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            text-align: center;
+        }
+
+        .aks-accordion-item-icon svg {
+            width: 15px;
+            fill: white;
+            margin: 0 auto;
+        }
+
+        .aks-accordion-item-title {
+            width: 90%;
+            text-align: left;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+        }
+
+        .aks-accordion-item-title h4 {
+            margin: 0;
+        }
+
+        .aks-accordion-item-content {
+            display: none;
+            width: 100%;
+            padding-top: 12px;
+            padding-right: 8px;
+            padding-bottom: 0;
+            padding-left: 42px;
+            overflow: hidden;
+            word-break: break-word;
+            width: 88%;
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        .aks-accordion-item.opened .aks-accordion-item-icon-open {
+            display: none;
+        }
+
+        .aks-accordion-item-icon-close {
+            display: none;
+        }
+
+        .aks-accordion-item.opened .aks-accordion-item-icon-close {
+            display: block;
+        }
+
+        @media screen and (max-width: 500px) {
+            .aks-accordion {
+                width: 100%;
+            }
+
+            .aks-accordion-item-content {
+                padding-left: 11px;
+                width: 92%;
+            }
+        }
+        
+        .open-menu-r { position: fixed; top: 20px; left: 10px; z-index: 997; box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.2); }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- open sidebar menu -->
+            <div id="desconectar" class="fixed-top bg-dark" style="height: 80px;">
+                <a class="btn btn-primary btn-customized open-menu-r" href="index.html" role="button">
+                    <img src="img/ico-arrow-left-peq.png" /> <span>Volver</span>
+                </a>
+                <div style="position: absolute; margin-top:27px;right: 10px;">
+                    <img class="img-fluid " src="assets/img/logo.png" alt="Logo memory" />
+                </div>
+            </div>
+
+
+
+            <!-- Nuevo Partido 1 -->
+            <div class="container">
+                <div class="row" style="margin-top:0px; background-color: #fff;margin-top: 20px">
+                    <div class="col-md-12">
+
+
+                        <div class="container">
+                            <div class="aks-accordion" itemscope itemtype="" data-accordion="">
+                                <h1>Ayuda</h1>
+                                <p style="line-height: 19px">A continuación te hemos preparado una pequeña guía con la que podrás resolver las principales dudas para comenzar a utilizar la pala Memory junto con la aplicación.</p>
+                                <div class="aks-accordion-row">
+                                    <div class="aks-accordion-item" itemscope itemprop="mainEntity" itemtype="" data-accordion-item="" data-ripple="#00000026">
+                                        <div class="aks-accordion-item-row">
+                                            <div class="aks-accordion-item-icon ">
+                                                <svg class="aks-accordion-item-icon-open" viewBox="0 0 512 512">
+                                                    <path d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
+			v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" /></svg>
+                                                <svg class="aks-accordion-item-icon-close" viewBox="0 0 512 512">
+                                                    <path d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z" /></svg>
+
+                                            </div>
+                                            <div class="aks-accordion-item-title">
+                                                <h4 itemprop="name">ANTES QUE NADA</h4>
+                                            </div>
+                                        </div>
+                                        <div class="aks-accordion-item-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-accordion-content="">
+                                            <p itemprop="text">Lo primero que debes de hacer es acceder a la opción de "Mi perfil" y rellenar todos los campos que te solicitan para que la aplicación pueda calcular correctamente las métricas de tus partidos.
+                                            </p>
+                                            <p itemprop="text">Una vez que hayas guardado los datos se desbloquearán todos las opciones del menú principal.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="aks-accordion-item" itemscope itemprop="mainEntity" itemtype="" data-accordion-item="" data-ripple="#00000026">
+                                        <div class="aks-accordion-item-row">
+                                            <div class="aks-accordion-item-icon ">
+                                                <svg class="aks-accordion-item-icon-open" viewBox="0 0 512 512">
+                                                    <path d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
+			v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" /></svg>
+                                                <svg class="aks-accordion-item-icon-close" viewBox="0 0 512 512">
+                                                    <path d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z" /></svg>
+
+                                            </div>
+                                            <div class="aks-accordion-item-title">
+                                                <h4 itemprop="name">COMPROBAR BATERÍA DE MI PALA MEMORY</h4>
+                                            </div>
+                                        </div>
+                                        <div class="aks-accordion-item-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-accordion-content="">
+                                            <p itemprop="text">La batería de tu pala Memory cargada al 100% tiene una capacidad de 2 partidos de 1 hora y media de duración sin necesidad de cargarla.
+                                            </p>
+                                            <p>
+                                               Para averiguar el estado de la carga de la batería puedes realizarlo pulsando la opción de "comprobar batería" del menú principal y siguiendo las instrucciones de conexión.
+                                            </p>
+                                            <p itemprop="text">Una vez finalizada la comprobación apaga la pala.
+                                            </p>
+                                            <p>
+                                            Si durante el partido el led de estado del tapón parpadea significa que te quedan aproximadamente 15 minutos de carga antes de apagarse. 
+                                            </p>
+                                         
+                                        
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="aks-accordion-item" itemscope itemprop="mainEntity" itemtype="" data-accordion-item="" data-ripple="#00000026">
+                                        <div class="aks-accordion-item-row">
+                                            <div class="aks-accordion-item-icon ">
+                                                <svg class="aks-accordion-item-icon-open" viewBox="0 0 512 512">
+                                                    <path d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
+			v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" /></svg>
+                                                <svg class="aks-accordion-item-icon-close" viewBox="0 0 512 512">
+                                                    <path d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z" /></svg>
+
+                                            </div>
+                                            <div class="aks-accordion-item-title">
+                                                <h4 itemprop="name">MI PRIMER PARTIDO</h4>
+                                            </div>
+                                        </div>
+                                        <div class="aks-accordion-item-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-accordion-content="">
+                                            <ol>
+                                                <li>
+                                                    Comprobar el estado de la batería de tu pala Memory
+                                                </li>
+                                                <li>
+                                                    Durante el calentamiento no encender la pala
+                                                </li>
+                                                <li>
+                                                    Encender la pala Memory al comenzar el partido
+                                                </li>
+                                                <li>
+                                                    Tras finalizar el partido, coge tu móvil y comprueba que el bluetooth está encendido
+                                                </li>
+                                                 <li>
+                                                    Arranca la aplicación MemoryGTS de tu Smartphone y en el menú pulsa la opción "Nuevo partido"
+                                                </li>
+            
+                                                <li>
+                                                    Sigue las instrucciones de conexión a la pala y pulsar descargar datos
+                                                </li>
+                                                <li>
+                                                    Una vez finalizada la descarga, aparecerá un botón que nos permitirá navegar al listado de partidos donde aparecerá un botón de color naranja. Pulsamos sobre este botón y completamos los datos del partido. Nuestros oponentes, donde jugamos y el resultado.
+                                                </li>
+                                                <li>
+                                                    Completados los datos pulsamos el botón de ir a mi partido y visualizaremos las metricas recogidas del partido.
+                                                </li>
+
+                                            </ol>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="aks-accordion-item" itemscope itemprop="mainEntity" itemtype="" data-accordion-item="" data-ripple="#00000026">
+                                        <div class="aks-accordion-item-row">
+                                            <div class="aks-accordion-item-icon ">
+                                                <svg class="aks-accordion-item-icon-open" viewBox="0 0 512 512">
+                                                    <path d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
+			v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" /></svg>
+                                                <svg class="aks-accordion-item-icon-close" viewBox="0 0 512 512">
+                                                    <path d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z" /></svg>
+
+                                            </div>
+                                            <div class="aks-accordion-item-title">
+                                                <h4 itemprop="name">NOTIFICACIÓN: "PALA DESCONECTADA"</h4>
+                                            </div>
+                                        </div>
+                                        <div class="aks-accordion-item-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-accordion-content="">
+                                            <p itemprop="text">Si durante el proceso de conexión a la pala apareciera el mensaje de pala desconectada, pulsar aceptar para ocultar la notificación y despues deberemos de pulsar el botón de desconectar y volver a repetir el proceso de conexión.
+                                            </p>
+                                            <p>
+                                                Si volviera aparecer el mensaje de pala desconectada salir de la opción principal de "Nuevo partido" y volver a entrar en esta opción y comenzar de nuevo el proceso de conexión.
+                                            </p>
+                     
+                                        </div>
+
+                                    </div>
+
+                                    <div class="aks-accordion-item" itemscope itemprop="mainEntity" itemtype="" data-accordion-item="" data-ripple="#00000026">
+                                        <div class="aks-accordion-item-row">
+                                            <div class="aks-accordion-item-icon ">
+                                                <svg class="aks-accordion-item-icon-open" viewBox="0 0 512 512">
+                                                    <path d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
+			v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" /></svg>
+                                                <svg class="aks-accordion-item-icon-close" viewBox="0 0 512 512">
+                                                    <path d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z" /></svg>
+
+                                            </div>
+                                            <div class="aks-accordion-item-title">
+                                                <h4 itemprop="name">¿CÓMO CARGAR MI PALA MEMORY?</h4>
+                                            </div>
+                                        </div>
+                                        <div class="aks-accordion-item-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-accordion-content="">
+                                            <p itemprop="text">Si tras comprobar el estado de carga de batería la recomendación es cargar la pala Memory, simplemente coge el cable que cargador conéctalo a la red eléctrica y conecta el extremo del micro-usb a la entrada micro-usb del tapón de la pala Memory. Una vez conectados aparecerá un led rojo, cuando cambie a color verde indicará que la pala está cargada y lista para jugar.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PANTALLA DE CONECTAR ID= p_iniciar -->
+
+     
+
+
+        <div id="ver" style="margin-bottom: 10px;margin-top: -20px">-</div>
+
+
+        <!-- Footer -->
+        <footer class="footer-container" style="background-color: white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        <img class="img-fluid " src="img/logo_gts_alta.png" alt="Logo gaftaf Sport" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="font-size: 13px">
+                        La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                        <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- End content -->
+
+    </div>
+    <!-- End wrapper -->
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+
+    <script>
+        (function() {
+            "use strict";
+            var jQueryPlugin = (window.jQueryPlugin = function(ident, func) {
+                return function(arg) {
+                    if (this.length > 1) {
+                        this.each(function() {
+                            var $this = $(this);
+
+                            if (!$this.data(ident)) {
+                                $this.data(ident, func($this, arg));
+                            }
+                        });
+
+                        return this;
+                    } else if (this.length === 1) {
+                        if (!this.data(ident)) {
+                            this.data(ident, func(this, arg));
+                        }
+
+                        return this.data(ident);
+                    }
+                };
+            });
+        })();
+
+        (function() {
+            "use strict";
+
+            function Accordion($roots) {
+                var element = $roots;
+                var accordion = $roots.first("[data-accordion]");
+                var accordion_target = $roots.find("[data-accordion-item]");
+                var accordion_content = $roots.find("[data-accordion-content]");
+                $(accordion_target).click(function() {
+                    $(this).toggleClass("opened");
+                    $(this).find(accordion_content).slideToggle("slow");
+                    $(this).siblings().find(accordion_content).slideUp("slow");
+                    $(this).siblings().removeClass("opened");
+                });
+            }
+            $.fn.Accordion = jQueryPlugin("Accordion", Accordion);
+            $("[data-accordion]").Accordion();
+
+            function Ripple_Button($root) {
+                var elements = $root;
+                var ripple_btn = $root.first("[data-ripple]");
+                $(ripple_btn).on("click", function(event) {
+                    event.preventDefault();
+                    var $div = $("<div/>"),
+                        btnOffset = ripple_btn.offset(),
+                        xPos = event.pageX - btnOffset.left,
+                        yPos = event.pageY - btnOffset.top;
+                    $div.addClass("ripple-effect");
+                    $div.css({
+                        height: ripple_btn.height(),
+                        width: ripple_btn.height(),
+                        top: yPos - $div.height() / 2,
+                        left: xPos - $div.width() / 2,
+                        background: ripple_btn.data("ripple") || "#ffffff26"
+                    });
+                    ripple_btn.append($div);
+
+                    window.setTimeout(function() {
+                        $div.remove();
+                    }, 2000);
+                });
+            }
+            $.fn.Ripple_Button = jQueryPlugin("Ripple_Button", Ripple_Button);
+            $("[data-ripple]").Ripple_Button();
+        })();
+
+    </script>
+
+
+</body>
+
+</html>

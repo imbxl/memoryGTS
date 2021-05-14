@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Memory</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap4/css/bootstrap.css" crossorigin="anonymous">
+     <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/vendor/jquery-ui-v1/jquery-ui-1.12.1.custom/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css">
+
+
+    <link rel="stylesheet" href="assets/css/material-dashboard.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <style>
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        /*************CARDS**********/
+
+        .tarjeta {
+            padding: 12px 12px 0px 12px;
+            border-radius: 8px;
+            margin-top: 10px
+        }
+
+        h1 {
+            text-align: left;
+            font-size: 29px;
+            margin-top: -10px
+        }
+
+        h6 {
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .txt-tam-1 {
+            font-size: 20px;
+        }
+
+
+        /**************END CARDS**************/
+        label {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+
+        }
+
+        /************************************/
+        li{
+            margin-top: -8px;
+        }
+
+       
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar" style="margin-top: 80px;">
+
+            <!-- close sidebar menu -->
+            <div class="dismiss">
+                <img src="img/ico-arrow-left.png" />
+            </div>
+
+
+            <ul class="list-unstyled menu-elements" style="margin-top: -5px">
+                <li>
+                    <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
+                </li>
+                <li>
+                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                </li>
+                <li>
+                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                </li>
+                <li>
+                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                </li>
+                <li>
+                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                </li>
+                <li>
+                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                </li>
+                <li>
+                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                </li>
+                <li>
+                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                </li>
+
+            </ul>
+            <div class="col-8 offset-2" style="margin-top: 35x">
+                <img class="img-fluid " src="img/logo_gts_alta_blanco.png" alt="Logo gaftaf Sport" />
+            </div>
+
+        </nav>
+        <!-- End sidebar -->
+
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- open sidebar menu -->
+
+
+            <div id="desconectar" class="fixed-top bg-dark" style="height: 80px;">
+                <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                    <img src="img/ico-menu.png" /> <span>Menu</span>
+                </a>
+                <div style="position: absolute; margin-top:27px;right: 10px;">
+                    <img class="img-fluid " src="assets/img/logo.png" alt="Logo gaftaf Sport" />
+                </div>
+            </div>
+
+
+
+            <!-- Nuevo Partido 1 -->
+
+            <div class="container">
+                <div class="row" style="background-color: #292d32">
+                    <div class="col-md-8" style="margin-top: 100px;color:white">
+                        <h1 style="color:white;text-align: center">Datos del Partido</h1>
+                        <p style="line-height: 23px">Rellena los campos con los datos del partido...</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="section-1-container section-container" id="section-1">
+                <div class="container">
+
+                    <div class="row" style="margin-top: 25px">
+                        <div class="col-lg-12">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-success card-header-icon">
+                                    <div class="card-icon">
+                                        <img src="img/ico-pareja-blanco.png" >
+                                    </div>
+                                    <p class="card-category">Datos del partido</p>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <section class="panel">
+
+                                            <div class="panel-body">
+
+
+                                                <form method="get">
+
+                                                    <div class="col-md-12" style="margin-top:20px;">
+                                                        <label>NOMBRE CONTRINCANTES</label>
+                                                        <input type="text" id="r_reves" name="r_reves" class="form-control amigos" placeholder="Rival REVÉS" style="background-color: #eee; border: 1px solid #8f9091;">
+                                                    </div>
+
+
+                                                    <div class="col-md-12" style="margin-top: 20px">
+                                                        <input type="text" id="r_derecha" name="r_derecha" class="form-control amigos" placeholder="Rival DERECHA" style="background-color: #eee;border: 1px solid #8f9091;">
+                                                    </div>
+
+
+                                                    <div class="col-md-12" style="margin-top: 25px">
+                                                        <label>NOMBRE DE TU COMPAÑERO</label>
+                                                        <input type="text" id="compi" name="compi" class="form-control amigos" placeholder="Nombre COMPI">
+                                                    </div>
+
+
+                                                    <div class="form-group" style="margin-top: 30px;">
+                                                        <label>DINOS EN QUE POSICIÓN JUGASTE</label>
+
+                                                        <div class="col-md-12" style="margin-top: -20px;">
+                                                            <label>
+                                                                <input type="radio" id="reves" name="posicion" value="reves">
+                                                                Jugué al REVÉS
+                                                            </label>
+
+                                                        </div>
+
+                                                        <div class="col-md-12" style="margin-top: -20px; margin-left:18px">
+                                                            <label>
+                                                                <input type="radio" id="derecha" name="posicion" value="derecha">
+                                                                Jugué a la DERECHA
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12">
+                                                        <label>CLUB DONDE JUGASTEIS</label>
+                                                        <input type="text" id="club" name="club" class="form-control clubs" placeholder="NOMBRE DEL CLUB">
+                                                    </div>
+
+
+                                                    <div class="col-md-12" style="margin-top: 25px;margin-left: -6px">
+                                                        <label>
+                                                            <input type="radio" id="indoor" name="tipo_pista" value="indoor">
+                                                            Jugamos en pista INDOOR
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="col-md-12" style="margin-top: -25px">
+                                                        <label>
+                                                            <input type="radio" id="outdoor" name="tipo_pista" value="outdoor">
+                                                            Jugamos en pista OUTDOOR
+                                                        </label>
+
+                                                    </div>
+
+                                                    <h2 style="font-size: 20px; margin-top: 25px"><b>RESULTADO DEL PARTIDO</b></h2>
+
+                                                    <hr style="margin: 0px 70px 0px 70px;border-top: dotted 1px;">
+
+
+                                                    <div class="row" style="padding: 0px  12px  0px  12px">
+                                                        <div class="col-6">
+
+                                                            <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 1</span><br>Mi compi y yo</div>
+                                                            <select class="form-control" name="set1" id="set1">
+                                                                <option value="-">-</option>
+                                                                <option value="0">0</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                            </select>
+                                                        </div>
+
+
+                                                        <div class="col-6">
+                                                            <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 1</span><br>Mis rivales</div>
+                                                            <select class="form-control" name="set1_rivales" id="set1r" style="background-color: #343a40; color: white">
+                                                                <option value="-">-</option>
+                                                                <option value="0">0</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+                                                    <div id="segundo_set" style="display:none">
+
+                                                        <hr style="margin: 20px 15px 0px 15px;border-top: dotted 1px;">
+
+                                                        <div class="row" style="padding: 0px  12px  0px  12px">
+
+                                                            <div class="col-6">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 2</span><br>Mi compi y yo</div>
+                                                                <select class="form-control" name="set2" id="set2">
+                                                                    <option value="-">-</option>
+                                                                    <option value="0">0</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
+                                                                    <option value="6">6</option>
+                                                                    <option value="7">7</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="col-6">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 2</span><br>Mis rivales</div>
+                                                                <select class="form-control" name="set2_rivales" id="set2r" style="background-color: #343a40; color: white">
+                                                                    <option value="-">-</option>
+                                                                    <option value="0">0</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
+                                                                    <option value="6">6</option>
+                                                                    <option value="7">7</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div id="tercer_set" style="display:none">
+                                                        <hr style="margin: 20px 15px 0px 15px;border-top: dotted 1px;">
+                                                        <div class="row" style="padding: 0px  12px  0px  12px">
+
+                                                            <div class="col-6">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 3</span><br>Mi compi y yo</div>
+                                                                <select class="form-control" name="set3" id="set3">
+                                                                    <option value="-">-</option>
+                                                                    <option value="0">0</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
+                                                                    <option value="6">6</option>
+                                                                    <option value="7">7</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="col-6">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 3</span><br>Mis rivales</div>
+                                                                <select class="form-control" name="set3_rivales" id="set3r" style="background-color: #343a40; color: white">
+                                                                    <option value="-">-</option>
+                                                                    <option value="0">0</option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
+                                                                    <option value="6">6</option>
+                                                                    <option value="7">7</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="col-md-12 text-center" style="margin-top: 40px">
+                                                        <button id="enviar" type="button" class="btn btn-success" style="padding: 10px 20px 10px 20px;"> <img src="img/ico_guardar.png" > <span> Guardar Datos</span></button>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </section>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="card-footer">
+                                    <div class="stats">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 1 -->
+
+
+
+            <div class="row">
+                <div class="col-md-12 text-center" style="margin:-60px 0px 20px 0px">
+                    <button id="mi_partido" type="button" class="btn btn-primary" style="padding: 0px 20px 0px 20px;"> <img class="img-fluid" src="img/ico-volver.png" /><span> Volver a Mi Partido</span></button>
+                </div>
+            </div>
+
+
+            <!-- Footer -->
+            <footer class="footer-container" style="background-color: white">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            <img class="img-fluid " src="img/logo_gts_alta.png" alt="Logo gaftaf Sport" />
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col" style="font-size: 13px">
+                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+        <!-- End content -->
+
+    </div>
+    <!-- End wrapper -->
+
+
+    <!-- modal -->
+    <div class="modal fade" id="mensaje" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color:#0088cc">¡Datos guardados!</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end modal -->
+
+
+    <!-- Javascript -->
+     <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/jquery-ui-v1/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="js/funciones_nuevo_partido.js"></script>
+
+
+    <script>
+        $("#mi_partido").on('click', function() {
+            ir_a_mi_partido();
+        });
+
+
+
+
+        function ocultar_set2() {
+            $('select[id=set2]').val("-");
+            $('select[id=set2_rivales]').val("-");
+            $("#segundo_set").css("display", "none");
+        }
+
+        function ocultar_set3() {
+            $('select[id=set3]').val("-");
+            $('select[id=set3_rivales]').val("-");
+            $("#tercer_set").css("display", "none");
+        }
+
+
+
+        function comprobar_sets() {
+
+            var s1 = $('select[id=set1]').val();
+            var s2 = $('select[id=set2]').val();
+            var s1r = $('select[id=set1r]').val();
+            var s2r = $('select[id=set2r]').val();
+
+            var vic = 0;
+            var der = 0;
+
+            //set 1
+            if (s1 != "-" && s1r != "-") {
+                if ((s1 == 6 && s1r < 6) || (s1 == 7 && s1r == 6) || (s1r == 6 && s1 < 6) || (s1r == 7 && s1 == 6) || (s1 == 7 && s1r == 5) || (s1 == 5 && s1r == 7)) {
+
+                    $("#segundo_set").css("display", "block");
+
+                    //averigua quien gano el primer set
+                    if (s1 > s1r) {
+                        vic = 1;
+                    } else {
+                        der = 1;
+                    };
+
+                } else {
+                    ocultar_set2();
+                    ocultar_set3();
+                }
+            } else {
+                ocultar_set2();
+                ocultar_set3();
+            }
+
+
+            //set 2
+            if (s2 != "-" && s2r != "-") {
+                if ((s2 == 6 && s2r < 6) || (s2 == 7 && s2r == 6) || (s2r == 6 && s2 < 6) || (s2r == 7 && s2 == 6) || (s2 == 7 && s2r == 5) || (s2 == 5 && s2r == 7)) {
+
+                    //$("#segundo_set").css("display", "block");
+
+                    //averigua quien gano el segundo set y si jugaron 3 set muestro los select del tercero
+                    if (s2 > s2r) {
+                        vic = vic + 1;
+                    } else {
+                        der = der + 1;
+                    };
+
+                    if (vic == der) {
+                        $("#tercer_set").css("display", "block");
+                    } else {
+                        ocultar_set3();
+                    }
+                } else {
+                    ocultar_set3();
+                }
+            } else {
+                ocultar_set3();
+            }
+
+        } //fin comprobar sets
+
+
+        $("#set1").change(function() {
+            comprobar_sets();
+        });
+        $("#set1r").change(function() {
+            comprobar_sets();
+        });
+        $("#set2").change(function() {
+            comprobar_sets();
+        });
+        $("#set2r").change(function() {
+            comprobar_sets();
+        });
+
+    </script>
+
+
+</body>
+
+</html>

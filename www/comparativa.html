@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Memory</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap4/css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css">
+
+    <link rel="stylesheet" href="assets/css/material-dashboard.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <!-- graficos -->
+    <link rel="stylesheet" href="assets/vendor/morris/morris.css" />
+
+
+    <style>
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        /*************CARDS LISTADO**********/
+
+        .tj_partidos {
+            padding: 14px 12px 0px 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+            background-color:
+                white;
+            border-left:
+                3px solid #0088cc;
+        }
+
+        .tj_cat {
+            font-size: 40px;
+            color: #0088cc;
+        }
+
+        .tj_titulo {
+            font-size: 17px;
+            margin-left: 60px;
+            margin-top: 0px;
+        }
+
+        .tj_dato {
+            color: black;
+            font-size: 18px;
+            text-align: right;
+            margin-top: -20px;
+            margin-right: 25px;
+        }
+
+        .tj_dato_medias {
+            color: black;
+            font-size: 18px;
+            text-align: right;
+            margin-top: -10px;
+            margin-right: 25px;
+            line-height: 25px;
+            /*border: 1px solid #000;*/
+        }
+
+        .tj_icono {
+            font-size: 40px;
+            color: #0088cc;
+        }
+
+        .tam_txt {
+            font-size: 14px;
+            color: #555555;
+            font-style: italic;
+        }
+
+        .tipo-label {
+            font-family: "Arial";
+            font-size: 12px;
+            color: #000;
+        }
+
+
+
+
+        /**************END CARDS**************/
+        li{
+            margin-top: -8px;
+        }
+
+
+        hr.style3 {
+            border-top: 1px dashed #8c8b8b;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar" style="margin-top: 80px;">
+
+            <!-- close sidebar menu -->
+            <div class="dismiss">
+                <img src="img/ico-arrow-left.png" />
+            </div>
+
+          
+
+            <ul class="list-unstyled menu-elements" style="margin-top: -5px">
+                <li>
+                    <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
+                </li>
+                <li>
+                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                </li>
+                <li>
+                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                </li>
+                <li>
+                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                </li>
+                <li>
+                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                </li>
+                <li>
+                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                </li>
+                <li>
+                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                </li>
+                <li class="active">
+                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                </li>
+                <li>
+                    <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                </li>
+
+            </ul>
+            <div class="col-8 offset-2" style="margin-top: 35x">
+                <img class="img-fluid " src="img/logo_gts_alta_blanco.png" alt="Logo gaftaf Sport" />
+            </div>
+
+        </nav>
+        <!-- End sidebar -->
+
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- open sidebar menu -->
+
+
+            <div id="desconectar" class="fixed-top bg-dark" style="height: 80px;">
+                <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                    <img src="img/ico-menu.png" /> <span>Menu</span>
+                </a>
+                <div style="position: absolute; margin-top:27px;right: 10px;">
+                    <img class="img-fluid " src="assets/img/logo.png" alt="Logo gaftaf Sport" />
+                </div>
+            </div>
+
+
+
+            <!-- Nuevo Partido 1 -->
+
+            <div class="container">
+                <div class="row" style="background-color: #292d32">
+                    <div class="col-12" style="margin-top: 80px;margin-bottom: 20px;color:white">
+
+                        <h1 style="color:white;text-align: center">Comparativa</h1>
+
+                        <button id="volver" type="button" class="btn btn-primary" style="font-size:12px"><img src="img/ico-pelota.png"> Volver al listado</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id='datos'>
+
+                <!-- Section 1 -->
+                <div class="container">
+                    <div class="row" style="margin-top: 25px">
+                        <div class="col-lg-12">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-warning card-header-icon">
+                                    <div class="card-icon">
+
+                                        <img class="img-fluid" src="img/ico-comparativa.png" />
+                                    </div>
+                                </div>
+
+                                <div class="row" id="contenedor_a">
+
+                                    <div class="col-4">
+                                        <p style="font-size: 15px; line-height: 20px;text-align: right; padding-left: 15px;margin-top: 15px">
+                                            Fecha/hora:<br>
+                                            Club:<br>
+                                            Rivales: <br>
+                                            Compañero: <br>
+                                            Lado: <br>
+                                            Resultado: <br>
+                                        </p>
+                                    </div>
+                                    <div class="col-8">
+                                        <p id="partido_a" style="font-size: 15px; line-height: 20px;text-align: left; margin-top: 15px">
+                                            <b><span id="">-</span></b><br>
+                                            <b><span id="">-</span></b><br>
+                                            <b><span id="">-</span></b><br>
+                                            <b><span id="">-</span></b><br>
+                                            <b><span id="">-</span></b><br>
+                                            <b><span id="">-</span></b><br>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <hr class="style3" style="margin: 10px 50px 0px 50px;">
+                                <p style="text-align: center">VS</p>
+                                <hr class="style3" style="margin: -18px 50px 10px 50px;">
+
+                                <div class="row" id="contenedor_b">
+
+                                    <div class="col-4">
+                                        <p style="font-size: 15px; line-height: 20px;text-align: right; padding-left: 15px;margin-top: 15px">
+                                            Fecha/hora:<br>
+                                            Club:<br>
+                                            Rivales: <br>
+                                            Compañero: <br>
+                                            Lado: <br>
+                                            Resultado: <br>
+                                        </p>
+                                    </div>
+                                    <div class="col-8">
+                                        <p id="partido_b" style="font-size: 15px; line-height: 20px;text-align: left; margin-top: 15px">
+                                            <b><span id="">-</span></b><br>
+                                            <b><span id="">-</span></b><br>
+                                            <b><span id="">-</span></b><br>
+                                            <b><span id="">-</span></b><br>
+                                            <b><span id="">-</span></b><br>
+                                            <b><span id="">-</span></b><br>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h1><b>COMPARATIVA MÉTRICAS</b></h1>
+
+                <div class="col-md-12">
+                    <div class="tj_partidos shadow-sm">
+                        <img style="float: left" src="img/ico-reloj.png">
+                        <h3 class="tj_titulo">Duración partido:</h3>
+                        <h1 class="tj_dato" id="tiempo">-</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="tj_partidos shadow-sm">
+                        <img style="float: left" src="img/corriendo.png">
+                        <h3 class="tj_titulo">Metros recorridos:</h3>
+                        <h1 class="tj_dato" id="metros">-</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
+                        <i class="fa fa-fire float-left tj_cat tj_icono"></i>
+                        <h3 class="tj_titulo">Calorías consumidas:</h3>
+                        <p class="tj_dato_medias" id="calorias">-</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="tj_partidos shadow-sm">
+                        <img style="float: left" src="img/totalgolpes.png">
+                        <h3 class="tj_titulo">Total golpes:</h3>
+                        <h1 class="tj_dato" id="golpes">-</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="tj_partidos shadow-sm">
+                        <img style="float: left" src="img/pala_derecha.png">
+                        <h3 class="tj_titulo t_derechas_p">Derechas:</h3>
+                        <h1 class="tj_dato" id="derechas">-</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="tj_partidos shadow-sm">
+                        <img style="float: left" src="img/pala_izquierda.png">
+                        <h3 class="tj_titulo t_reveses_p">Revéses:</h3>
+                        <h1 class="tj_dato" id="reveses">-</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="tj_partidos shadow-sm">
+                        <img style="float: left" src="img/pala_derecha.png">
+                        <h3 class="tj_titulo  t_g_derechas_p">Globos derecha:</h3>
+                        <h1 class="tj_dato" id="globo_d">-</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="tj_partidos shadow-sm">
+                        <img style="float: left" src="img/pala_izquierda.png">
+                        <h3 class="tj_titulo t_g_reveses_p">Globos revés:</h3>
+                        <h1 class="tj_dato" id="globo_r">-</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="tj_partidos shadow-sm">
+                        <img style="float: left" src="img/remate.png">
+                        <h3 class="tj_titulo">Remates:</h3>
+                        <h1 class="tj_dato" id="remate">-</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
+                        <img style="float: left" src="img/ico_velocidad_maxima.png">
+                        <h3 class="tj_titulo">Velocidad máxima de impacto:</h3>
+                        <p class="tj_dato_medias" id="velocidad_m">
+                            <b><span class="tam_txt t_derecha_p">Derecha:</span> <span>-</span></b><br>
+                            <b><span class="tam_txt t_reves_p">Revés:</span> <span>-</span></b><br>
+                            <b><span class="tam_txt">Remate:</span> <span>-</span></b><br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
+                        <img style="float: left" src="img/ico_velocidad_media.png">
+                        <h3 class="tj_titulo">Velocidad media de impacto:</h3>
+                        <p class="tj_dato_medias" id="medias">
+                            <b><span class="tam_txt">Derechas:</span> <span>-</span></b><br>
+                            <b><span class="tam_txt">Revéses:</span> <span>-</span></b><br>
+                            <b><span class="tam_txt">Globos derecha:</span> <span>-</span></b><br>
+                            <b><span class="tam_txt">Globos revés:</span> <span>-</span></b><br>
+                            <b><span class="tam_txt">Remates:</span> <span>-</span></b><br>
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <!-- -------------------------   GRAFICAS ------------------------ -->
+
+                <!-- grafica 1 -->
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <hr style="margin-top: 40px">
+                        <div style="margin: 0px 20px 0px 20px">
+                            <h1 class="t_cc_d">Golpes Derechas</h1>
+                            <h6 style="font-size:15px">Comparativa de golpes de derechas en intervalos de 10 min.</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label t_derechas"> Derechas</span>
+                                <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label t_derechas"> Derechas</span>
+                            </div>
+                        </div>
+                        <!-- Morris: Bar -->
+                        <div class="chart chart-md" id="grafica_1" style="z-index: 1"></div>
+                    </div>
+                </div>
+
+                <!-- grafica 2 -->
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <hr style="margin-top: 40px">
+                        <div style="margin: 0px 20px 0px 20px">
+                            <h1 class="t_cc_r">Golpes Revéses</h1>
+                            <h6 style="font-size:15px">Comparativa de golpes de revéses en intervalos de 10 min.</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label t_reveses"> Revéses</span>
+                                <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label t_reveses"> Revéses</span>
+                            </div>
+                        </div>
+                        <!-- Morris: Bar -->
+                        <div class="chart chart-md" id="grafica_2" style="z-index: 1"></div>
+                    </div>
+                </div>
+
+                <!-- grafica 3 -->
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <hr style="margin-top: 40px">
+                        <div style="margin: 0px 20px 0px 20px">
+                            <h1>Golpes de Globo</h1>
+                            <h6 style="font-size:15px">Comparativa de golpes de globo derecha y globo revés en intervalos de 10 min.</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label t_g_derecha_reves"> Globos derecha/revés</span>
+                                <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label t_g_derecha_reves"> Globos derecha/revés</span>
+                            </div>
+                        </div>
+
+                        <!-- Morris: Bar -->
+                        <div class="chart chart-md" id="grafica_3" style="z-index: 1"></div>
+                    </div>
+                </div>
+
+                <!-- grafica 4 -->
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <hr style="margin-top: 40px">
+                        <div style="margin: 0px 20px 0px 20px">
+                            <h1>Golpes Remate</h1>
+                            <h6 style="font-size:15px">Comparativa de golpes de remate en intervalos de 10 min.</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Remate</span>
+                                <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label"> Remate</span>
+                            </div>
+                        </div>
+
+                        <!-- Morris: Bar -->
+                        <div class="chart chart-md" id="grafica_4" style="z-index: 1"></div>
+                    </div>
+                </div>
+
+                <!-- grafica 5 -->
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <hr style="margin-top: 40px">
+                        <div style="margin: 0px 20px 0px 20px">
+                            <h1>Total Golpes</h1>
+                            <h6 style="font-size:15px">Comparativa total de golpes realizados en intervalos de 10 min.</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Total golpes</span>
+                                <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label"> Total golpes</span>
+                            </div>
+                        </div>
+
+                        <!-- Morris: Bar -->
+                        <div class="chart chart-md" id="grafica_5" style="z-index: 1"></div>
+                    </div>
+                </div>
+
+                <!-- grafica 6 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr style="margin-top: 40px">
+                        <div style="margin: 0px 20px 0px 20px">
+                            <h1>Metros recorridos</h1>
+                            <h6 style="font-size:15px">Distancia recorrida en intervalos de 10 min.</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Distancia recorrida</span>
+                                <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label"> Distancia recorrida</span>
+                            </div>
+                        </div>
+                        <!-- Morris: Line -->
+                        <div class="chart chart-md" id="grafica_6" style="z-index: 1"></div>
+                    </div>
+                </div>
+
+                <!-- grafica 7 
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr style="margin-top: 40px">
+                        <div style="margin: 0px 20px 0px 20px">
+                            <h1>Rendimiento</h1>
+                            <h6 style="font-size:15px">Rendimiento en térmios de porcentaje en intervalos de 10 min.</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Rendimiento</span>
+                                <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label"> Rendimiento</span>
+                            </div>
+                        </div>
+                        <div class="chart chart-md" id="grafica_7"></div>
+                    </div>
+                </div>
+-->
+
+
+                <!-- grafica 8 DERECHAS golpes vs velocidad  -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr style="margin-top: 40px">
+                        <div style="margin: 0px 20px 0px 20px">
+                            <h1 class="t_cc_v_d">Velocidad Derechas</h1>
+                            <h6 style="font-size:15px">Número de golpes, velocidad media y velocidad máxima golpes de derecha en intervalos de 10 min.</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Velocidad Máxima</span>
+                                <i class="fa fa-square" style="color:#34bcd5"></i> <span class="tipo-label t_vmderechas"> V.M. Derechas</span>
+                                <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label"> Velocidad Máxima</span>
+                                <i class="fa fa-square" style="color:#18d105"></i> <span class="tipo-label t_vmderechas"> V.M. Derechas</span>
+                            </div>
+                        </div>
+                        <!-- Morris: Line -->
+                        <div class="chart chart-md" id="grafica_8" style="z-index: 1"></div>
+                    </div>
+                </div>
+                <!-- grafica 9 REVESES golpes vs velocidad  -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr style="margin-top: 40px">
+                        <div style="margin: 0px 20px 0px 20px">
+                            <h1 class="t_cc_v_r">Velocidad Revéses</h1>
+                            <h6 style="font-size:15px">Comparativa de velocidad media y velocidad máxima de revéses en intervalos de 10 min.</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Velocidad Máxima</span>
+                                <i class="fa fa-square" style="color:#34bcd5"></i> <span class="tipo-label t_vmreveses"> V.M. Revéses</span>
+                                <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label"> Velocidad Máxima</span>
+                                <i class="fa fa-square" style="color:#18d105"></i> <span class="tipo-label t_vmreveses"> V.M. Revéses</span>
+                            </div>
+                        </div>
+                        <!-- Morris: Line -->
+                        <div class="chart chart-md" id="grafica_9" style="z-index: 1"></div>
+                    </div>
+                </div>
+                <!-- grafica 10 GLOBO DERECHA golpes vs velocidad  -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr style="margin-top: 40px">
+                        <div style="margin: 0px 20px 0px 20px">
+                            <h1>Velocidad Globos</h1>
+                            <h6 style="font-size:15px">Comparativa de velocidad media de globos de derecha y revés en intervalos de 10 min.</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label t_g_vmderechas"> V.M. Globos de derecha</span>
+                                <i class="fa fa-square" style="color:#34bcd5"></i> <span class="tipo-label t_g_vmreveses"> V.M. Globos de revés</span>
+                                <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label t_g_vmderechas"> V.M. Globos de derecha</span>
+                                <i class="fa fa-square" style="color:#18d105"></i> <span class="tipo-label t_g_vmreveses"> V.M. Globos de revés</span>
+                            </div>
+                        </div>
+                        <!-- Morris: Line -->
+                        <div class="chart chart-md" id="grafica_10" style="z-index: 1"></div>
+                    </div>
+                </div>
+               
+                <!-- grafica 11 REMATES golpes vs velocidad  -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr style="margin-top: 40px">
+                        <div style="margin: 0px 20px 0px 20px">
+                            <h1>Velocidad Remates</h1>
+                            <h6 style="font-size:15px">Comparativa velocidad media y velocidad máxima golpes de remate en intervalos de 10 min.</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Velocidad Máxima</span>
+                                <i class="fa fa-square" style="color:#34bcd5"></i> <span class="tipo-label"> V.M. Remates</span>
+                                <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label"> Velocidad Máxima</span>
+                                <i class="fa fa-square" style="color:#18d105"></i> <span class="tipo-label"> V.M. Remates</span>
+                         
+                            </div>
+                        </div>
+                        <!-- Morris: Line -->
+                        <div class="chart chart-md" id="grafica_11" style="z-index: 1"></div>
+                    </div>
+                </div>
+                <!--fin graficas -->
+
+                <!--fin panel datos -->
+            </div>
+
+
+            <!-- Footer -->
+            <footer class="footer-container" style="background-color: white">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            <img class="img-fluid " src="img/logo_gts_alta.png" alt="Logo gaftaf Sport" />
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col" style="font-size: 13px">
+                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+        <!-- End content -->
+
+    </div>
+    <!-- End wrapper -->
+
+
+
+    <!-- modal borrar partido-->
+    <div class="modal fade" id="mensaje_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">ELIMINAR PARTIDO
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color:red;font-size: 15px">¿Estas seguro de querer eliminar este partido?</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                    <button id="eliminar_modal" type="button" class="btn btn-danger" data-dismiss="modal">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end modal -->
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+
+    <!-- graficas -->
+
+    <script src="assets/vendor/raphael/raphael.js"></script>
+    <script src="assets/vendor/morris/morris.js"></script>
+
+    <script src="js/funciones_comparativa.js"></script>
+
+
+    <script>
+        //grafica golpes
+        function grafica_1() {
+
+            //tiempo en minutos
+            var morrisBarData = [];
+            var tiempo_freq = 10; //frecuencia en minutos de cada segmento de barras
+
+            for (i = 0; i < 12; i++) {
+
+                file = {
+                    x: tiempo_freq + ' min',
+                    a: Math.round(a_arr_g_dere[i]),
+                    b: Math.round(b_arr_g_dere[i])
+                };
+                morrisBarData.push(file);
+                tiempo_freq += 10; //10 min
+            }
+
+
+            Morris.Bar({
+                element: 'grafica_1',
+                resize: true,
+                data: morrisBarData,
+                xkey: 'x',
+                ykeys: ['a', 'b'],
+                labels: [eti_der, eti_der],
+                barColors: ['#0088cc', '#119904'],
+                hideHover: false,
+                smooth: false,
+                stacked: false
+            });
+
+        }
+
+        function grafica_2() {
+
+            //tiempo en minutos
+            var morrisBarData = [];
+            var tiempo_freq = 10; //frecuencia en minutos de cada segmento de barras
+
+            for (i = 0; i < 12; i++) {
+
+                file = {
+                    x: tiempo_freq + ' min',
+                    a: Math.round(a_arr_g_reve[i]),
+                    b: Math.round(b_arr_g_reve[i])
+                };
+                morrisBarData.push(file);
+                tiempo_freq += 10; //10 min
+            }
+
+
+            Morris.Bar({
+                element: 'grafica_2',
+                resize: true,
+                data: morrisBarData,
+                xkey: 'x',
+                ykeys: ['a', 'b'],
+                labels: [eti_rev, eti_rev],
+                barColors: ['#0088cc', '#119904'],
+                hideHover: false,
+                smooth: false,
+                stacked: false
+            });
+
+        }
+
+        function grafica_3() {
+
+            //tiempo en minutos
+            var morrisBarData = [];
+            var tiempo_freq = 10; //frecuencia en minutos de cada segmento de barras
+
+            for (i = 0; i < 12; i++) {
+
+                file = {
+                    x: tiempo_freq + ' min',
+                    y: Math.round(a_arr_g_glod[i]),
+                    z: Math.round(a_arr_g_glor[i]),
+                    a: Math.round(b_arr_g_glod[i]),
+                    b: Math.round(b_arr_g_glor[i])
+                };
+                morrisBarData.push(file);
+                tiempo_freq += 10; //10 min
+            }
+
+
+            Morris.Bar({
+                element: 'grafica_3',
+                resize: true,
+                data: morrisBarData,
+                xkey: 'x',
+                ykeys: ['y', 'z', 'a', 'b'],
+                labels: [eti_glo_der, eti_glo_rev, eti_glo_der, eti_glo_rev],
+                barColors: ['#0088cc', '#34bcd5', '#119904', '#18d105'],
+                hideHover: false,
+                smooth: false,
+                stacked: false
+            });
+
+        }
+
+        function grafica_4() {
+
+            //tiempo en minutos
+            var morrisBarData = [];
+            var tiempo_freq = 10; //frecuencia en minutos de cada segmento de barras
+
+            for (i = 0; i < 12; i++) {
+
+                file = {
+                    x: tiempo_freq + ' min',
+                    a: Math.round(a_arr_g_rema[i]),
+                    b: Math.round(b_arr_g_rema[i])
+                };
+                morrisBarData.push(file);
+                tiempo_freq += 10; //10 min
+            }
+
+
+            Morris.Bar({
+                element: 'grafica_4',
+                resize: true,
+                data: morrisBarData,
+                xkey: 'x',
+                ykeys: ['a', 'b'],
+                labels: ['Remate', 'Remate'],
+                barColors: ['#0088cc', '#119904'],
+                hideHover: false,
+                smooth: false,
+                stacked: false
+            });
+
+        }
+
+        function grafica_5() {
+
+            //tiempo en minutos
+            var morrisBarData = [];
+            var tiempo_freq = 10; //frecuencia en minutos de cada segmento de barras
+
+            for (i = 0; i < 12; i++) {
+
+                var a_totales = a_arr_g_dere[i] + a_arr_g_reve[i] + a_arr_g_glod[i] + a_arr_g_glor[i] + a_arr_g_rema[i];
+                var b_totales = b_arr_g_dere[i] + b_arr_g_reve[i] + b_arr_g_glod[i] + b_arr_g_glor[i] + b_arr_g_rema[i];
+
+                file = {
+                    x: tiempo_freq + ' min',
+                    a: Math.round(a_totales),
+                    b: Math.round(b_totales)
+                };
+                morrisBarData.push(file);
+                tiempo_freq += 10; //10 min
+            }
+            
+      
+            
+            
+
+            Morris.Bar({
+                element: 'grafica_5',
+                resize: true,
+                data: morrisBarData,
+                xkey: 'x',
+                ykeys: ['a', 'b'],
+                labels: ['Total Golpes', 'Total Golpes'],
+                barColors: ['#0088cc', '#119904'],
+                hideHover: false,
+                smooth: false,
+                stacked: false
+            });
+        }
+
+        function grafica_6() {
+
+            var morrisLineData = [];
+            var tiempo_freq = 10; //minutos
+
+            for (i = 0; i < 12; i++) {
+
+                file = {
+                    y: tiempo_freq + ' min.',
+                    a: Math.round(a_arr_pasos[i] * zancada),
+                    b: Math.round(b_arr_pasos[i] * zancada)
+                };
+
+                morrisLineData.push(file);
+                tiempo_freq += 10;
+            }
+
+            Morris.Area({
+                resize: true,
+                element: 'grafica_6',
+                data: morrisLineData,
+                xkey: 'y',
+                ykeys: ['a', 'b'],
+                labels: ['Metros', 'Metros'],
+                hideHover: false,
+                lineColors: ['#0088cc', '#119904'],
+                lineWidth: ['3', '3'],
+                parseTime: false,
+                behaveLikeLine: true,
+                fillOpacity: '0.5'
+            });
+        }
+
+
+        function grafica_7() {
+
+            //tiempo en minutos
+            var morrisLineData = [];
+            var tiempo_freq = 10; //minutos
+
+            var a_sum_golpes = 0;
+            var a_sum_velocidades = 0;
+            var a_mayor_num = 0;
+            var a_arr_totales = [];
+            var a_porcentaje = 0;
+
+            var b_sum_golpes = 0;
+            var b_sum_velocidades = 0;
+            var b_mayor_num = 0;
+            var b_arr_totales = [];
+            var b_porcentaje = 0;
+
+            for (i = 0; i < 12; i++) {
+
+                a_sum_golpes = a_arr_g_dere[i] + a_arr_g_reve[i] + a_arr_g_glod[i] + a_arr_g_glor[i] + a_arr_g_rema[i];
+                a_sum_velocidades = a_arr_v_dere[i] + a_arr_v_reve[i] + a_arr_v_glod[i] + a_arr_v_glor[i] + a_arr_v_rema[i];
+                a_arr_pasos[i] = Math.round(a_arr_pasos[i] * zancada);
+                a_arr_totales[i] = Math.round(a_sum_golpes + a_sum_velocidades + a_arr_pasos[i]);
+
+                if (a_mayor_num < a_arr_totales[i]) {
+                    a_mayor_num = a_arr_totales[i];
+                }
+
+                b_sum_golpes = b_arr_g_dere[i] + b_arr_g_reve[i] + b_arr_g_glod[i] + b_arr_g_glor[i] + b_arr_g_rema[i];
+                b_sum_velocidades = b_arr_v_dere[i] + b_arr_v_reve[i] + b_arr_v_glod[i] + b_arr_v_glor[i] + b_arr_v_rema[i];
+                b_arr_pasos[i] = Math.round(b_arr_pasos[i] * zancada);
+                b_arr_totales[i] = Math.round(b_sum_golpes + b_sum_velocidades + b_arr_pasos[i]);
+
+                if (b_mayor_num < b_arr_totales[i]) {
+                    b_mayor_num = b_arr_totales[i];
+                }
+            }
+
+
+
+            for (i = 0; i < 12; i++) {
+
+                a_porcentaje = Math.round((100 * a_arr_totales[i]) / a_mayor_num);
+                b_porcentaje = Math.round((100 * b_arr_totales[i]) / b_mayor_num);
+
+                file = {
+                    y: tiempo_freq + ' min.',
+                    a: a_porcentaje,
+                    b: b_porcentaje
+                };
+
+                morrisLineData.push(file);
+                tiempo_freq += 10;
+            }
+
+            Morris.Area({
+                resize: true,
+                element: 'grafica_7',
+                data: morrisLineData,
+                xkey: 'y',
+                ykeys: ['a', 'b'],
+                labels: ['Porcentaje', 'Porcentaje'],
+                hideHover: false,
+                lineColors: ['#0088cc', '#119904'],
+                lineWidth: ['5', '5'],
+                parseTime: false,
+                behaveLikeLine: true,
+                fillOpacity: '0.5'
+            });
+
+        }
+
+//derechas velocidad
+
+        function grafica_8(){
+
+            //tiempo en minutos
+            var morrisLineData = [];
+            var tiempo_freq = 10;
+
+            for (i = 0; i < 12; i++) {
+
+                file = {
+                    y: tiempo_freq + ' min.',
+                    a: a_max_derecha.toFixed(1),
+                    b: a_arr_v_dere[i].toFixed(1),
+                    c: b_max_derecha.toFixed(1),
+                    d: b_arr_v_dere[i].toFixed(1)
+                };
+
+                morrisLineData.push(file);
+                tiempo_freq += 10;
+            }
+
+
+            Morris.Line({
+                resize: true,
+                element: 'grafica_8',
+                data: morrisLineData,
+                xkey: 'y',
+                ykeys: ['a', 'b', 'c', 'd'],
+                labels: ['Max Vel.', 'Vel. Media', 'Max Vel.', 'Vel. Media'],
+                hideHover: false,
+                lineColors: ['#0088cc', '#34bcd5', '#119904', '#18d105'],
+                lineWidth: ['1', '1', '1', '1'],
+                parseTime: false
+            });
+
+        }
+
+        function grafica_9() {
+
+            //tiempo en minutos
+            var morrisLineData = [];
+            var tiempo_freq = 10;
+
+            for (i = 0; i < 12; i++) {
+
+                file = {
+                    y: tiempo_freq + ' min.',
+                    a: a_max_reves.toFixed(1),
+                    b: a_arr_v_reve [i].toFixed(1),
+                    c: b_max_reves.toFixed(1),
+                    d: b_arr_v_reve [i].toFixed(1)
+                };
+
+                morrisLineData.push(file);
+                tiempo_freq += 10;
+            }
+
+
+            Morris.Line({
+                resize: true,
+                element: 'grafica_9',
+                data: morrisLineData,
+                xkey: 'y',
+                ykeys: ['a', 'b', 'c', 'd'],
+                labels: ['Max Vel.', 'Vel. Media', 'Max Vel.', 'Vel. Media'],
+                hideHover: false,
+                lineColors: ['#0088cc', '#34bcd5', '#119904', '#18d105'],
+                lineWidth: ['1', '1', '1', '1'],
+                parseTime: false
+            });
+
+        }
+
+        function grafica_10() {
+
+           //tiempo en minutos
+            var morrisLineData = [];
+            var tiempo_freq = 10;
+
+            for (i = 0; i < 12; i++) {
+
+                file = {
+                    y: tiempo_freq + ' min.',
+                    a: a_arr_v_glod[i].toFixed(1),
+                    b: a_arr_v_glor[i].toFixed(1),
+                    c: b_arr_v_glod[i].toFixed(1),
+                    d: b_arr_v_glor[i].toFixed(1)
+                };
+
+                morrisLineData.push(file);
+                tiempo_freq += 10;
+            }
+
+
+            Morris.Line({
+                resize: true,
+                element: 'grafica_10',
+                data: morrisLineData,
+                xkey: 'y',
+                ykeys: ['a', 'b', 'c', 'd'],
+                labels: [eti_vm_glo_der, eti_vm_glo_rev, eti_vm_glo_der, eti_vm_glo_rev],
+                hideHover: false,
+                lineColors: ['#0088cc', '#34bcd5', '#119904', '#18d105'],
+                lineWidth: ['1', '1', '1', '1'],
+                parseTime: false
+            });
+
+
+        }
+
+        function grafica_11() {
+
+           //tiempo en minutos
+            var morrisLineData = [];
+            var tiempo_freq = 10;
+
+            for (i = 0; i < 12; i++) {
+
+                file = {
+                    y: tiempo_freq + ' min.',
+                    a: a_max_remate.toFixed(1),
+                    b: a_arr_v_rema[i].toFixed(1),
+                    c: b_max_remate.toFixed(1),
+                    d: b_arr_v_rema[i].toFixed(1)
+                };
+
+                morrisLineData.push(file);
+                tiempo_freq += 10;
+            }
+
+
+            Morris.Line({
+                resize: true,
+                element: 'grafica_11',
+                data: morrisLineData,
+                xkey: 'y',
+                ykeys: ['a', 'b', 'c', 'd'],
+                labels: ['Max Vel.', 'Vel. Media', 'Max Vel.', 'Vel. Media'],
+                hideHover: false,
+                lineColors: ['#0088cc', '#34bcd5', '#119904', '#18d105'],
+                lineWidth: ['1', '1', '1', '1'],
+                parseTime: false
+            });
+        }
+
+       
+        /*********************************************************************************/
+        
+        $('#volver').on("click", function() {
+            location.href = 'comparativa_listado.html';
+        });
+
+    </script>
+
+
+</body>
+
+</html>

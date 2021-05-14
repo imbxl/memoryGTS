@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Memory</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap4/css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+
+
+
+    <style>
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        /*************CARDS**********/
+
+        .tarjeta {
+            padding: 12px 12px 0px 12px;
+            border-radius: 8px;
+            margin-top: 10px
+        }
+
+        h1 {
+            text-align: left;
+            font-size: 29px;
+            margin-top: -10px
+        }
+
+        h6 {
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .txt-tam-1 {
+            font-size: 20px;
+        }
+
+        .off_class {
+            color: red;
+        }
+
+
+        /**************END CARDS**************/
+        
+        li{
+            margin-top: -8px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar" style="margin-top: 80px;">
+
+            <!-- close sidebar menu -->
+            <div class="dismiss">
+                <img src="img/ico-arrow-left.png" />
+            </div>
+
+            
+            <ul class="list-unstyled menu-elements" style="margin-top: -5px">
+                <li class="active opacidad">
+                    <a href="index.html" class="desactivar "><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
+                </li>
+                <li class="opacidad">
+                    <a href="nuevo_partido.html" class="desactivar "><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                </li>
+                <li>
+                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                </li>
+                <li class="opacidad">
+                    <a href="listado_partidos.html" class="desactivar "><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                </li>
+                <li class="opacidad">
+                    <a href="historico_rivales.html" class="desactivar "><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                </li>
+                <li class="opacidad">
+                    <a href="historico_compis.html" class="desactivar "><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                </li>
+                <li class="opacidad">
+                    <a href="historico_victorias_derrotas.html" class="desactivar "><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                </li>
+                <li class="opacidad">
+                    <a href="comparativa_listado.html" class="desactivar "><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                </li>
+                <li class="opacidad">
+                    <a href="comprobar_bateria.html" class="desactivar "><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                </li>
+            </ul>
+            <div class="col-8 offset-2" style="margin-top: 35x">
+            
+                    <img class="img-fluid " src="img/logo_gts_alta_blanco.png" alt="Logo gaftaf Sport" />
+               
+            </div>
+
+        </nav>
+        <!-- End sidebar -->
+
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- open sidebar menu -->
+
+
+            <div id="desconectar" class="fixed-top bg-dark" style="height: 80px;">
+                <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                    <img src="img/ico-menu.png" /> <span>Menu</span>
+                </a>
+                <div style="position: absolute; margin-top:27px;right: 10px;">
+                    <img class="img-fluid " src="assets/img/logo.png" alt="Logo memory" />
+                </div>
+            </div>
+
+            <!-- Top content -->
+            <div class="top-content section-container" id="top-content">
+                <div class="container">
+                    <div class="row" style="margin-top: 50px">
+                        <div class="col-md-12">
+
+                            <div class="description wow fadeInLeft" style="background-color: rgba(0, 0, 0, 0.5);  ; border-radius: 8px;padding: 20px 30px 20px 30px;text-align: justify;margin-top:25px">
+
+                                <div id="mensaje">
+
+                                    <h1 style="text-align: center;margin-top:-50px;line-height: 40px;font-size: 35px"><strong>Bienvenido al app de Memory</strong></h1>
+                                    <p style="color: white;line-height: 25px;text-align: left;">
+                                        Darte las gracias por haber adquirido una <strong>pala Memory</strong>.<br><br> Desde ahora podrás conocer aspectos y métricas de tu juego que desconocías, así como visualizar históricos, evoluciones y comparativas de juego.<br><br>
+                                        <strong><span style="font-size: 25px">¡Antes de comenzar debes rellenar los datos de tu perfil! </span></strong>
+                                    </p>
+
+                                    <div class="wow fadeInUp" style=" margin-top: 30px;text-align: center">
+                                        <a class="btn btn-primary btn-customized scroll-link" href="#" role="button" id="ir_a_perfil">
+                                            <img class="img-fluid" src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi Perfil
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Nuevo Partido 1 -->
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div style="background-color: #fff; margin: 30px 15px 15px 15px; border-radius: 10px;padding: 15px">
+
+                            <img class="img-fluid" src="img/ico_nuevo_partido.png" />
+
+                            <h1 style="text-align: center;margin-top: 0px;"><b>Nuevo Partido</b></h1>
+                            <p style="font-size:20px;margin-top: 10px">Descargar Datos</p>
+
+                            <p style="line-height: 20px;margin-top: -10px">Si has acabado de jugar tu partido, pulsa el siguiente botón para acceder a la pantalla de descarga de datos de tu pala Memory...</p>
+
+                            <a class="btn btn-primary btn-customized desactivar opacidad a_ref" href="nuevo_partido.html" role="button">
+                                <img class="img-fluid" src="img/ico_pala-movil.png" width="41" height="28" /> Descargar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Section 1 -->
+
+                <hr style="margin-top:20px">
+
+
+                <div class="row">
+                    <div class="shadow" style="background-color: #fff; margin: 15px 15px 40px 15px; border-radius: 10px;padding: 15px">
+
+                        <div class="col-md-4 section-1-box wow fadeInUp">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="section-1-box-icon">
+                                        <i class="fa fa-question"></i>
+                                    </div>
+                                </div>
+                                <div style="text-align: center;margin-bottom: 20px">
+                                    <h1 style="text-align: center;margin-top: 3px;"><b>Ayuda</b></h1>
+                                    <p style="line-height: 20px">Pulsa el siguiente botón acceder a nuestra guía de ayuda</p>
+
+                                    <a class="btn btn-primary btn-customized " href="ayuda.html" role="button">
+                                        <i class="fa fa-question"></i> Ayuda
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+
+            <!-- Footer -->
+            <footer class="footer-container" style="background-color: white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            <img class="img-fluid " src="img/logo_gts_alta.png" alt="Logo gaftaf Sport" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="font-size: 13px">
+                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- End content -->
+
+    </div>
+    <!-- End wrapper -->
+
+
+
+
+    <!-- modal -->
+    <div class="modal fade" id="mensaje_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color:red">¡Lo primero que debes hacer es pulsar la opción <b>"Mi Perfil"</b> y rellenar los campos del formulario!</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end modal -->
+
+
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.js"></script>
+
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+
+    <script>
+        //(name, version, descrition, db_size)
+        var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+
+        var tabla_MisDatos = 'CREATE TABLE IF NOT EXISTS MisDatos (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, altura TEXT, peso TEXT, edad TEXT, sexo TEXT, mano TEXT)';
+
+        var tabla_Partidos = 'CREATE TABLE IF NOT EXISTS Partidos (id INTEGER PRIMARY KEY AUTOINCREMENT, fecha TEXT, hora TEXT, club TEXT, tipo_pista TEXT, r_reves TEXT, r_derecha TEXT,  posicion TEXT, compi TEXT, set1 TEXT, set2 TEXT, set3 TEXT, tiempo TEXT, g_derechas TEXT, g_reveses TEXT, g_globo_der TEXT, g_globo_rev TEXT, g_remates TEXT, v_derechas TEXT, v_reveses TEXT, v_globo_der TEXT, v_globo_rev TEXT, v_remates TEXT, max_derecha TEXT, max_reves TEXT, max_remate TEXT, pasos TEXT)';
+
+        var select_MisDatos = "SELECT * FROM MisDatos WHERE id=1"; //id=1 solo puede haber un perfil
+
+        function onError(tx, error) {
+            alert("Error: " + error.message);
+            console.log(error.message);
+        }
+
+        function ok_tabla_1() {
+            console.log('ok=' + x);
+            x++;
+            crear_tablas(x);
+        }
+
+        var x = 1;
+        var nombre = '';
+
+        //comprobación
+        function iniciar_bbdd() { // Function Call When Page is ready.
+
+            try {
+                if (!window.openDatabase) { // Check browser is supported SQLite or not.
+                    alert('La BBDD no es soportada por este dispositivo.');
+                } else {
+                    crear_tablas(x); // If supported then call Function for create table in SQLite
+                }
+            } catch (e) {
+
+                if (e == 2) {
+                    // Version number mismatch. 
+                    alert("Versión de BBDD no es válida para este dispositivo");
+                } else {
+                    alert("Unknown error " + e + ".");
+                }
+                return;
+            }
+        }
+
+        function crear_tablas(x) {
+            switch (x) {
+                case 1:
+                    db.transaction(function(tx) {
+                        tx.executeSql(tabla_MisDatos, [], ok_tabla_1, onError);
+                    });
+                    break;
+                case 2:
+                    db.transaction(function(tx) {
+                        tx.executeSql(tabla_Partidos, [], showRecords_miperfil, onError);
+                    });
+                    break;
+            }
+        }
+
+
+        function showRecords_miperfil() { // Function For Retrive data from Database Display records as list
+
+            db.transaction(function(tx) {
+                tx.executeSql(select_MisDatos, [], function(tx, result) {
+
+                    var item = null;
+                    dataset = result.rows;
+
+
+                    //HAY UN PERFIL
+                    if (dataset.length >= 1) { //existe datos y actualiza los datos del formularior
+                        item = dataset.item(0);
+                        //activar botones
+                        nombre = item['nombre'];
+                        activar();
+                    } else { //BBDD vacia NO HAY PERFIL
+                        desactivar();
+                    }
+                });
+            });
+        }
+
+        function modal_datos_no_guardados() {
+            $('#mensaje_1').modal({
+                backdrop: 'static'
+            });
+        }
+
+        $('#ir_a_perfil').click(function() {
+            window.location.href = 'mi_perfil.html';
+        });
+
+        var desactivar_bot = false;
+
+        //estados de activacion de la app
+        $('.desactivar').click(function() {
+
+            if (desactivar_bot == false) {
+                modal_datos_no_guardados();
+                return false;
+            }
+        });
+
+        function desactivar() {
+            $('.opacidad').css("opacity", "0.5");
+            console.log('desactivar');
+            desactivar_bot = false;
+
+        }
+
+        function activar() {
+            $('.opacidad').css("opacity", "1");
+            // bot_desactivar = '.sin_css';
+            console.log('activar');
+            desactivar_bot = true;
+
+            $('#mensaje').html(
+                "<h1 style = 'text-align: center;margin-top:-30px;margin-bottom:50px'> ¡Bienvenido " + nombre +
+                "!"
+            );
+        }
+
+        $(document).ready(function() { 
+            iniciar_bbdd();
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Partidos</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap4/css/bootstrap.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css">
+
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <style>
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        /*************CARDS LISTADO**********/
+
+        .tarjeta_partidos {
+            padding: 8px 12px 6px 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-align: left
+        }
+
+        .tarjeta_fecha {
+            font-size: 13px;
+            text-align: right;
+            margin-top: -20px;
+        }
+
+        .tarjeta_club {
+            font-size: 15px;
+            margin-top: -25px;
+            margin-left: 70px;
+        }
+
+        .tarjeta_club1 {
+            font-size: 15px;
+            color: white;
+            line-height: 18px;
+            margin: -35px 0px 0px 70px;
+        }
+
+        .titulo_clubs {
+            font-size: 17px;
+            color: white;
+            font-weight: 500;
+        }
+
+        /**************END CARDS**************/
+        label {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+
+        }
+        li{
+            margin-top: -8px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar" style="margin-top: 80px;">
+
+            <!-- close sidebar menu -->
+            <div class="dismiss">
+                <img src="img/ico-arrow-left.png" />
+            </div>
+
+
+            <ul class="list-unstyled menu-elements" style="margin-top: -5px">
+                <li>
+                    <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
+                </li>
+                <li>
+                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                </li>
+                <li>
+                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                </li>
+                <li class="active">
+                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                </li>
+                <li>
+                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                </li>
+                <li>
+                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                </li>
+                <li>
+                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                </li>
+                <li>
+                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                </li>
+                <li>
+                    <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                </li>
+
+            </ul>
+            <div class="col-8 offset-2" style="margin-top: 35x">
+                <img class="img-fluid " src="img/logo_gts_alta_blanco.png" alt="Logo gaftaf Sport" />
+            </div>
+
+        </nav>
+        <!-- End sidebar -->
+
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- open sidebar menu -->
+
+
+            <div id="desconectar" class="fixed-top bg-dark" style="height: 80px;">
+                <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                    <img src="img/ico-menu.png" /> <span>Menu</span>
+                </a>
+                <div style="position: absolute; margin-top:27px;right: 10px;">
+                    <img class="img-fluid " src="assets/img/logo.png" alt="Logo gaftaf Sport" />
+                </div>
+            </div>
+
+
+
+            <!-- Nuevo Partido 1 -->
+
+            <div class="container">
+                <div class="row" style="background-color: #292d32">
+                    <div class="col-md-8" style="margin-top: 100px;color:white">
+                        <h1 style="color:white;text-align: center">Mis Partidos</h1>
+                        <p style="line-height: 23px">Pulsa sobre los partidos para ver los detalles...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row" id="resultado">
+
+
+
+                    <!-- Section 1 -->
+                    <!--   <div class="col-md-12">
+                        <a href='mi_partido.html?id='>
+                            <div class="card-box bg-warning tarjeta_partidos">
+                                <i class="fa fa-exclamation float-left text-white" style="font-size: 50px;"></i>
+                                <h1 class="text-white tarjeta_fecha">25/06/2017</h1>
+                                <h6 class="text-white tarjeta_club">Faltan datos</h6>
+                                <h1 class="text-white tarjeta_club">Pulsa para completar datos</h1>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="card-box bg-secondary tarjeta_partidos">
+                            <i class="fa fa-thumbs-down float-left text-white" style="font-size: 50px;"></i>
+                            <h1 class="text-white tarjeta_fecha">25/06/2017</h1>
+                            <p class="tarjeta_club1"><span class="titulo_clubs">Villapadel</span><br>Belasteguin - Juan Martin<br>Compi: Lamperti</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="card-box bg-primary tarjeta_partidos">
+                            <i class="fa fa-trophy float-left text-white" style="font-size: 50px;"></i>
+                            <h1 class="text-white tarjeta_fecha">25/06/2017</h1>
+                            <h6 class="text-white tarjeta_club">Villapadel</h6>
+                            <h1 class="text-white tarjeta_club">Belasteguin - Juan Martin</h1>
+                        </div>
+                    </div>
+                -->
+
+                </div>
+            </div>
+
+
+
+            <!-- <button id="guardar" type="button" class="btn btn-primary " style="padding: 10px 20px 10px 20px;"> <i class="fas fa-align-left"></i> <span>Guardar</span></button> -->
+
+
+            <!-- Footer -->
+            <footer class="footer-container" style="background-color: white;margin-top: 10px;">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            <img class="img-fluid " src="img/logo_gts_alta.png" alt="Logo gaftaf Sport" />
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col" style="font-size: 13px">
+                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+        <!-- End content -->
+
+    </div>
+    <!-- End wrapper -->
+
+    <!-- Javascript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+
+
+    <script>
+        //http://127.0.0.1:50342/memory_v1/listado_partidos.html  averiguar borrado bbdd
+        /* 
+               //puntero raton
+               $(".tarjeta_partidos").mouseover(function() {
+                   // $(this).css("opacity", "0.5");
+                   $(this).css("cursor", "pointer");
+               });
+               $(".tarjeta_partidos").mouseout(function() {
+                   //$(this).css("opacity", "1");
+                   $(this).css("cursor", "default");
+               });
+
+               //no es necesario
+               $(".tarjeta_partidos").on('click', function() {
+                     alert("hola");
+
+                 });*/
+
+        /****************************************************/
+
+        var seleccionar_todo = "SELECT * FROM Partidos ORDER BY id DESC";
+        var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+        var dataset;
+
+        function calcular_victoria_derrota(set1, set2, set3) {
+
+            arr_set1 = set1.split("/");
+            s1 = arr_set1[0];
+            s1r = arr_set1[1];
+
+            arr_set2 = set2.split("/");
+            s2 = arr_set2[0];
+            s2r = arr_set2[1];
+
+            if (set3 == '' || set3 == '-/-') {
+                s3 = 0;
+                s3r = 0;
+            } else {
+                arr_set3 = set3.split("/");
+                s3 = arr_set3[0];
+                s3r = arr_set3[1];
+            }
+
+
+            //calcular victoria o derrota
+
+            var vic = 0;
+            var der = 0;
+
+            if (s1 > s1r) {
+                vic = 1;
+            } else {
+                der = 1;
+            };
+
+            if (s2 > s2r) {
+                vic = vic + 1;
+            } else {
+                der = der + 1;
+            };
+
+            if (s3 > s3r) {
+                vic = vic + 1;
+            } else {
+                der = der + 1;
+            };
+
+
+            if (vic > der) {
+                return victoria = true;
+            } else {
+                return victoria = false;
+            }
+
+        }
+
+
+
+
+        function showRecords() { // Function For Retrive data from Database Display records as list
+
+            db.transaction(function(tx) {
+
+                tx.executeSql(seleccionar_todo, [], function(tx, result) {
+
+                    dataset = result.rows;
+                    var item = null;
+
+                    if (dataset.length == null || dataset.length == 0) {
+
+                        $("#resultado").append(
+                            "<div class='col-md-12' style='margin: 100px 0px 100px 0px'>" +
+                            "<div class='card-box bg-primary tarjeta_partidos'>" +
+                            "<i class='fa fa-exclamation float-left text-white' style='font-size: 50px;'></i>" +
+                            "<h6 style='color:white;padding: 30px 30px 30px 60px'>Aún no hay partidos jugados...</h6>" +
+                            "</div>" +
+                            "</div>"
+                        );
+
+                    } else {
+
+
+
+                        for (i = 0; i < dataset.length; i++) {
+
+                            item = dataset.item(i);
+
+                            var faltan_datos = false;
+                            var victoria = false;
+                            var derrota = false;
+
+                            //averiguar victoria o derrota o faltan datos
+                            
+                            if (item['club'] == null || item['posicion'] == null || item['tipo_pista'] == null || item['r_derecha'] == null || item['r_reves'] == null || item['compi'] == null || item['set1'] == null || item['set2'] == null || item['set1'] == '-/-' || item['set2'] == '-/-') {
+
+                                faltan_datos = true;
+
+                            } else {
+
+                                set1 = item['set1'];
+                                set2 = item['set2'];
+                                set3 = item['set3'];
+
+                                victoria = calcular_victoria_derrota(set1, set2, set3);
+
+                                if (victoria == false) {
+                                    derrota = true;
+                                }
+                            }
+
+                            //faltan datos
+                            if (faltan_datos == true) {
+
+                                $("#resultado").append(
+                                    "<div class='col-md-12'>" +
+                                    "<a href='mi_partido.html?id_partido=" + item['id'] + "'>" +
+                                    "<div class='card-box bg-warning tarjeta_partidos' >" +
+                                    "<img src='img/ico_faltan_datos.png' class='float-left'>" +
+                                    "<h1 class='text-white tarjeta_fecha'>" + item['fecha'] + ' | ' + item['hora'] + "</h1>" +
+                                    "<h6 class='text-white tarjeta_club'> Faltan datos </h6>" +
+                                    "<h1 class='text-white tarjeta_club'> Pulsa para completar partido </h1>" +
+                                    "</div>" +
+                                    "</a>" +
+                                    "</div>"
+                                );
+                            }
+
+                            if (victoria == true) {
+
+                                $("#resultado").append(
+                                    "<div class='col-md-12'>" +
+                                    "<a href='mi_partido.html?id=" + item['id'] + "'>" +
+                                    "<div class='card-box bg-primary tarjeta_partidos'>" +
+                                    "<img src='img/ico_victoria.png' class='float-left' style='widht:55px;height:55px'>" +
+                                    "<h1 class='text-white tarjeta_fecha'>" + item['fecha'] + "</h1>" +
+                                    "<p class='tarjeta_club1'>" +
+                                    "<span class='titulo_clubs'>" + item['club'] + "</span>" +
+                                    "<br>" + item['r_derecha'] + " - " + item['r_reves'] +
+                                    "<br>Compi: " + item['compi'] + "</p>" +
+                                    "</div>" +
+                                    "</a>" +
+                                    "</div>"
+                                );
+                            }
+
+                            if (derrota == true) {
+
+                                $("#resultado").append(
+                                    "<div class='col-md-12'>" +
+                                    "<a href='mi_partido.html?id=" + item['id'] + "'>" +
+                                    " <div class='card-box bg-secondary tarjeta_partidos'>" +
+                                    "<img src='img/ico_derrota.png' class='float-left'>" +
+                                    "<h1 class='text-white tarjeta_fecha'>" + item['fecha'] + "</h1>" +
+                                    "<p class='tarjeta_club1'>" +
+                                    "<span class='titulo_clubs'>" + item['club'] + "</span>" +
+                                    "<br>" + item['r_derecha'] + " - " + item['r_reves'] +
+                                    "<br>Compi: " + item['compi'] + "</p>" +
+                                    "</div>" +
+                                    "</a>" +
+                                    "</div>"
+                                );
+                            }
+                        }
+                        //********* END FOR *************
+                    }
+
+
+                });
+            });
+        }
+
+
+
+
+
+        function onError(tx, error) { // Function for Hendeling Error...
+            alert(error.message);
+        }
+
+
+        $(document).ready(function() {
+
+            showRecords();
+        });
+
+    </script>
+
+
+</body>
+
+</html>

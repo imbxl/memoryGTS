@@ -1,7 +1,0 @@
-{
-    "iosDevP12": "certificates/iosp12cert.p12",
-    "iosDevP12Password": "schellenberg1969",
-    "iosDevelopment": "certificates/Phonegap_Build_Profile.mobileprovision",
-    "platform": "ios",
-    "release": "debug"
-}

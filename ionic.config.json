@@ -1,0 +1,7 @@
+{
+    "name": "memorygts",
+    "type": "custom",
+    "integrations": {
+        "cordova": {}
+    }
+}

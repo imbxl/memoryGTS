@@ -1,0 +1,22 @@
+{
+  "name": "memorygts",
+  "version": "1.0.0",
+  "description": "Monitorización de métricas de padel",
+  "main": "index.js",
+  "scripts": {
+    "test": "prueba"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelms2021/memoryGTS.git"
+  },
+  "keywords": [
+    "memory"
+  ],
+  "author": "Rafael Moret",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelms2021/memoryGTS/issues"
+  },
+  "homepage": "https://github.com/rafaelms2021/memoryGTS#readme"
+}

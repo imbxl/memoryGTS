@@ -324,9 +324,8 @@
                 } else {
                     //(name, version, descrition, db_size)
                     //db = window.openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024);
-                    db = window.sqlitePlugin.openDatabase({
-                        name: 'memory.db',
-                        location: 'default',
+                    db = sqlitePlugin.openDatabase({
+                        name: 'memory.db'
                     });
                     crear_tablas(x); // If supported then call Function for create table in SQLite
                 }

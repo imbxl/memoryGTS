@@ -319,7 +319,7 @@
         function iniciar_bbdd() { // Function Call When Page is ready.
 
             try {
-                if (!window.openDatabase) { // Check browser is supported SQLite or not.
+                if (!window.sqlitePlugin || !window.sqlitePlugin.openDatabase) { // Check browser is supported SQLite or not.
                     alert('La BBDD no es soportada por este dispositivo.');
                 } else {
                     //(name, version, descrition, db_size)

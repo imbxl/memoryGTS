@@ -33,7 +33,8 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ble-central": {},
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-statusbar": {}
     },
     "platforms": [
       "android",

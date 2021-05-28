@@ -294,7 +294,7 @@
 
     <script>
         //(name, version, descrition, db_size)
-        var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+        var db = null;
 
         var tabla_MisDatos = 'CREATE TABLE IF NOT EXISTS MisDatos (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, altura TEXT, peso TEXT, edad TEXT, sexo TEXT, mano TEXT)';
 
@@ -323,6 +323,7 @@
                 if (!window.openDatabase) { // Check browser is supported SQLite or not.
                     alert('La BBDD no es soportada por este dispositivo.');
                 } else {
+                    db = window.sqlitePlugin.openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024);
                     crear_tablas(x); // If supported then call Function for create table in SQLite
                 }
             } catch (e) {
@@ -414,9 +415,9 @@
                 "!"
             );
         }
-
-        $(document).ready(function() { 
-            iniciar_bbdd();
+        
+        document.addEventListener('deviceready', function() {
+          iniciar_bbdd();
         });
 
     </script>

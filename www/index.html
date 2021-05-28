@@ -419,12 +419,10 @@
                 "<h1 style = 'text-align: center;margin-top:-30px;margin-bottom:50px'> ¡Bienvenido " + nombre +
                 "!"
             );
-        }
+        }      
         
-        document.addEventListener('deviceready', function() {            
-            jQuery(document).ready(function() {
-                iniciar_bbdd();
-            });
+        jQuery(document).ready(function() {
+            iniciar_bbdd();
         });
 
     </script>

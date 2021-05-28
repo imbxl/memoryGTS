@@ -17,6 +17,7 @@
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-statusbar" />
     <plugin name="cordova-plugin-inappbrowser" />
+    <plugin name="cordova-sqlite-storage" />
     <allow-navigation href="*" />
     <access origin="*" />
     <allow-intent href="*" />

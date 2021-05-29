@@ -213,41 +213,31 @@ $('.desactivar').click(function () {
 
 //***************************************************************
 
-    document.addEventListener("DOMContentLoaded", function() {
-        document.addEventListener('deviceready', function(){
-            db = sqlitePlugin.openDatabase({
-                name: 'memory.db',
-                iosDatabaseLocation: 'Documents'
-            });
-
+document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener('deviceready', function(){
+        db = sqlitePlugin.openDatabase({
+            name: 'memory.db',
+            iosDatabaseLocation: 'Documents'
+        });
         desactivar();
         showRecords();
-
-
         //cambio de color en los titulos
         $('#nombre_inp').focus(function () {
             $('#atencion1').css('color', 'black');
         });
-
         $('input:radio[name=sexo]').change(function () {
             $('#atencion2').css('color', 'black');
         });
         $('input:radio[name=mano]').change(function () {
             $('#atencion3').css('color', 'black');
         });
-
-
         //INSERTO EL FORMULARIO EN BBDD
         $("#guardar").on('click', function () {
-
-            var comprobar = true;
-
+            var comprobar = true;                
             //compruebo que se añaden todos los campos
             nombre = $('#nombre_inp').val();
             sexo = $('input:radio[name=sexo]:checked').val();
             mano = $('input:radio[name=mano]:checked').val();
-
-
             //comprobar campos
             if (nombre == '' || nombre == undefined) {
                 modal_datos_no_guardados();
@@ -255,9 +245,7 @@ $('.desactivar').click(function () {
                 comprobar = false;
             } else {
                 $('#atencion1').css('color', 'black');
-
             }
-
             if (sexo == '' || sexo == undefined) {
                 modal_datos_no_guardados();
                 $('#atencion2').css('color', 'red');
@@ -265,7 +253,6 @@ $('.desactivar').click(function () {
             } else {
                 $('#atencion1').css('color', 'black');
             }
-
             if (mano == '' || sexo == undefined) {
                 modal_datos_no_guardados();
                 $('#atencion3').css('color', 'red');
@@ -273,21 +260,18 @@ $('.desactivar').click(function () {
             } else {
                 $('#atencion1').css('color', 'black');
             }
-
             if (comprobar == true) {
                 if (id_existe == 1) { //existen datos con lo cual hay que actualizarlos
                     updateRecord();
                 } else {
                     insertRecord(); //graba los datos por primera vez
                 }
-                
                 //activo botones menu
                 activar();
             }
-
-
         });
     });
+});
 
  $(function() {
     $(document).on('input', '#altura', function(e) {

@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Memory</title>
+
+    <link rel="stylesheet" href="assets/vendor/bootstrap4/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css">
+
+
+    <link rel="stylesheet" href="assets/css/material-dashboard.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <style>
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        /*************CARDS LISTADO**********/
+
+        .tarjeta_partidos {
+            padding: 8px 12px 6px 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-align: left
+        }
+
+        .tarjeta_fecha {
+            font-size: 13px;
+            text-align: right;
+            margin-top: -20px;
+        }
+
+        .tarjeta_club {
+            font-size: 15px;
+            margin-top: -25px;
+            margin-left: 70px;
+        }
+
+        .tarjeta_club1 {
+            font-size: 15px;
+            color: white;
+            line-height: 18px;
+            margin: -35px 0px 0px 70px;
+        }
+
+        .titulo_clubs {
+            font-size: 17px;
+            color: white;
+            font-weight: 500;
+        }
+
+        /**************END CARDS**************/
+        label {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar" style="margin-top: 80px;">
+
+            <!-- close sidebar menu -->
+            <div class="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <hr style="margin-top: 55px;margin-bottom: -5px">
+
+            <ul class="list-unstyled menu-elements">
+                <li class="active opacidad">
+                    <a href="index.html" class="desactivar "><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
+                </li>
+                <li class="opacidad">
+                    <a href="nuevo_partido.html" class="desactivar "><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                </li>
+                <li>
+                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                </li>
+                <li class="opacidad">
+                    <a href="listado_partidos.html" class="desactivar "><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                </li>
+                <li class="opacidad">
+                    <a href="historico_rivales.html" class="desactivar "><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                </li>
+                <li class="opacidad">
+                    <a href="historico_compis.html" class="desactivar "><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                </li>
+                <li class="opacidad">
+                    <a href="historico_victorias_derrotas.html" class="desactivar "><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                </li>
+                <li class="opacidad">
+                    <a href="comprobar_bateria.html" class="desactivar "><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                </li>
+
+            </ul>
+            <div class="col-8 offset-2" style="margin-top: 35x">
+                <a href="index_back.html"><img class="img-fluid " src="img/logo_gts_alta_blanco.png" alt="Logo gaftaf Sport" /></a>
+            </div>
+
+        </nav>
+        <!-- End sidebar -->
+
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- open sidebar menu -->
+
+
+            <div id="desconectar" class="fixed-top bg-dark" style="height: 80px;">
+                <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                    <i class="fas fa-align-left"></i> <span>Menu</span>
+                </a>
+                <div style="position: absolute; margin-top:27px;right: 10px;">
+                    <img class="img-fluid " src="assets/img/logo.png" alt="Logo gaftaf Sport" />
+                </div>
+            </div>
+
+
+
+            <!-- Nuevo Partido 1 -->
+
+            <div class="container">
+                <div class="row" style="background-color: #292d32">
+                    <div class="col-md-8" style="margin-top: 100px;color:white">
+                        <h1 style="color:white;text-align: center">Rellenar BBDD</h1>
+                        <p style="line-height: 23px"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" style="margin: 25px 0px 0px 0px">
+                        <button id="perfil" type="button" class="btn btn-primary " style="padding: 10px 20px 10px 20px;"> <i class="fas fa-align-left"></i> <span>Generar Perfil</span></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="margin: 25px 0px 0px 0px">
+                        <button id="guardar" type="button" class="btn btn-primary " style="padding: 10px 20px 10px 20px;"> <i class="fas fa-align-left"></i> <span>Generar Partido</span></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="margin: 25px 0px 0px 0px">
+                        <button id="guardar_g" type="button" class="btn btn-primary " style="padding: 10px 20px 10px 20px;"> <i class="fas fa-align-left"></i> <span>Generar Golpes</span></button>
+                    </div>
+                </div>
+                <!--
+                <div class="row">
+                    <div class="col-12" style="margin: 25px 0px 0px 0px">
+                        <button id="insert_p" type="button" class="btn btn-primary " style="padding: 10px 20px 10px 20px;"> <i class="fas fa-align-left"></i> <span>Insertar partido</span></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="margin: 25px 0px 0px 0px">
+                        <button id="borrar_partidos" type="button" class="btn btn-primary " style="padding: 10px 20px 10px 20px;"> <i class="fas fa-align-left"></i> <span>Borrar tabla Partidos</span></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="margin: 25px 0px 0px 0px">
+                        <button id="borrar_golpes" type="button" class="btn btn-primary " style="padding: 10px 20px 10px 20px;"> <i class="fas fa-align-left"></i> <span>Borrar tabla Golpes</span></button>
+                    </div>
+                </div>
+-->
+            </div>
+
+
+
+            <!-- Footer -->
+            <footer class="footer-container" style="background-color: white;margin-top: 10px;">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            <img class="img-fluid " src="img/logo_gts_alta.png" alt="Logo gaftaf Sport" />
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col" style="font-size: 13px">
+                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+        <!-- End content -->
+
+    </div>
+    <!-- End wrapper -->
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="plugins/cordova-sqlite-storage/www/SQLitePlugin.js"></script>
+    <!-- Javascript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/bootstrap4/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+
+
+    <script>
+        /****************************************************/
+
+        var seleccionar_todo = "SELECT * FROM Partidos ORDER BY id DESC";
+
+        var insertar_perfil = "INSERT INTO MisDatos (nombre, altura, peso, edad, sexo, mano) VALUES (?, ?, ?, ?, ?, ?)";
+
+        var insertar_dato = "INSERT INTO Partidos (fecha, hora, club, tipo_pista, r_reves, r_derecha, compi, posicion, set1, set2, set3, tiempo, g_derechas, g_reveses, g_globo_der, g_globo_rev, g_remates, v_derechas, v_reveses, v_globo_der, v_globo_rev, v_remates, max_derecha, max_reves, max_remate, pasos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        var insertar_golpes = "INSERT INTO Partidos (fecha, hora, tiempo, g_derechas, g_reveses, g_globo_der, g_globo_rev, g_remates, v_derechas, v_reveses, v_globo_der, v_globo_rev, v_remates, max_derecha, max_reves, max_remate, pasos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        //var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+        var db = null; // Open SQLite Database 10MB
+        document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener('deviceready', function(){
+                db = sqlitePlugin.openDatabase({
+                    name: 'memory.db',
+                    iosDatabaseLocation: 'Documents'
+                });
+            }, false);
+        });
+
+        var dataset;
+
+        var borrar_partidos = "DROP TABLE Partidos";
+
+        var borrar_golpes = "DROP TABLE Golpes";
+
+
+
+        // Retorna un número aleatorio entre min (incluido) y max (excluido)
+        function numero_rnd(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        var dia = 0;
+        var mes = 1;
+        var dia_f = '';
+        var mes_f = '';
+        var id_golpes = 1;
+
+        function c_fecha() {
+            if (dia > 28) {
+                mes++;
+                dia = 1;
+                if (mes > 12) {
+                    mes = 1;
+                }
+            }
+
+
+            ff = numero_rnd(1, 4);
+
+            dia += ff;
+
+            if (dia < 10) {
+                dia_f = '0' + dia
+            } else {
+                dia_f = dia
+            }
+            if (mes < 10) {
+                mes_f = '0' + mes
+            } else {
+                mes_f = mes
+            }
+
+            fecha = dia_f + '-' + mes_f + '-' + 2019;
+            dia++;
+            return fecha;
+        }
+
+        function c_hora() {
+
+            hh = numero_rnd(10, 24);
+            mm = numero_rnd(1, 60);
+
+            hora = hh + ':' + mm;
+
+            return hora;
+
+        }
+
+
+
+        function generar_partidos_y_golpes() {
+
+            /* var g_derechas = "12, 25, 8, 15, 9, 27, 19, 14, 16, 22, 10, 5,";
+             var g_reveses = "15, 4, 25, 19, 22, 13, 24, 19, 8, 9, 26, 21,";
+             var g_globo_der = "5, 4, 8, 9, 3, 0, 2, 0, 7, 0, 3, 5,";
+             var g_globo_rev = "2, 6, 12, 3, 0, 7, 12, 2, 4, 1, 7, 0,";
+             var g_remates = "0, 2, 0, 3, 0, 6, 2, 0, 1, 2, 0, 4,";
+             
+             //velocidad medias
+            var v_derechas = "29, 25, 12, 18, 30, 21, 16, 24, 36, 22, 10, 15,";
+            var v_reveses = "15, 24, 25, 19, 22, 33, 24, 19, 8, 9, 26, 21,";
+            var v_globo_der = "15, 14, 18, 19, 13, 10, 12, 10, 17, 10, 13, 15,";
+            var v_globo_rev = "12, 16, 12, 13, 10, 17, 12, 12, 14, 11, 17, 10,";
+            var v_remates = "0, 71, 0, 63, 0, 86, 52, 0, 81, 72, 0, 64,";
+            /* var g_derechas = "12, 25, 8, 15, 9, 27, 19, 14, 16, 22, 10, 5,";
+             var g_reveses = "15, 4, 25, 19, 22, 13, 24, 19, 8, 9, 26, 21,";
+             var g_globo_der = "5, 4, 8, 9, 3, 0, 2, 0, 7, 0, 3, 5,";
+             var g_globo_rev = "2, 6, 12, 3, 0, 7, 12, 2, 4, 1, 7, 0,";
+             var g_remates = "0, 2, 0, 3, 0, 6, 2, 0, 1, 2, 0, 4,";
+             
+             //velocidad medias
+            var v_derechas = "29, 25, 12, 18, 30, 21, 16, 24, 36, 22, 10, 15,";
+            var v_reveses = "15, 24, 25, 19, 22, 33, 24, 19, 8, 9, 26, 21,";
+            var v_globo_der = "15, 14, 18, 19, 13, 10, 12, 10, 17, 10, 13, 15,";
+            var v_globo_rev = "12, 16, 12, 13, 10, 17, 12, 12, 14, 11, 17, 10,";
+            var v_remates = "0, 71, 0, 63, 0, 86, 52, 0, 81, 72, 0, 64,";
+            
+            var pasos = "231, 312, 95, 185, 268, 143, 358, 187, 223, 284, 123, 189,";
+             
+           
+            var pasos = "231, 312, 95, 185, 268, 143, 358, 187, 223, 284, 123, 189,";
+             
+             */
+
+            var g_derechas = [];
+            var g_reveses = [];
+            var g_globo_der = [];
+            var g_globo_rev = [];
+            var g_remates = [];
+
+            var v_derechas = [];
+            var v_reveses = [];
+            var v_globo_der = [];
+            var v_globo_rev = [];
+            var v_remates = [];
+            
+             var pasos = [];
+
+            for (i = 0; i < 12; i++) {
+
+                g_derechas[i] = numero_rnd(0, 35);
+                g_reveses[i] = numero_rnd(0, 35);
+                g_globo_der[i] = numero_rnd(0, 35);
+                g_globo_rev[i] = numero_rnd(0, 35);
+                g_remates[i] = numero_rnd(0, 35);
+
+                v_derechas[i] = numero_rnd(0, 50);
+                v_reveses[i] = numero_rnd(0, 50);
+                v_globo_der[i] = numero_rnd(0, 50);
+                v_globo_rev[i] = numero_rnd(0, 50);
+                v_remates[i] = numero_rnd(0, 50);
+
+                pasos[i] = numero_rnd(50, 280);
+            }
+
+
+            var max_derecha = numero_rnd(50, 75);
+            var max_reves = numero_rnd(50, 75);
+            var max_remate = numero_rnd(70, 90);
+
+            var tiempo = numero_rnd(75, 120);
+
+
+            var arr_club = ['vita', 'villapadel', 'dos punto cero', 'volea', 'rackets', 'novopadel', 'novopadel', 'novopadel', 'novopadel'];
+            var arr_tipo_pista = ['indoor', 'outdoor'];
+            var arr_r_reves = ['Sergio', 'Ramón', 'Ricardo', 'Raúl', 'Carlos', 'Esteban', 'Diego', 'Mario', 'Javi', 'Mario', 'Javi'];
+            var arr_r_derecha = ['Ernesto', 'Félix', 'Valen', 'Jorge', 'Lolo', 'Rafita', 'Guillermo', 'Pepe', 'Adolfo', 'Pepe', 'Adolfo'];
+            var arr_compi = ['Gonzalo', 'Celso', 'Julio', 'Miguel', 'Sito', 'Joaquín', 'Fernando', 'Víctor', 'Adrián', 'Abel', 'Alfredo', 'Alfonso', 'Fede', 'Jesus', 'Juan'];
+            var arr_posicion = ['reves', 'derecha'];
+            var arr_resultados = ['6/1-6/4', '5/7-3/6', '6/4-3/6-7/6', '1/6-6/2-6/3', '7/6-6/3', '4/6-1/6', '6/2-4/6-6/3', '5/7-6/1-1/6'];
+            //calculo de la fecha y hora actual
+
+            //var fechaHora = new Date();
+            //fecha = fechaHora.getDate() + "-" + (fechaHora.getMonth() + 1) + "-" + fechaHora.getFullYear();
+            //hora = fechaHora.getHours() + ":" + fechaHora.getMinutes();
+
+            var ffecha = "";
+            var hhora = "";
+
+            ffecha = c_fecha();
+            hhora = c_hora();
+
+
+            club = arr_club[numero_rnd(0, 6)];
+            tipo_pista = arr_tipo_pista[numero_rnd(0, 1)];
+            r_reves = arr_r_reves[numero_rnd(0, 8)];
+            r_derecha = arr_r_derecha[numero_rnd(0, 8)];
+            compi = arr_compi[numero_rnd(0, 12)];
+            posicion = arr_posicion[numero_rnd(0, 1)];
+
+            resultado = arr_resultados[numero_rnd(0, 7)];
+
+            var res = resultado.split("-");
+
+            set1 = res[0];
+            set2 = res[1];
+            if (res.length == 3) {
+                set3 = res[2];
+            } else {
+                set3 = '';
+            }
+
+            db.transaction(function(tx) {
+                tx.executeSql(insertar_dato, [ffecha, hhora, club, tipo_pista, r_reves, r_derecha, compi, posicion, set1, set2, set3, tiempo, g_derechas, g_reveses, g_globo_der, g_globo_rev, g_remates, v_derechas, v_reveses, v_globo_der, v_globo_rev, v_remates, max_derecha, max_reves, max_remate, pasos], loadAndReseta, onError);
+            });
+
+
+        }
+
+
+
+        function insert_perfil() { // Get value from Input and insert record . Function Call when Save/Submit Button Click..
+
+            nombre = 'Rafael';
+            altura = 187;
+            peso = 82;
+            edad = 49;
+            sexo = 'masculino';
+            mano = 'derecha';
+
+            db.transaction(function(tx) {
+                tx.executeSql(insertar_perfil, [nombre, altura, peso, edad, sexo, mano], loadAndReset, onError);
+            });
+
+            //tx.executeSql(SQL Query Statement,[ Parameters ] , Sucess Result Handler Function, Error Result Handler Function );
+        }
+
+
+
+
+
+        function probar() {
+
+            for (i = 0; i < 30; i++) {
+                aa = numero_rnd(0, 100);
+                bb = numero_rnd(0, 100);
+                cc = numero_rnd(0, 100);
+                console.log("aa" + aa + "bb" + bb + "cc" + cc);
+            }
+
+        }
+        //probar();
+
+
+
+        var tiempo = 0;
+
+        function insert_golpes() { // Get value from Input and insert record . Function Call when Save/Submit Button Click..
+
+
+            var g_derechas = "12, 25, 8, 15, 9, 27, 19, 14, 16, 22, 10, 5,";
+            var g_reveses = "15, 4, 25, 19, 22, 13, 24, 19, 8, 9, 26, 21,";
+            var g_globo_der = "5, 4, 8, 9, 3, 0, 2, 0, 7, 0, 3, 5,";
+            var g_globo_rev = "2, 6, 12, 3, 0, 7, 12, 2, 4, 1, 7, 0,";
+            var g_remates = "0, 2, 0, 3, 0, 6, 2, 0, 1, 2, 0, 4,";
+
+            //velocidad medias
+            var v_derechas = "29, 25, 12, 18, 30, 21, 16, 24, 36, 22, 10, 15,";
+            var v_reveses = "15, 24, 25, 19, 22, 33, 24, 19, 8, 9, 26, 21,";
+            var v_globo_der = "15, 14, 18, 19, 13, 10, 12, 10, 17, 10, 13, 15,";
+            var v_globo_rev = "12, 16, 12, 13, 10, 17, 12, 12, 14, 11, 17, 10,";
+            var v_remates = "0, 71, 0, 63, 0, 86, 52, 0, 81, 72, 0, 64,";
+
+            var pasos = "231, 312, 95, 185, 268, 143, 358, 187, 223, 284, 123, 189,";
+
+            var max_derecha = 65;
+            var max_reves = 53;
+            var max_remate = 84;
+
+            var tiempo = 89;
+
+            var ffecha = "";
+            var hhora = "";
+
+            ffecha = c_fecha();
+            hhora = c_hora();
+
+            //  console.log("cual" + cual + "piezo" + piezo + "gx" + gx + "t" + t);
+
+            db.transaction(function(tx) {
+                tx.executeSql(insertar_golpes, [ffecha, hhora, tiempo, g_derechas, g_reveses, g_globo_der, g_globo_rev, g_remates, v_derechas, v_reveses, v_globo_der, v_globo_rev, v_remates, max_derecha, max_reves, max_remate, pasos], loadAndReseta, onError);
+            });
+
+        }
+
+        function insert_p() { // Get value from Input and insert record . Function Call when Save/Submit Button Click..
+
+
+            var g_derechas = "12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,";
+            var g_reveses = "15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,";
+            var g_globo_der = "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,";
+            var g_globo_rev = "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,";
+            var g_remates = "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,";
+
+            //velocidad medias
+            var v_derechas = "29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,";
+            var v_reveses = "15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,";
+            var v_globo_der = "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,";
+            var v_globo_rev = "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,";
+            var v_remates = "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,";
+
+            var pasos = "24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,";
+
+            var max_derecha = 65;
+            var max_reves = 53;
+            var max_remate = 0;
+
+            var tiempo = 3;
+
+            var ffecha = "";
+            var hhora = "";
+
+            ffecha = c_fecha();
+            hhora = c_hora();
+
+            //  console.log("cual" + cual + "piezo" + piezo + "gx" + gx + "t" + t);
+
+            db.transaction(function(tx) {
+                tx.executeSql(insertar_golpes, [ffecha, hhora, tiempo, g_derechas, g_reveses, g_globo_der, g_globo_rev, g_remates, v_derechas, v_reveses, v_globo_der, v_globo_rev, v_remates, max_derecha, max_reves, max_remate, pasos], loadAndReseta, onError);
+            });
+
+        }
+
+
+
+
+        function loadAndReset() { // Function for Hendeling Error...
+            alert("datos guardados");
+        }
+
+        function loadAndReseta() { // Function for Hendeling Error...
+            console.log('dato insertado');
+        }
+
+
+        function onError(tx, error) { // Function for Hendeling Error...
+            alert(error.message);
+        }
+
+        function borrado() {
+            alert("tabla borrada");
+        }
+
+        function b_partidos() {
+
+            db.transaction(function(tx) {
+                tx.executeSql(borrar_partidos, [], borrado, onError);
+            });
+        }
+
+        function b_golpes() {
+
+            db.transaction(function(tx) {
+                tx.executeSql(borrar_golpes, [], borrado, onError);
+            });
+        }
+
+
+
+
+        function golpes() {
+            cont = 0;
+            var intervalo = setInterval(function() {
+                cont++;
+                if (cont >= 5) {
+                    clearInterval(intervalo);
+                    alert("terminado");
+                } else {
+                    insert_golpes();
+                }
+            }, 100);
+        }
+
+        function partidos() {
+            cont = 0;
+            var intervalo = setInterval(function() {
+                cont++;
+                if (cont >= 20) {
+                    clearInterval(intervalo);
+                    alert("terminado");
+                } else {
+                    generar_partidos_y_golpes();
+                }
+            }, 100);
+        }
+
+
+        $(document).ready(function() {
+
+            $("#perfil").on('click', function() {
+                insert_perfil();
+            });
+
+            $("#guardar").on('click', function() {
+                partidos();
+            });
+
+            $("#guardar_g").on('click', function() {
+                golpes();
+            });
+            $("#insert_p").on('click', function() {
+                insert_p();
+            });
+            $("#borrar_partidos").on('click', function() {
+                b_partidos();
+            });
+            $("#borrar_golpes").on('click', function() {
+                b_golpes();
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

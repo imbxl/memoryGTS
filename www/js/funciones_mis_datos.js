@@ -5,7 +5,8 @@
 var seleccionar_todo = "SELECT * FROM MisDatos";
 var insertar_dato = "INSERT INTO MisDatos (nombre, altura, peso, edad, sexo, mano) VALUES (?, ?, ?, ?, ?, ?)";
 var actualizar = "UPDATE MisDatos SET nombre = ?, altura = ?, peso = ?, edad = ?, sexo = ?, mano = ? WHERE id=?";
-var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+//var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+var db = null; // Open SQLite Database 10MB
 
 var dataset;
 var DataType;
@@ -212,13 +213,15 @@ $('.desactivar').click(function () {
 
 //***************************************************************
 
-$(document).ready(
-    function () { // Call function when page is ready for load..
+    document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener('deviceready', function(){
+            db = sqlitePlugin.openDatabase({
+                name: 'memory.db',
+                iosDatabaseLocation: 'Documents'
+            });
 
         desactivar();
         showRecords();
-
-
 
 
         //cambio de color en los titulos
@@ -284,24 +287,22 @@ $(document).ready(
 
 
         });
-
     });
 
  $(function() {
+    $(document).on('input', '#altura', function(e) {
+        $('#ver1').html($('#altura').val());
+    });
 
-            $(document).on('input', '#altura', function(e) {
-                $('#ver1').html($('#altura').val());
-            });
-
-            $(document).on('input', '#peso', function(e) {
-                $('#ver2').html($('#peso').val());
-            });
-            $(document).on('input', '#edad', function(e) {
-                $('#ver3').html($('#edad').val());
-            });
+    $(document).on('input', '#peso', function(e) {
+        $('#ver2').html($('#peso').val());
+    });
+    $(document).on('input', '#edad', function(e) {
+        $('#ver3').html($('#edad').val());
+    });
 
 
-            $('.rango').rangeslider({
-                polyfill: false
-            });
-        });
+    $('.rango').rangeslider({
+        polyfill: false
+    });
+});

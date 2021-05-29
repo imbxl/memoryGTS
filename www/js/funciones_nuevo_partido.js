@@ -38,7 +38,8 @@
 
   var actualizar = "UPDATE Partidos SET club = ?, tipo_pista = ?, r_reves = ?, r_derecha = ?, compi = ?, posicion = ?, set1 = ?, set2 = ?, set3 = ? WHERE id=?";
 
-  var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+  //var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+  var db = null; // Open SQLite Database 10MB
 
 
   var dataset;
@@ -267,8 +268,13 @@
       //***************************************************************
       //***************************************************************
 
-      $(document).ready(function () { // Call function when page is ready for load..
-
+    document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener('deviceready', function(){
+            db = sqlitePlugin.openDatabase({
+                name: 'memory.db',
+                iosDatabaseLocation: 'Documents'
+            });
+            
           showRecords();
 
           //INSERTO EL FORMULARIO EN BBDD
@@ -290,4 +296,5 @@
           });
 
           /****************************************************************************/
-      });
+        }, false);
+    });

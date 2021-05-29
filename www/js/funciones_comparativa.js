@@ -26,7 +26,8 @@
 
    /****************************************/
 
-   var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+   //var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+   var db = null; // Open SQLite Database 10MB
    var seleccionar_perfil = "SELECT * FROM MisDatos WHERE id=1";
    var seleccionar_partido = "SELECT * FROM Partidos WHERE id=?";
    var seleccionar_todo = "SELECT * FROM Partidos";
@@ -1758,12 +1759,14 @@
 
 
    /****************************************/
-
-   $(document).ready(function () {
-
-
-       perfil();
-
-       gestion_consultas();
-
-   });
+    document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener('deviceready', function(){
+            db = sqlitePlugin.openDatabase({
+                name: 'memory.db',
+                iosDatabaseLocation: 'Documents'
+            });
+            
+            perfil();
+            gestion_consultas();
+        }, false);
+    });

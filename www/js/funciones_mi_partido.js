@@ -73,7 +73,8 @@
 
    /****************************************/
 
-   var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+   //var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+   var db = null; // Open SQLite Database 10MB
 
    var seleccionar_partido = "SELECT * FROM Partidos WHERE id=?";
 
@@ -621,7 +622,13 @@
 
    /****************************************/
 
-   $(document).ready(function () {
+    document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener('deviceready', function(){
+            db = sqlitePlugin.openDatabase({
+                name: 'memory.db',
+                iosDatabaseLocation: 'Documents'
+            });
+            
        perfil();
        showRecords();
 
@@ -636,8 +643,5 @@
        $('#eliminar_modal').on("click", function () {
            eliminar_partido();
        });
-
-
-
-
-   });
+        }, false);
+    });

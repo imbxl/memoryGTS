@@ -311,7 +311,8 @@
 
         var insertar_golpes = "INSERT INTO Partidos (fecha, hora, tiempo, g_derechas, g_reveses, g_globo_der, g_globo_rev, g_remates, v_derechas, v_reveses, v_globo_der, v_globo_rev, v_remates, max_derecha, max_reves, max_remate, pasos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-        var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+        //var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+        var db = null; // Open SQLite Database 10MB
 
 
         function onError(tx, error) { // Function for Hendeling Error...
@@ -637,8 +638,14 @@
             }
         };
 
-        $(document).ready(function() {
-            iniciar();
+        document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener('deviceready', function(){
+                db = sqlitePlugin.openDatabase({
+                    name: 'memory.db',
+                    iosDatabaseLocation: 'Documents'
+                });
+                iniciar();
+            }, false);
         });
 
     </script>

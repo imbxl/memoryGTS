@@ -339,7 +339,8 @@
         /****************************************************/
 
 
-        var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+        //var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
+        var db = null; // Open SQLite Database 10MB
         var seleccionar_todo = "SELECT * FROM Partidos ORDER BY id DESC";
         var dataset;
 
@@ -573,11 +574,15 @@
         });
 
 
-        $(document).ready(function() {
-
-            showRecords();
+        document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener('deviceready', function(){
+                db = sqlitePlugin.openDatabase({
+                    name: 'memory.db',
+                    iosDatabaseLocation: 'Documents'
+                });
+                showRecords();
+            }, false);
         });
-
     </script>
 
 

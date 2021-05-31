@@ -61,7 +61,7 @@
 		<custom-config-file parent="NSBluetoothAlwaysUsageDescription" platform="ios" target="*-Info.plist" mode="replace">
 			<string>Se necesita acceso al Bluetooth para conectar la app con tu pala.</string>
 		</custom-config-file>
-		<custom-config-file parent="NSBluetoothPeripheralUsageDescription " platform="ios" target="*-Info.plist" mode="replace">
+		<custom-config-file parent="NSBluetoothPeripheralUsageDescription" platform="ios" target="*-Info.plist" mode="replace">
 			<string>Se necesita acceso al Bluetooth para conectar la app con tu pala.</string>
 		</custom-config-file>
     </platform>

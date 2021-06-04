@@ -37,6 +37,11 @@
 		<custom-config-file parent="NSBluetoothPeripheralUsageDescription" platform="ios" target="*-Info.plist" mode="replace">
 			<string>Se necesita acceso al Bluetooth para conectar la app con tu pala.</string>
 		</custom-config-file>
+		<config-file parent="UIBackgroundModes" target="*-Info.plist">
+			<array>
+				<string>bluetooth-central</string>
+			</array>
+		</config-file>
     </platform>
     <access origin="*" />
     <allow-intent href="http://*/*" />

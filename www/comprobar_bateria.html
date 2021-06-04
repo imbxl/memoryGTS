@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="assets/css/media-queries.css">
 
     <link rel="stylesheet" href="assets/css/material-dashboard.css">
-    <script src="https://assistenlinea.com:1337/vorlon.js"></script>
 
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="assets/ico/favicon.png">
@@ -489,11 +488,7 @@
 
                 var data = stringToBytes(dator);
                 var deviceId = event.target.dataset.deviceId;
-                if (cordova.platformId === 'android') { // Android filtering is broken
-                    ble.writeWithoutResponse(deviceId, ble_hm.serviceUUID, ble_hm.txCharacteristic, data, success, failure);
-                } else {
-                    ble.write(deviceId, ble_hm.serviceUUID, ble_hm.txCharacteristic, data, success, failure);
-                }
+                ble.writeWithoutResponse(deviceId, ble_hm.serviceUUID, ble_hm.txCharacteristic, data, success, failure);
 
             },
             disconnect: function() {

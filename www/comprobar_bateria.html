@@ -419,10 +419,17 @@
             return array.buffer;
         }
 
+        /*
         var ble_hm = {
             serviceUUID: "0000FFE0-0000-1000-8000-00805F9B34FB",
             txCharacteristic: "0000FFE1-0000-1000-8000-00805F9B34FB", // transmit is from the phone's perspective
             rxCharacteristic: "0000FFE1-0000-1000-8000-00805F9B34FB" // receive is from the phone's perspective
+        };
+        */
+        var ble_hm = {
+            serviceUUID: "FFE0",
+            txCharacteristic: "FFE1", // transmit is from the phone's perspective
+            rxCharacteristic: "FFE1" // receive is from the phone's perspective
         };
 
         var app = {

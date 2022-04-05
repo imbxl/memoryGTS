@@ -221,72 +221,92 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         desactivar();
         showRecords();
+
+
+
+
         //cambio de color en los titulos
         $('#nombre_inp').focus(function () {
-            $('#atencion1').css('color', 'black');
+            $('.atencion1').css('color', 'black');
         });
+
         $('input:radio[name=sexo]').change(function () {
-            $('#atencion2').css('color', 'black');
+            $('.atencion2').css('color', 'black');
         });
         $('input:radio[name=mano]').change(function () {
-            $('#atencion3').css('color', 'black');
+            $('.atencion3').css('color', 'black');
         });
+
+
         //INSERTO EL FORMULARIO EN BBDD
         $("#guardar").on('click', function () {
-            var comprobar = true;                
+
+            var comprobar = true;
+
             //compruebo que se añaden todos los campos
             nombre = $('#nombre_inp').val();
             sexo = $('input:radio[name=sexo]:checked').val();
             mano = $('input:radio[name=mano]:checked').val();
+
+
             //comprobar campos
             if (nombre == '' || nombre == undefined) {
                 modal_datos_no_guardados();
-                $('#atencion1').css('color', 'red');
+                $('.atencion1').css('color', 'red');
                 comprobar = false;
             } else {
-                $('#atencion1').css('color', 'black');
+                $('.atencion1').css('color', 'black');
+
             }
+
             if (sexo == '' || sexo == undefined) {
                 modal_datos_no_guardados();
-                $('#atencion2').css('color', 'red');
+                $('.atencion2').css('color', 'red');
                 comprobar = false;
             } else {
-                $('#atencion1').css('color', 'black');
+                $('.atencion2').css('color', 'black');
             }
+
             if (mano == '' || sexo == undefined) {
                 modal_datos_no_guardados();
-                $('#atencion3').css('color', 'red');
+                $('.atencion3').css('color', 'red');
                 comprobar = false;
             } else {
-                $('#atencion1').css('color', 'black');
+                $('.atencion3').css('color', 'black');
             }
+
             if (comprobar == true) {
                 if (id_existe == 1) { //existen datos con lo cual hay que actualizarlos
                     updateRecord();
                 } else {
                     insertRecord(); //graba los datos por primera vez
                 }
+                
                 //activo botones menu
                 activar();
             }
+
+
         });
     }, false);
-});
+
+    });
 
  $(function() {
-    $(document).on('input', '#altura', function(e) {
-        $('#ver1').html($('#altura').val());
-    });
 
-    $(document).on('input', '#peso', function(e) {
-        $('#ver2').html($('#peso').val());
-    });
-    $(document).on('input', '#edad', function(e) {
-        $('#ver3').html($('#edad').val());
-    });
+            $(document).on('input', '#altura', function(e) {
+                $('#ver1').html($('#altura').val());
+            });
+
+            $(document).on('input', '#peso', function(e) {
+                $('#ver2').html($('#peso').val());
+            });
+            $(document).on('input', '#edad', function(e) {
+                $('#ver3').html($('#edad').val());
+            });
 
 
-    $('.rango').rangeslider({
-        polyfill: false
-    });
-});
+            $('.rango').rangeslider({
+                polyfill: false
+            });
+        });

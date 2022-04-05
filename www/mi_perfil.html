@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Bootstrap 4 Template with Sidebar Menu</title>
+    <title>Memory</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/vendor/bootstrap4/css/bootstrap.css">
@@ -69,9 +69,29 @@
             font-size: 16px;
             font-weight: 100;
         }
-        
-        li{
+
+        .aj-radio {
+            margin-top: 9px;
+        }
+
+        li {
             margin-top: -8px;
+        }
+
+        /**idiomas**********************/
+
+        .es,
+        .en {
+            display: none;
+        }
+
+        .es:lang(es) {
+            display: block;
+        }
+
+
+        .en:lang(en) {
+            display: block;
         }
 
     </style>
@@ -97,32 +117,69 @@
                     <a href="index.html" class=" "><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
                 </li>
                 <li class="opacidad">
-                    <a href="nuevo_partido.html" class="desactivar "><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    <span class="es">
+                        <a href="nuevo_partido.html" class="desactivar "><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    </span>
+                    <span class="en">
+                        <a href="nuevo_partido.html" class="desactivar "><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> New match</a>
+                    </span>
                 </li>
                 <li class="active">
-                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    <span class="es">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    </span>
+                    <span class="en">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> My profile</a>
+                    </span>
                 </li>
                 <li class="opacidad">
-                    <a href="listado_partidos.html" class="desactivar "><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    <span class="es">
+                        <a href="listado_partidos.html" class="desactivar "><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    </span>
+                    <span class="en">
+                        <a href="listado_partidos.html" class="desactivar "><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> My Matches</a>
+                    </span>
                 </li>
                 <li class="opacidad">
-                    <a href="historico_rivales.html" class="desactivar "><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    <span class="es">
+                        <a href="historico_rivales.html" class="desactivar "><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_rivales.html" class="desactivar "><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivals</a>
+                    </span>
                 </li>
                 <li class="opacidad">
-                    <a href="historico_compis.html" class="desactivar "><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    <span class="es">
+                        <a href="historico_compis.html" class="desactivar "><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_compis.html" class="desactivar "><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Mates</a>
+                    </span>
                 </li>
                 <li class="opacidad">
-                    <a href="historico_victorias_derrotas.html" class="desactivar "><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
-                </li>
-                <li>
-                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    <span class="es">
+                        <a href="historico_victorias_derrotas.html" class="desactivar "><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_victorias_derrotas.html" class="desactivar "><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victories vs Losses</a>
+                    </span>
                 </li>
                 <li class="opacidad">
-                    <a href="comprobar_bateria.html" class="desactivar "><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    <span class="es">
+                        <a href="comparativa_listado.html" class="desactivar "><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    </span>
+                    <span class="en">
+                        <a href="comparativa_listado.html" class="desactivar "><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparative</a>
+                    </span>
                 </li>
-
-
-
+                <li class="opacidad">
+                    <span class="es">
+                        <a href="comprobar_bateria.html" class="desactivar "><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    </span>
+                    <span class="en">
+                        <a href="comprobar_bateria.html" class="desactivar "><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Check Battery</a>
+                    </span>
+                </li>
             </ul>
             <div class="col-8 offset-2" style="margin-top: 35x">
                 <img class="img-fluid " src="img/logo_gts_alta_blanco.png" alt="Logo gaftaf Sport" />
@@ -155,9 +212,20 @@
 
             <div class="container">
                 <div class="row" style="background-color: #292d32">
-                    <div class="col-md-8" style="margin-top: 100px;color:white">
-                        <h1 style="color:white;text-align: center">Mi Perfil</h1>
-                        <p style="line-height: 23px">Rellena el formulario a continuación para que podamos calcular tus métricas correctamente...</p>
+                    <div class="col-md-12" style="margin-top: 100px;color:white">
+                        <span class="es">
+                            <h1 style="color:white;text-align: center">Mi Perfil</h1>
+                            <p style="line-height: 23px">Rellena el formulario a continuación para que podamos calcular tus métricas correctamente</p>
+                        </span>
+                        <span class="en">
+                            <h1 style="color:white;text-align: center">My profile</h1>
+                            <p style="line-height: 23px">Fill out the form below so that we can calculate your metrics correctly</p>
+                        </span>
+                        <h1 style="text-align: center;margin-top:10px;font-size: 17px;color:white">Selecciona tu idioma | Select your language</h1>
+                        <div style="text-align: center;margin-top:-20px;margin-bottom: 20px; font-size: 15px">
+                            <a class="idioma_b" href="#" data-lang="es"><img src="img/band-esp.jpg" /> Español</a> |
+                            <a class="idioma_b" href="#" data-lang="en"><img src="img/band-ing.jpg" /> Inglés</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -176,7 +244,12 @@
                                     <div class="card-icon">
                                         <img class="img-fluid" src="img/ico_compi_blanco.png" />
                                     </div>
-                                    <p class="card-category">Mi Perfil</p>
+                                    <span class="es">
+                                        <p class="card-category">Mi Perfil</p>
+                                    </span>
+                                    <span class="en">
+                                        <p class="card-category">My profile</p>
+                                    </span>
                                 </div>
 
 
@@ -185,7 +258,12 @@
                                     <div class="col-lg-12">
                                         <section class="panel">
                                             <header class="panel-heading">
-                                                <h2 style="font-size: 19px;margin-top: 20px;font-weight: bold;color:#fe9d18">INDICANOS TUS CARACTERÍSTICAS</h2>
+                                                <span class="es">
+                                                    <h2 style="font-size: 19px;margin-top: 20px;font-weight: bold;color:#fe9d18">INDICANOS TUS CARACTERÍSTICAS</h2>
+                                                </span>
+                                                <span class="en">
+                                                    <h2 style="font-size: 19px;margin-top: 20px;font-weight: bold;color:#fe9d18">INDICATE YOUR CHARACTERISTICS</h2>
+                                                </span>
                                             </header>
                                             <style>
                                                 hr.dotted {
@@ -195,7 +273,6 @@
                                                     margin-bottom: 20px;
                                                 }
 
-                                             
                                             </style>
 
                                             <div class="panel-body">
@@ -204,97 +281,129 @@
 
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
-                                                            <label><span id="atencion1">NOMBRE</span></label>
-                                                            <input id="nombre_inp" type="text" class="form-control" placeholder="Tu nombre">
+                                                            <span class="es">
+                                                                <label><span class="atencion1">NOMBRE</span></label>
+                                                            </span>
+                                                            <span class="en">
+                                                                <label><span class="atencion1">NAME</span></label>
+                                                            </span>
+                                                            <input id="nombre_inp" type="text" class="form-control" placeholder="Tu nombre/Your name">
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <hr class="dotted">
-                                                    
+
                                                     <div class="col-lg-12">
                                                         <div class="form-group ">
-                                                            <label>CUANTO MIDES</label>
-                                                            <br>
+                                                            <span class="es">
+                                                                <label>CUANTO MIDES</label>
+                                                            </span>
+                                                            <span class="en">
+                                                                <label>HOW TALL ARE YOU</label>
+                                                            </span>
 
                                                             <input id="altura" type="range" min="100" max="210" value="100" class="rango">
 
-                                                            <p class="altura_vis" style="margin-top: 13px; font-size:18px">Mi altura es de: <b><span id="ver1">100</span></b> cm</p>
+                                                            <p style="margin-top: 13px; font-size:20px;"><b><span id="ver1">100</span></b> cm</p>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <hr class="dotted">
 
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
-                                                            <label>CUANTO PESAS</label>
-                                                            <br>
+                                                            <span class="es">
+                                                                <label>CUÁNTO PESAS</label>
+                                                            </span>
+                                                            <span class="en">
+                                                                <label>HOW MUCH DO YOU WEIGH?</label>
+                                                            </span>
+
                                                             <input id="peso" type="range" min="40" max="120" value="40" class="rango">
 
-                                                            <p class="peso_vis" style="margin-top: 13px; font-size:18px">Mi peso es de: <b><span id="ver2">40</span></b> Kg</p>
+                                                            <p style="margin-top: 13px; font-size:20px"><b><span id="ver2">40</span></b> Kg</p>
 
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <hr class="dotted">
 
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
-                                                            <label>QUE EDAD TIENES</label>
-                                                            <br>
+                                                            <span class="es">
+                                                                <label>QUE EDAD TIENES</label>
+                                                            </span>
+                                                            <span class="en">
+                                                                <label>HOW OLD ARE YOU?</label>
+                                                            </span>
 
                                                             <input id="edad" type="range" min="10" max="80" value="10" class="rango">
 
-                                                            <p class="edad_vis" style="margin-top: 13px; font-size:18px">Tengo: <b><span id="ver3">10</span></b> años</p>
+                                                            <p style="margin-top: 13px; font-size:20px"> <b><span id="ver3">10</span></b> <span id="idioma1">años</span></p>
 
 
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <hr class="dotted">
 
 
                                                     <div class="form-group">
-                                                        <label><span id="atencion2">QUE ERES</span></label>
+                                                        <span class="es">
+                                                            <label><span class="atencion2">QUE ERES</span></label>
+                                                        </span>
+                                                        <span class="en">
+                                                            <label><span class="atencion2">WHAT ARE YOU?</span></label>
+                                                        </span>
+
+
+
+
                                                         <div class="col-lg-12" style="margin-top: -30px">
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input" name="sexo" id="femenino" value="femenino">
-                                                                    <span class="txt_label"> Mujer</span></label>
+                                                                    <input type="radio" class="form-check-input aj-radio" name="sexo" id="femenino" value="femenino">
+                                                                    <span class="txt_label" id="idioma2"> Mujer</span></label>
                                                             </div>
 
                                                             <div class="form-check">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input" name="sexo" id="masculino" value="masculino">
-                                                                    <span class="txt_label"> Hombre</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <hr class="dotted">
-
-                                                    <div class="form-group">
-                                                        <label><span id="atencion3">CON QUE MANO JUEGAS</span></label>
-                                                        <div class="col-lg-12" style="margin-top: -30px">
-                                                            <div class="form-check">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input" name="mano" id="derecha" value="derecha">
-                                                                    <span class="txt_label"> Derecha</span></label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input" name="mano" id="izquierda" value="izquierda">
-                                                                    <span class="txt_label"> Izquierda</span>
+                                                                    <input type="radio" class="form-check-input aj-radio" name="sexo" id="masculino" value="masculino">
+                                                                    <span class="txt_label" id="idioma3"> Hombre</span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
 
-<hr class="dotted">
+                                                    <hr class="dotted">
+
+                                                    <div class="form-group">
+                                                        <span class="es">
+                                                            <label><span class="atencion3">CON QUE MANO JUEGAS</span></label>
+                                                        </span>
+                                                        <span class="en">
+                                                            <label><span class="atencion3">WHAT HAND DO YOU PLAY WITH?</span></label>
+                                                        </span>
+                                                        <div class="col-lg-12" style="margin-top: -30px">
+                                                            <div class="form-check">
+                                                                <label class="form-check-label">
+                                                                    <input type="radio" class="form-check-input aj-radio" name="mano" id="derecha" value="derecha">
+                                                                    <span class="txt_label" id="idioma4"> Derecha</span></label>
+                                                            </div>
+
+                                                            <div class="form-check">
+                                                                <label class="form-check-label">
+                                                                    <input type="radio" class="form-check-input aj-radio" name="mano" id="izquierda" value="izquierda">
+                                                                    <span class="txt_label" id="idioma5"> Izquierda</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <hr class="dotted">
 
                                                     <div class="col-md-12 text-center" style="margin-top: 20px">
-                                                        <button id="guardar" type="button" class="btn btn-primary " style="padding: 10px 20px 10px 20px;"> <img src="img/ico_guardar.png" > <span>Guardar</span></button>
+                                                        <button id="guardar" type="button" class="btn btn-primary " style="padding: 10px 20px 10px 20px;"> <img src="img/ico_guardar.png"> <span>Guardar / Save</span></button>
                                                     </div>
 
                                                 </form>
@@ -344,8 +453,14 @@
                     </div>
                     <div class="row">
                         <div class="col" style="font-size: 13px">
-                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
-                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            <span class="es">
+                                La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            </span>
+                            <span class="en">
+                                The highest technology in padel rackets <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl all rights reserved.</span>
+                            </span>
                         </div>
 
                     </div>
@@ -444,8 +559,54 @@
     <script src="assets/js/scripts.js"></script>
     <script src="js/funciones_mis_datos.js"></script>
 
+    <!-- idiomas-->
+    <script src="js/js.cookie.js"></script>
+
     <script>
-       
+        var lang;
+
+        $('.idioma_b').on('click', function() {
+
+            lang = $(this).data('lang');
+
+            $('html').prop('lang', lang);
+
+            switch (lang) {
+                case 'es':
+                    Cookies.set('idioma', 'esp');
+                    break;
+                case 'en':
+                    Cookies.set('idioma', 'ing');
+                    break;
+            }
+        });
+
+        if (Cookies.get('idioma')) {
+
+            switch (Cookies.get('idioma')) {
+                case 'esp':
+                    lang = 'es';
+                    $('html').prop('lang', 'es');
+                    break;
+
+                case 'ing':
+                    lang = 'en';
+                    $('html').prop('lang', 'en');
+                    break;
+            }
+        } else {
+            lang = 'en';
+            $('html').prop('lang', 'en');
+            Cookies.set('idioma', 'ing');
+        }
+
+        if (lang == 'en') {
+            $('#idioma1').html("years");
+            $('#idioma2').html("Woman");
+            $('#idioma3').html("Man");
+            $('#idioma4').html("Right");
+            $('#idioma5').html("Left");
+        }
 
     </script>
 

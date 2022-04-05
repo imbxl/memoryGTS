@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Bootstrap 4 Template with Sidebar Menu</title>
+    <title>Memory</title>
 
     <!-- CSS -->
 
@@ -91,8 +91,8 @@
             color: #555555;
             font-style: italic;
         }
-        
-        li{
+
+        li {
             margin-top: -8px;
         }
 
@@ -110,6 +110,22 @@
 
         hr.style3 {
             border-top: 1px dashed #8c8b8b;
+        }
+
+        /**idiomas**********************/
+
+        .es,
+        .en {
+            display: none;
+        }
+
+        .es:lang(es) {
+            display: block;
+        }
+
+
+        .en:lang(en) {
+            display: block;
         }
 
     </style>
@@ -135,30 +151,69 @@
                     <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
                 </li>
                 <li>
-                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    <span class="es">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    </span>
+                    <span class="en">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> New match</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    <span class="es">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    </span>
+                    <span class="en">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> My profile</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    <span class="es">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    </span>
+                    <span class="en">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> My Matches</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    <span class="es">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivals</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    <span class="es">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Mates</a>
+                    </span>
                 </li>
                 <li class="active">
-                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    <span class="es">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victories vs Losses</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    <span class="es">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    </span>
+                    <span class="en">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparative</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    <span class="es">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    </span>
+                    <span class="en">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Check Battery</a>
+                    </span>
                 </li>
-
             </ul>
             <div class="col-8 offset-2" style="margin-top: 35x">
                 <img class="img-fluid " src="img/logo_gts_alta_blanco.png" alt="Logo gaftaf Sport" />
@@ -191,9 +246,15 @@
 
             <div class="container">
                 <div class="row" style="background-color: #292d32">
-                    <div class="col-md-8" style="margin-top: 80px;color:white">
-                        <h1 style="color:white;text-align: center">Victorias vs Derrotas</h1>
-                        <p style="line-height: 23px;margin-top: -10px">Relación entre victorias y derrotas.</p>
+                    <div class="col-md-12" style="margin-top: 80px;color:white">
+                        <span class="es">
+                            <h1 style="color:white;text-align: center">Victorias vs Derrotas</h1>
+                            <p style="line-height: 23px;margin-top: -10px">Análisis de victorias y derrotas</p>
+                        </span>
+                        <span class="en">
+                            <h1 style="color:white;text-align: center">Victories vs Defeats</h1>
+                            <p style="line-height: 23px;margin-top: -10px">Win-loss report</p>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -208,24 +269,38 @@
                         <div class="card card-stats">
                             <div class="card-header card-header-icon">
                                 <div class="card-icon sombra" style="background-color: #0088cc">
-
                                     <img class="img-fluid" src="img/ico_victorias_derrotas_blanco.png" />
                                 </div>
-                                <p class="card-category">Victorias vs Derrotas</p>
+                                <span class="es">
+                                    <p class="card-category">Victorias vs Derrotas</p>
+                                </span>
+                                <span class="en">
+                                    <p class="card-category">Victories vs Defeats</p>
+                                </span>
                             </div>
-
-                            <h1 style="font-size: 28px">Victorias</h1>
-
                             <i class="fa fa-trophy float-left tj_cat tj_icono"></i>
+                            <span class="es">
+                                <h1 style="font-size: 28px">Total Victorias</h1>
+                            </span>
+                            <span class="en">
+                                <h1 style="font-size: 28px">Total Victories</h1>
+                            </span>
 
-                            <p style="font-size: 20px;margin-top:10px;">Total victorias, <span id="d1">-</span></p>
 
-                            <hr class="style3" style="margin: 0px 50px 0px 50px;">
+                            <p style="font-size: 20px;margin-top:10px;"><span id="d1">-</span></p>
 
-                            <h1 style="font-size: 28px">Derrotas</h1>
+                            <hr class="style3" style="margin: 0px 50px 20px 50px;">
 
                             <i class="fa fa-thumbs-down float-left tj_cat" style="color: grey"></i>
-                            <p style="font-size: 20px;margin-top:10px;">Total derrotas, <span id="d2">-</span></p>
+
+                            <span class="es">
+                                <h1 style="font-size: 28px">Total Derrotas</h1>
+                            </span>
+                            <span class="en">
+                                <h1 style="font-size: 28px">Total Defeats</h1>
+                            </span>
+
+                            <p style="font-size: 20px;margin-top:10px;"><span id="d2">-</span></p>
 
 
 
@@ -239,7 +314,12 @@
             <div class="col-md-12">
                 <div class="tj_partidos shadow-sm">
                     <img style="float: left" src="img/ico_partidos.png">
-                    <h3 class="tj_titulo">Total partidos jugados:</h3>
+                    <span class="es">
+                        <h3 class="tj_titulo">Total partidos jugados:</h3>
+                    </span>
+                    <span class="en">
+                        <h3 class="tj_titulo">Total games played:</h3>
+                    </span>
                     <h1 class="tj_dato" id="d3">-</h1>
                 </div>
             </div>
@@ -249,9 +329,9 @@
                     <img style="float: left" src="img/ico_indoor.png">
                     <h3 class="tj_titulo">INDOOR:</h3>
                     <p class="tj_dato_medias">
-                        <b><span class="tam_txt">Partidos disputados en Indoor:</span> <span id="d4">-</span></b><br>
-                        <b><span class="tam_txt">Victorias indoor:</span> <span id="d5">-</span></b><br>
-                        <b><span class="tam_txt">Derrotas indoor:</span> <span id="d6">-</span></b>
+                        <b><span class="tam_txt" id="txt_1">Partidos disputados en Indoor:</span> <span id="d4">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_2">Victorias indoor:</span> <span id="d5">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_3">Derrotas indoor:</span> <span id="d6">-</span></b>
                     </p>
                 </div>
             </div>
@@ -260,9 +340,9 @@
                     <img style="float: left" src="img/ico_outdoor.png">
                     <h3 class="tj_titulo">OUTDOOR:</h3>
                     <p class="tj_dato_medias">
-                        <b><span class="tam_txt">Partidos disputados en Outdoor:</span> <span id="d7">-</span></b><br>
-                        <b><span class="tam_txt">Victorias outdoor:</span> <span id="d8">-</span></b><br>
-                        <b><span class="tam_txt">Derrotas outdoor:</span> <span id="d9">-</span></b>
+                        <b><span class="tam_txt" id="txt_4">Partidos disputados en Outdoor:</span> <span id="d7">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_5">Victorias outdoor:</span> <span id="d8">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_6">Derrotas outdoor:</span> <span id="d9">-</span></b>
                     </p>
                 </div>
             </div>
@@ -270,10 +350,15 @@
             <div class="col-md-12">
                 <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
                     <i class="fa fa-trophy float-left tj_cat tj_icono"></i>
-                    <h3 class="tj_titulo">Victorias por Set:</h3>
+                    <span class="es">
+                        <h3 class="tj_titulo">Victorias por Set:</h3>
+                    </span>
+                    <span class="en">
+                        <h3 class="tj_titulo">Wins by Set:</h3>
+                    </span>
                     <p class="tj_dato_medias">
-                        <b><span class="tam_txt">Victorias en 2 set:</span> <span id="d10">-</span></b><br>
-                        <b><span class="tam_txt">Victorias en 3 set:</span> <span id="d11">-</span></b>
+                        <b><span class="tam_txt" id="txt_7">Victorias en 2 set:</span> <span id="d10">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_8">Victorias en 3 set:</span> <span id="d11">-</span></b>
                     </p>
                 </div>
             </div>
@@ -281,10 +366,15 @@
             <div class="col-md-12">
                 <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
                     <i class="fa fa-thumbs-down float-left tj_cat"></i>
-                    <h3 class="tj_titulo">Derrotas por Set:</h3>
+                    <span class="es">
+                        <h3 class="tj_titulo">Derrotas por Set:</h3>
+                    </span>
+                    <span class="en">
+                        <h3 class="tj_titulo">Losses by Set:</h3>
+                    </span>
                     <p class="tj_dato_medias">
-                        <b><span class="tam_txt">Derrotas en 2 set:</span> <span id="d12">-</span></b><br>
-                        <b><span class="tam_txt">Derrotas en 3 set:</span> <span id="d13">-</span></b>
+                        <b><span class="tam_txt" id="txt_9">Derrotas en 2 set:</span> <span id="d12">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_10">Derrotas en 3 set:</span> <span id="d13">-</span></b>
                     </p>
                 </div>
             </div>
@@ -292,14 +382,19 @@
             <div class="col-md-12">
                 <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
                     <i class="fa fa-trophy float-left tj_cat tj_icono"></i>
-                    <h3 class="tj_titulo">Victorias por Franja Horaria:</h3>
+                    <span class="es">
+                        <h3 class="tj_titulo">Victorias por Franja Horaria:</h3>
+                    </span>
+                    <span class="en">
+                        <h3 class="tj_titulo">Wins by Time Zone:</h3>
+                    </span>
                     <p class="tj_dato_medias">
-                        <b><span class="tam_txt">Partidos jugados mañana:</span> <span class="pm">-</span></b><br>
-                        <b><span class="tam_txt">Victorias mañana:</span> <span id="d14">-</span></b><br>
-                        <b><span class="tam_txt">Partidos jugados tarde:</span> <span class="pt">-</span></b><br>
-                        <b><span class="tam_txt">Victorias tarde:</span> <span id="d15">-</span></b><br>
-                        <b><span class="tam_txt">Partidos jugados noche:</span> <span class="pn">-</span></b><br>
-                        <b><span class="tam_txt">Victorias noche:</span> <span id="d16">-</span></b>
+                        <b><span class="tam_txt" id="txt_11">Partidos jugados mañana:</span> <span class="pm">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_12">Victorias mañana:</span> <span id="d14">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_13">Partidos jugados tarde:</span> <span class="pt">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_14">Victorias tarde:</span> <span id="d15">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_15">Partidos jugados noche:</span> <span class="pn">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_16">Victorias noche:</span> <span id="d16">-</span></b>
                     </p>
                 </div>
             </div>
@@ -307,14 +402,19 @@
             <div class="col-md-12">
                 <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
                     <i class="fa fa-thumbs-down float-left tj_cat"></i>
-                    <h3 class="tj_titulo">Derrotas por Franja Horaria:</h3>
+                    <span class="es">
+                        <h3 class="tj_titulo">Derrotas por Franja Horaria:</h3>
+                    </span>
+                    <span class="en">
+                        <h3 class="tj_titulo">Losses by Time Zone:</h3>
+                    </span>
                     <p class="tj_dato_medias">
-                        <b><span class="tam_txt">Partidos jugados mañana:</span> <span class="pm">-</span></b><br>
-                        <b><span class="tam_txt">Derrotas mañana:</span> <span id="d17">-</span></b><br>
-                        <b><span class="tam_txt">Partidos jugados tarde:</span> <span class="pt">-</span></b><br>
-                        <b><span class="tam_txt">Derrotas tarde:</span> <span id="d18">-</span></b><br>
-                        <b><span class="tam_txt">Partidos jugados noche:</span> <span class="pn">-</span></b><br>
-                        <b><span class="tam_txt">Derrotas noche:</span> <span id="d19">-</span></b>
+                        <b><span class="tam_txt" id="txt_17">Partidos jugados mañana:</span> <span class="pm">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_18">Derrotas mañana:</span> <span id="d17">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_19">Partidos jugados tarde:</span> <span class="pt">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_20">Derrotas tarde:</span> <span id="d18">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_21'">Partidos jugados noche:</span> <span class="pn">-</span></b><br>
+                        <b><span class="tam_txt" id="txt_22">Derrotas noche:</span> <span id="d19">-</span></b>
                     </p>
                 </div>
             </div>
@@ -327,11 +427,23 @@
                 <div class="col-md-12">
                     <hr style="margin-top: 40px">
                     <div style="margin: 0px 20px 0px 20px">
-                        <h1>Victorias vs Derrotas</h1>
-                        <h6 style="font-size:15px">Evolución de victorias sobre derrotas en el tiempo...</h6>
-                        <div style="font-size:12px">
-                            <i class="fa fa-square" style="color:#0b62a4"></i> <span> Victorias ascendente </span>
-                            <i class="fa fa-square" style="color:#0b62a4"></i> <span> Derrotas descendente</span></div>
+                        <span class="es">
+                            <h1>Victorias vs Derrotas</h1>
+                            <h6 style="font-size:15px">Evolución de victorias sobre derrotas en el tiempo</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0b62a4"></i> <span> Victorias ascendente </span>
+                                <i class="fa fa-square" style="color:#0b62a4"></i> <span> Derrotas descendente</span></div>
+                        </span>
+                        <span class="en">
+                            <h1>Victories vs Defeats</h1>
+
+                            <h6 style="font-size:15px">Evolution of wins over losses over time</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0b62a4"></i> <span> Ascending victories </span>
+                                <i class="fa fa-square" style="color:#0b62a4"></i> <span> Descending losses</span></div>
+                        </span>
+
+
                     </div>
 
                     <!-- Morris: Bar -->
@@ -345,15 +457,28 @@
                 <div class="col-md-12">
                     <hr style="margin-top: 40px">
                     <div style="margin: 0px 20px 0px 20px">
-                        <h1>Victorias vs Derrotas</h1>
-                        <h6 style="font-size:15px">Evolución de resultados por diferentes categorías...</h6>
-                        <div style="font-size:12px">
-                            <i class="fa fa-square" style="color:#0088cc"></i> <span> Total partidos</span>
-                            <i class="fa fa-square" style="color:#34bcd5"></i> <span> Indoor</span>
-                            <i class="fa fa-square" style="color:#bf2222"></i> <span> Outdoor</span>
-                            <i class="fa fa-square" style="color:#e2b500"></i> <span> En 2 Sets</span><br>
-                            <i class="fa fa-square" style="color:#17c305"></i> <span> En 3 Sets</span>
-                        </div>
+                        <span class="es">
+                            <h1>Victorias vs Derrotas</h1>
+                            <h6 style="font-size:15px">Evolución de resultados por diferentes categorías</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span> Total partidos</span>
+                                <i class="fa fa-square" style="color:#34bcd5"></i> <span> Indoor</span>
+                                <i class="fa fa-square" style="color:#bf2222"></i> <span> Outdoor</span>
+                                <i class="fa fa-square" style="color:#e2b500"></i> <span> En 2 Sets</span><br>
+                                <i class="fa fa-square" style="color:#17c305"></i> <span> En 3 Sets</span>
+                            </div>
+                        </span>
+                        <span class="en">
+                            <h1>Victories vs Defeats</h1>
+                            <h6 style="font-size:15px">Evolution of results by different categories </h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0088cc"></i> <span> Total matches</span>
+                                <i class="fa fa-square" style="color:#34bcd5"></i> <span> Indoor</span>
+                                <i class="fa fa-square" style="color:#bf2222"></i> <span> Outdoor</span>
+                                <i class="fa fa-square" style="color:#e2b500"></i> <span> In 2 Sets</span><br>
+                                <i class="fa fa-square" style="color:#17c305"></i> <span> In 3 Sets</span>
+                            </div>
+                        </span>
                     </div>
                     <!-- Morris: Line -->
                     <div class="chart chart-md" id="morrisLine_2" style="z-index: 1"></div>
@@ -366,14 +491,24 @@
 
                     <hr style="margin-top: 40px">
                     <div style="margin: 0px 20px 0px 20px">
-                        <h1>Victorias vs Derrotas</h1>
-                        <h6 style="font-size:15px">Comparativa de victorias y derrotas agrupadas por diferentes categorías...</h6>
-                        <div style="font-size:12px">
-                            <i class="fa fa-square" style="color:#0b62a4"></i> <span> Victorias</span>
-                            <i class="fa fa-square" style="color:#7a92a3"></i> <span> Derrotas</span><br>
-                            <span style="color:#000;font-size: 13px;font-weight: 400">Total Partidos - Indoor - Outdoor - 2 Sets - 3 Sets </span>
-
-                        </div>
+                        <span class="es">
+                            <h1>Victorias vs Derrotas</h1>
+                            <h6 style="font-size:15px">Comparativa de victorias y derrotas agrupadas por diferentes categorías</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0b62a4"></i> <span> Victorias</span>
+                                <i class="fa fa-square" style="color:#7a92a3"></i> <span> Derrotas</span><br>
+                                <span style="color:#000;font-size: 13px;font-weight: 400">Total Partidos - Indoor - Outdoor - 2 Sets - 3 Sets </span>
+                            </div>
+                        </span>
+                        <span class="en">
+                            <h1>Victories vs Defeats</h1>
+                            <h6 style="font-size:15px">Comparison of victories and defeats grouped by different categories</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#0b62a4"></i> <span> Victories</span>
+                                <i class="fa fa-square" style="color:#7a92a3"></i> <span> Defeats</span><br>
+                                <span style="color:#000;font-size: 13px;font-weight: 400">Total Matches - Indoor - Outdoor - 2 Sets - 3 Sets </span>
+                            </div>
+                        </span>
                     </div>
                 </div>
 
@@ -397,8 +532,14 @@
                 </div>
                 <div class="row">
                     <div class="col" style="font-size: 13px">
-                        La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
-                        <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                        <span class="es">
+                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                        </span>
+                        <span class="en">
+                            The highest technology in padel rackets <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl all rights reserved.</span>
+                        </span>
                     </div>
 
                 </div>
@@ -424,9 +565,91 @@
     <script src="assets/vendor/raphael/raphael.js"></script>
     <script src="assets/javascripts/ui-elements/morris_barras_laterales.js"></script>
 
+    <!-- idiomas-->
+    <script src="js/js.cookie.js"></script>
 
 
     <script>
+        var lang;
+
+        $('.idioma_b').on('click', function() {
+
+            lang = $(this).data('lang');
+
+            $('html').prop('lang', lang);
+
+            switch (lang) {
+                case 'es':
+                    Cookies.set('idioma', 'esp');
+                    break;
+                case 'en':
+                    Cookies.set('idioma', 'ing');
+                    break;
+            }
+        });
+
+        if (Cookies.get('idioma')) {
+
+            switch (Cookies.get('idioma')) {
+                case 'esp':
+                    lang = 'es';
+                    $('html').prop('lang', 'es');
+                    break;
+
+                case 'ing':
+                    lang = 'en';
+                    $('html').prop('lang', 'en');
+                    break;
+            }
+        } else {
+            lang = 'en';
+            $('html').prop('lang', 'en');
+            Cookies.set('idioma', 'ing');
+        }
+
+        
+        if(lang == 'en'){
+           $('#txt_1').html("Matches played in Indoor:");
+           $('#txt_2').html("Indoor wins:");
+           $('#txt_3').html("Indoor losses:");
+           $('#txt_4').html("Matches played in Outdoor:");
+           $('#txt_5').html("Outdoor victories:");
+           $('#txt_6').html("Outdoor losses:");
+           $('#txt_7').html("Wins in 2 set:");
+           $('#txt_8').html("Wins in 3 sets:");
+           $('#txt_9').html("Losses in 2 sets:");
+           $('#txt_10').html("Losses in 3 sets:");
+           $('#txt_11').html("Games played in the morning:");
+           $('#txt_12').html("Victories in the morning:");
+           $('#txt_13').html("Games played in the afternoon:");
+           $('#txt_14').html("Victories in the afternoon:");
+           $('#txt_15').html("Games played in the night:");
+           $('#txt_16').html("Victories at night:");
+           $('#txt_17').html("Games played in the morning:");
+           $('#txt_18').html("Losses in the morning:");
+           $('#txt_19').html("Games played in the afternoon:");
+           $('#txt_20').html("Losses in the afternoon:");
+           $('#txt_21').html("Games played at night:");
+           $('#txt_22').html("Losses at night:");
+        }
+        
+        var txt1 = 'Total Partidos';
+        var txt2 = 'En 2 Sets';
+        var txt3 = 'En 3 Sets';
+        var txt4 = 'Victorias';
+        var txt5 = 'Derrotas';
+
+
+        if (lang == 'en') {
+         txt1 = 'Total Matches';
+         txt2 = 'In 2 Sets';
+         txt3 = 'In 3 Sets';
+         txt4 = 'Wins';
+         txt5 = 'Losses';
+        }
+
+
+
         function calcular_victoria_derrota(set1, set2, set3) {
 
             arr_set1 = set1.split("/");
@@ -520,10 +743,10 @@
 
 
                         if (item['tipo_pista'] == null || item['set1'] == null || item['set2'] == null || item['tipo_pista'] == "" || item['set1'] == "" || item['set2'] == "" || item['tipo_pista'] == undefined || item['set1'] == undefined || item['set2'] == undefined) {
-                            
-        
+
+
                         } else {
-                            
+
                             var set3;
 
                             if (item['set3'] == null || item['set3'] == "" || item['set3'] == undefined) {
@@ -726,7 +949,7 @@
 
 
             arr_grafica_3.push({
-                x: 'Total Partidos',
+                x: txt1,
                 a: total_victorias,
                 b: total_derrotas
             });
@@ -744,13 +967,13 @@
             });
 
             arr_grafica_3.push({
-                x: 'En 2 Sets',
+                x: txt2,
                 a: sets2_victorias,
                 b: sets2_derrotas
             });
 
             arr_grafica_3.push({
-                x: 'En 3 Sets',
+                x: txt3,
                 a: sets3_victorias,
                 b: sets3_derrotas
             });
@@ -822,7 +1045,7 @@
                 data: arr_grafica_2,
                 xkey: 'y',
                 ykeys: ['a', 'b', 'c', 'd', 'e'],
-                labels: ['Total partidos', 'Indoor', 'Outdoor', 'En 2 Sets', 'En 3 Sets'],
+                labels: [txt1, 'Indoor', 'Outdoor', txt2, txt3],
                 hideHover: true,
                 lineColors: ['#0088cc', '#34bcd5', '#bf2222', '#e2b500', '#17c305'],
                 lineWidth: ['3', '1', '1', '1', '1'],
@@ -841,7 +1064,7 @@
                 data: arr_grafica_3,
                 xkey: 'x',
                 ykeys: ['a', 'b'],
-                labels: ['Victorias', 'Derrotas'],
+                labels: [txt4, txt5],
                 barColors: ['#0b62a4', '#808080'],
                 hideHover: true,
                 smooth: false,

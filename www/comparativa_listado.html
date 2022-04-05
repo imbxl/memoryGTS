@@ -157,6 +157,21 @@
         .slider.round:before {
             border-radius: 50%;
         }
+         /**idiomas**********************/
+
+        .es,
+        .en {
+            display: none;
+        }
+
+        .es:lang(es) {
+            display: block;
+        }
+
+
+        .en:lang(en) {
+            display: block;
+        }
 
     </style>
 
@@ -181,28 +196,68 @@
                     <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
                 </li>
                 <li>
-                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    <span class="es">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    </span>
+                    <span class="en">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> New match</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    <span class="es">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    </span>
+                    <span class="en">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> My profile</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    <span class="es">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    </span>
+                    <span class="en">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> My Matches</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    <span class="es">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivals</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    <span class="es">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Mates</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    <span class="es">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victories vs Losses</a>
+                    </span>
                 </li>
                 <li class="active">
-                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    <span class="es">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    </span>
+                    <span class="en">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparative</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    <span class="es">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    </span>
+                    <span class="en">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Check Battery</a>
+                    </span>
                 </li>
 
             </ul>
@@ -221,7 +276,6 @@
 
             <!-- open sidebar menu -->
 
-
             <div class="fixed-top bg-dark" style="height: 80px;">
                 <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
                     <img src="img/ico-menu.png" /> <span>Menu</span>
@@ -238,7 +292,12 @@
             <div class="container">
                 <div class="row" style="background-color: #292d32">
                     <div class="col-md-8" style="margin-top: 80px;color:white">
+                        <span class="es">
                         <h1 style="color:white;text-align: center">Selecciona 2 opciones</h1>
+                            </span>
+                        <span class="en">
+                        <h1 style="color:white;text-align: center">Select 2 options</h1>
+                            </span>
                         <p style="line-height: 23px"></p>
                     </div>
                 </div>
@@ -250,20 +309,42 @@
                     <div class="col-md-12">
                         <div class="card-box bg-primary tarjeta_partidos">
                             <i class="fa fa-trophy float-left text-white" style="font-size: 50px;"></i>
+                            <span class="es">
                             <h1 class="text-white tarjeta_fecha">Victorias</h1>
+                            </span>
+                            <span class="en">
+                            <h1 class="text-white tarjeta_fecha">Victories</h1>
+                            </span>
                             <label class='switch' style='margin-top:-17px'> <input id="victorias" type='checkbox' class='success micheckbox' value='victorias'><span class=' slider round'></span></label>
+                            <span class="es">
                             <h6 class="text-white tarjeta_club">TOTAL VICTORIAS</h6>
                             <h1 class="text-white tarjeta_club" style="font-size: 12px" id="mensaje_victorias">Media global de victorias</h1>
+                            </span>
+                            <span class="en">
+                            <h6 class="text-white tarjeta_club">TOTAL WINS</h6>
+                            <h1 class="text-white tarjeta_club" style="font-size: 12px" id="mensaje_victorias">Overall average wins</h1>
+                            </span>
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="card-box bg-secondary tarjeta_partidos">
                             <i class="fa fa-thumbs-down float-left text-white" style="font-size: 50px;"></i>
+                            <span class="es">
                             <h1 class="text-white tarjeta_fecha">Derrotas</h1>
+                            </span>
+                            <span class="en">
+                            <h1 class="text-white tarjeta_fecha">Defeats</h1>
+                            </span>
                             <label class='switch' style='margin-top:-17px'> <input id="derrotas" type='checkbox' class='success micheckbox' value='derrotas'><span class=' slider round'></span></label>
+                             <span class="es">
                             <h6 class="text-white tarjeta_club">TOTAL DERROTAS</h6>
                             <h1 class="text-white tarjeta_club" style="font-size: 12px" id="mensaje_derrotas">Media global de derrotas</h1>
+                            </span>
+                            <span class="en">
+                            <h6 class="text-white tarjeta_club">TOTAL DEFEATS</h6>
+                            <h1 class="text-white tarjeta_club" style="font-size: 12px" id="mensaje_derrotas">Overall average losses</h1>
+                            </span>
                         </div>
                     </div>
 
@@ -285,8 +366,14 @@
                     </div>
                     <div class="row">
                         <div class="col" style="font-size: 13px">
-                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
-                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            <span class="es">
+                                La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            </span>
+                            <span class="en">
+                                The highest technology in padel rackets <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl all rights reserved.</span>
+                            </span>
                         </div>
 
                     </div>
@@ -304,18 +391,18 @@
     <div class="modal fade" id="mensaje_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">COMPARATIVA
-
+                <div class="modal-header">
+                    COMPARATIVA / COMPARISON
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <h5 class="modal-title" id="exampleModalLabel" style="font-size: 15px">¿Deseas crear la comparativa?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel" style="font-size: 15px">¿Deseas crear la comparativa? / Do you want to create the comparison?</h5>
                 </div>
                 <div class="modal-footer">
-                    <button id="cancelar" type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
-                    <button id="aceptar" type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                    <button id="cancelar" type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    <button id="aceptar" type="button" class="btn btn-success" data-dismiss="modal">Accept</button>
                 </div>
             </div>
         </div>
@@ -334,10 +421,51 @@
     <script src="assets/js/jquery.waypoints.min.js"></script>
     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+     <!-- idiomas-->
+    <script src="js/js.cookie.js"></script>
 
 
 
     <script>
+        
+        var lang;
+
+        $('.idioma_b').on('click', function() {
+
+            lang = $(this).data('lang');
+
+            $('html').prop('lang', lang);
+
+            switch (lang) {
+                case 'es':
+                    Cookies.set('idioma', 'esp');
+                    break;
+                case 'en':
+                    Cookies.set('idioma', 'ing');
+                    break;
+            }
+        });
+
+        if (Cookies.get('idioma')) {
+
+            switch (Cookies.get('idioma')) {
+                case 'esp':
+                    lang = 'es';
+                    $('html').prop('lang', 'es');
+                    break;
+
+                case 'ing':
+                    lang = 'en';
+                    $('html').prop('lang', 'en');
+                    break;
+            }
+        } else {
+            lang = 'en';
+            $('html').prop('lang', 'en');
+            Cookies.set('idioma', 'ing');
+
+        }
+        
         /****************************************************/
 
 
@@ -585,6 +713,7 @@
                 showRecords();
             }, false);
         });
+
     </script>
 
 

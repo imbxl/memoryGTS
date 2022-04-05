@@ -64,9 +64,26 @@
 
 
         /**************END CARDS**************/
-        
-        li{
+
+        li {
             margin-top: -8px;
+        }
+
+
+        /**idiomas**********************/
+
+        .es,
+        .en {
+            display: none;
+        }
+
+        .es:lang(es) {
+            display: block;
+        }
+
+
+        .en:lang(en) {
+            display: block;
         }
 
     </style>
@@ -79,49 +96,85 @@
     <div class="wrapper">
 
         <!-- Sidebar -->
-        <nav class="sidebar" style="margin-top: 80px; height: calc(100vh - 80px);">
+        <nav class="sidebar" style="margin-top: 80px;">
 
             <!-- close sidebar menu -->
             <div class="dismiss">
                 <img src="img/ico-arrow-left.png" />
             </div>
 
-            
+
             <ul class="list-unstyled menu-elements" style="margin-top: -5px">
-                <li class="active opacidad">
-                    <a href="index.html" class="desactivar "><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
+                <li class="active">
+                    <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
                 </li>
                 <li class="opacidad">
-                    <a href="nuevo_partido.html" class="desactivar "><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    <span class="es">
+                        <a href="nuevo_partido.html" class="desactivar "><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    </span>
+                    <span class="en">
+                        <a href="nuevo_partido.html" class="desactivar "><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> New match</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    <span class="es">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    </span>
+                    <span class="en">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> My profile</a>
+                    </span>
                 </li>
                 <li class="opacidad">
+                    <span class="es">
                     <a href="listado_partidos.html" class="desactivar "><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    </span>
+                    <span class="en">
+                    <a href="listado_partidos.html" class="desactivar "><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> My Matches</a>
+                    </span>
                 </li>
                 <li class="opacidad">
+                    <span class="es">
                     <a href="historico_rivales.html" class="desactivar "><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    </span>
+                    <span class="en">
+                    <a href="historico_rivales.html" class="desactivar "><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivals</a>
+                    </span>
                 </li>
                 <li class="opacidad">
+                    <span class="es">
                     <a href="historico_compis.html" class="desactivar "><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    </span>
+                    <span class="en">
+                    <a href="historico_compis.html" class="desactivar "><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Mates</a>
+                    </span>
                 </li>
                 <li class="opacidad">
+                    <span class="es">
                     <a href="historico_victorias_derrotas.html" class="desactivar "><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    </span>
+                    <span class="en">
+                    <a href="historico_victorias_derrotas.html" class="desactivar "><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victories vs Losses</a>
+                    </span>
                 </li>
                 <li class="opacidad">
+                    <span class="es">
                     <a href="comparativa_listado.html" class="desactivar "><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    </span>
+                    <span class="en">
+                    <a href="comparativa_listado.html" class="desactivar "><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparative</a>
+                    </span>
                 </li>
                 <li class="opacidad">
+                    <span class="es">
                     <a href="comprobar_bateria.html" class="desactivar "><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    </span>
+                    <span class="en">
+                    <a href="comprobar_bateria.html" class="desactivar "><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Check Battery</a>
+                    </span>
                 </li>
             </ul>
             <div class="col-8 offset-2" style="margin-top: 35x">
-            
-                 <!--<a href="rellenar_datos_bbdd.html">-->
                     <img class="img-fluid " src="img/logo_gts_alta_blanco.png" alt="Logo gaftaf Sport" />
-                <!--</a>-->
-               
             </div>
 
         </nav>
@@ -134,8 +187,6 @@
         <div class="content">
 
             <!-- open sidebar menu -->
-
-
             <div id="desconectar" class="fixed-top bg-dark" style="height: 80px;">
                 <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
                     <img src="img/ico-menu.png" /> <span>Menu</span>
@@ -154,27 +205,42 @@
                             <div class="description wow fadeInLeft" style="background-color: rgba(0, 0, 0, 0.5);  ; border-radius: 8px;padding: 20px 30px 20px 30px;text-align: justify;margin-top:25px">
 
                                 <div id="mensaje">
-
-                                    <h1 style="text-align: center;margin-top:-50px;line-height: 40px;font-size: 35px"><strong>Bienvenido al app de Memory</strong></h1>
-                                    <p style="color: white;line-height: 25px;text-align: left;">
-                                        Darte las gracias por haber adquirido una <strong>pala Memory</strong>.<br><br> Desde ahora podrás conocer aspectos y métricas de tu juego que desconocías, así como visualizar históricos, evoluciones y comparativas de juego.<br><br>
-                                        <strong><span style="font-size: 25px">¡Antes de comenzar debes rellenar los datos de tu perfil! </span></strong>
-                                    </p>
-
+                                    <span class="es">
+                                        <h1 style="text-align: center;margin-top:-50px;line-height: 40px;font-size: 35px"><strong>Bienvenido al app de Memory</strong></h1>
+                                        <h1 style="text-align: center;margin-top:-50px;line-height: 40px;font-size: 17px"><strong>Selecciona tu idioma | Select your language</strong></h1>
+                                    </span>
+                                    <span class="en">
+                                        <h1 style="text-align: center;margin-top:-50px;line-height: 40px;font-size: 35px"><strong>Welcome to the Memory app</strong></h1>
+                                        <h1 style="text-align: center;margin-top:-50px;line-height: 40px;font-size: 17px"><strong>Selecciona tu idioma | Select your language</strong></h1>
+                                    </span>
+                                    <div style="text-align: center;margin-top:-10px;font-size: 20px">
+                                        <a class="idioma_b" href="#" data-lang="es"><img src="img/band-esp.jpg" /> Español</a> |
+                                        <a class="idioma_b" href="#" data-lang="en"><img src="img/band-ing.jpg" /> Inglés</a>
+                                    </div>
+                                    <span class="es">
+                                        <p style="color: white;line-height: 25px;text-align: left;margin-top:10px">
+                                            Darte las gracias por haber adquirido una <strong>pala Memory</strong>.<br> Desde ahora podrás conocer aspectos y métricas de tu juego que desconocías, así como visualizar históricos, evoluciones y comparativas de juego.<br>
+                                            <strong><span style="font-size: 25px">¡Antes de comenzar debes rellenar los datos de tu perfil! </span></strong>
+                                        </p>
+                                    </span>
+                                    <span class="en">
+                                        <p style="color: white;line-height: 25px;text-align: left;margin-top:10px">
+                                            Thank you for having purchased a <strong> Memory racket </strong>. <br> From now on you will be able to know aspects and metrics of your game that you did not know, as well as view historical, evolutions and game comparisons. <br>
+                                            <strong> <span style="font-size: 25px"> Before starting you must fill in your profile data! </span></strong>
+                                        </p>
+                                    </span>
                                     <div class="wow fadeInUp" style=" margin-top: 30px;text-align: center">
                                         <a class="btn btn-primary btn-customized scroll-link" href="#" role="button" id="ir_a_perfil">
-                                            <img class="img-fluid" src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi Perfil
+                                            <img class="img-fluid" src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" />
+                                            Mi Perfil | My profile
                                         </a>
                                     </div>
-
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
 
 
             <!-- Nuevo Partido 1 -->
@@ -186,51 +252,56 @@
                         <div style="background-color: #fff; margin: 30px 15px 15px 15px; border-radius: 10px;padding: 15px">
 
                             <img class="img-fluid" src="img/ico_nuevo_partido.png" />
+                            <span class="es">
+                                <h1 style="text-align: center;margin-top: 0px;"><b>Nuevo Partido</b></h1>
+                                <p style="font-size:20px;margin-top: 10px">Descargar Datos</p>
 
-                            <h1 style="text-align: center;margin-top: 0px;"><b>Nuevo Partido</b></h1>
-                            <p style="font-size:20px;margin-top: 10px">Descargar Datos</p>
+                                <p style="line-height: 20px;margin-top: -10px">Si has acabado de jugar tu partido, pulsa el siguiente botón para acceder a la pantalla de descarga de datos de tu pala Memory...</p>
+                            </span>
+                            <span class="en">
+                                <h1 style="text-align: center;margin-top: 0px;"><b>New Match</b></h1>
+                                <p style="font-size:20px;margin-top: 10px">Download Data</p>
 
-                            <p style="line-height: 20px;margin-top: -10px">Si has acabado de jugar tu partido, pulsa el siguiente botón para acceder a la pantalla de descarga de datos de tu pala Memory...</p>
-
+                                <p style="line-height: 20px;margin-top: -10px">If you have finished playing your game, press the following button to access the data download screen of your Memory racket...</p>
+                            </span>
                             <a class="btn btn-primary btn-customized desactivar opacidad a_ref" href="nuevo_partido.html" role="button">
-                                <img class="img-fluid" src="img/ico_pala-movil.png" width="41" height="28" /> Descargar
+                                <img class="img-fluid" src="img/ico_pala-movil.png" width="41" height="28" /> Descargar | Download
                             </a>
                         </div>
                     </div>
                 </div>
 
-
-
                 <!-- Section 1 -->
 
-                <hr style="margin-top:20px">
-
+                <hr style="margin-top:15px">
 
                 <div class="row">
-                    <div class="shadow" style="background-color: #fff; margin: 15px 15px 40px 15px; border-radius: 10px;padding: 15px">
+                    <div class="col-12">
+                        <div style="background-color: #fff; margin: 15px 15px 15px 15px; border-radius: 10px;padding: 15px">
 
-                        <div class="col-md-4 section-1-box wow fadeInUp">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="section-1-box-icon">
-                                        <i class="fa fa-question"></i>
-                                    </div>
-                                </div>
-                                <div style="text-align: center;margin-bottom: 20px">
-                                    <h1 style="text-align: center;margin-top: 3px;"><b>Ayuda</b></h1>
-                                    <p style="line-height: 20px">Pulsa el siguiente botón acceder a nuestra guía de ayuda</p>
 
-                                    <a class="btn btn-primary btn-customized " href="ayuda.html" role="button">
-                                        <i class="fa fa-question"></i> Ayuda
-                                    </a>
+                            <div class="col-12 section-1-box  ">
+                                <div class="section-1-box-icon">
+                                    <i class="fa fa-question"></i>
                                 </div>
                             </div>
+                            <span class="es">
+                                <h1 style="text-align: center;margin-top: 0px;"><b>Ayuda</b></h1>
+
+                                <p style="line-height: 20px">Pulsa el siguiente botón acceder a nuestra guía de ayuda</p>
+                            </span>
+                            <span class="en">
+                                <h1 style="text-align: center;margin-top: 0px;"><b>Help</b></h1>
+
+                                <p style="line-height: 20px">Press the following button to access our help guide</p>
+                            </span>
+                            <a class="btn btn-primary btn-customized " href="ayuda.html" role="button">
+                                <i class="fa fa-question"></i> Ayuda | Help
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
 
 
             <!-- Footer -->
@@ -243,8 +314,14 @@
                     </div>
                     <div class="row">
                         <div class="col" style="font-size: 13px">
-                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
-                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            <span class="es">
+                                La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            </span>
+                            <span class="en">
+                                The highest technology in padel rackets <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl all rights reserved.</span>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -270,7 +347,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <h5 class="modal-title" id="exampleModalLabel" style="color:red">¡Lo primero que debes hacer es pulsar la opción <b>"Mi Perfil"</b> y rellenar los campos del formulario!</h5>
+                    <span class="es">
+                        <h5 class="modal-title" id="exampleModalLabel" style="color:red">¡Lo primero que debes hacer es pulsar la opción <b>"Mi Perfil"</b> y rellenar los campos del formulario!</h5>
+                    </span>
+                    <span class="en">
+                        <h5 class="modal-title" id="exampleModalLabel" style="color:red">The first thing you should do is click on the <b> "My Profile" </b> option and fill in the fields of the form!</h5>
+                    </span>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
@@ -295,6 +377,9 @@
     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 
+    <!-- idiomas-->
+    <script src="js/js.cookie.js"></script>
+
 
     <script>
         var db = null;
@@ -307,11 +392,9 @@
 
         function onError(tx, error) {
             alert("Error: " + error.message);
-            console.log(error.message);
         }
 
         function ok_tabla_1() {
-            console.log('ok=' + x);
             x++;
             crear_tablas(x);
         }
@@ -396,7 +479,6 @@
 
         var desactivar_bot = false;
 
-        //estados de activacion de la app
         $('.desactivar').click(function() {
 
             if (desactivar_bot == false) {
@@ -407,27 +489,65 @@
 
         function desactivar() {
             $('.opacidad').css("opacity", "0.5");
-            console.log('desactivar');
             desactivar_bot = false;
 
         }
 
         function activar() {
             $('.opacidad').css("opacity", "1");
-            // bot_desactivar = '.sin_css';
-            console.log('activar');
             desactivar_bot = true;
+            
+            var txt_m = 'Bienvenido ';
+            if(lang=='en'){
+                txt_m = 'Welcome ';
+            }
 
-            $('#mensaje').html(
-                "<h1 style = 'text-align: center;margin-top:-30px;margin-bottom:50px'> ¡Bienvenido " + nombre +
-                "!"
-            );
+            $('#mensaje').html("<h1 style = 'text-align: center;margin-top:-30px;margin-bottom:50px'>" + txt_m + ' ' + nombre + "!");
         }
         document.addEventListener("DOMContentLoaded", function() {
             document.addEventListener('deviceready', function(){
                 iniciar_bbdd();
             }, false);
+        /*****IDIOMAS******************************/
+
+        var lang;
+
+        $('.idioma_b').on('click', function() {
+
+            lang = $(this).data('lang');
+
+            $('html').prop('lang', lang);
+
+            switch (lang) {
+                case 'es':
+                    Cookies.set('idioma', 'esp');
+                    break;
+                case 'en':
+                    Cookies.set('idioma', 'ing');
+                    break;
+            }
         });
+
+        if (Cookies.get('idioma')) {
+
+            switch (Cookies.get('idioma')) {
+                case 'esp':
+                    lang = 'es';
+                    $('html').prop('lang', 'es');
+                    break;
+
+                case 'ing':
+                    lang = 'en';
+                    $('html').prop('lang', 'en');
+                    break;
+            }
+        } else {
+            lang = 'en';
+            $('html').prop('lang', 'en');
+            Cookies.set('idioma', 'ing');
+
+        }
+
     </script>
 
 </body>

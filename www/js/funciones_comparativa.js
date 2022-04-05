@@ -1,3 +1,49 @@
+   var lang;
+
+   $('.idioma_b').on('click', function () {
+
+       lang = $(this).data('lang');
+
+       $('html').prop('lang', lang);
+
+       switch (lang) {
+           case 'es':
+               Cookies.set('idioma', 'esp');
+               break;
+           case 'en':
+               Cookies.set('idioma', 'ing');
+               break;
+       }
+   });
+
+   if (Cookies.get('idioma')) {
+
+       switch (Cookies.get('idioma')) {
+           case 'esp':
+               lang = 'es';
+               $('html').prop('lang', 'es');
+               break;
+
+           case 'ing':
+               lang = 'en';
+               $('html').prop('lang', 'en');
+               break;
+       }
+   } else {
+       lang = 'en';
+       $('html').prop('lang', 'en');
+       Cookies.set('idioma', 'ing');
+
+   }
+
+var txt_t1 = 'MEDIA GLOBAL VICTORIAS';
+var txt_t2 = 'MEDIA GLOBAL DERROTAS'; 
+
+if(lang == 'en'){
+        txt_t1 = 'GLOBAL AVERAGE WINS';
+        txt_t2 = 'GLOBAL AVERAGE DEFEATS';
+}
+
    //RECOJO ID's DEL PARTIDO
    var enlace = location.search;
    var cadVariables = location.search.substring(1, location.search.length);
@@ -1491,8 +1537,8 @@
                "<img src='img/ico_copa.png' style='margin-top: 25px;'>" +
                "</div>" +
                "<div class='col-8'>" +
-               "<p style='font-size: 15px; text-align: left; margin-top: 50px'>" +
-               "<b>MEDIA GLOBAL VICTORIAS</b>" +
+               "<p style='font-size: 15px; text-align: left; margin-top: 50px;color:#0088cc'>" +
+               "<b>" + txt_t1 + "</b>" +
                "</p>" +
                "</div>");
 
@@ -1500,11 +1546,11 @@
        } else if (id_a == "derrotas") {
 
            $("#contenedor_a").html("<div class='col-4' style='text-align: right'>" +
-               "<img src='img/ico_pulgar.png' style='margin-top: 25px;'>" +
+               "<img src='img/ico_pulgar_verde.png' style='margin-top: 25px;'>" +
                "</div>" +
                "<div class='col-8'>" +
-               "<p style='font-size: 15px; text-align: left; margin-top: 30px'>" +
-               "<b>MEDIA GLOBAL DERROTAS</b>" +
+               "<p style='font-size: 15px; text-align: left; margin-top: 30px; color:#119904'>" +
+               "<b>" + txt_t2 + "</b>" +
                "</p>" +
                "</div>");
 
@@ -1528,19 +1574,19 @@
                "<img src='img/ico_copa.png' style='margin-top: 25px;'>" +
                "</div>" +
                "<div class='col-8'>" +
-               "<p style='font-size: 15px; text-align: left; margin-top: 50px'>" +
-               "<b>MEDIA GLOBAL VICTORIAS</b>" +
+               "<p style='font-size: 15px; text-align: left; margin-top: 50px;color:#0088cc'>" +
+               "<b>" + txt_t1 + "</b>" +
                "</p>" +
                "</div>");
 
        } else if (id_b == "derrotas") {
 
            $("#contenedor_b").html("<div class='col-4' style='text-align: right'>" +
-               "<img src='img/ico_pulgar.png' style='margin-top: 25px;'>" +
+               "<img src='img/ico_pulgar_verde.png' style='margin-top: 25px;'>" +
                "</div>" +
                "<div class='col-8'>" +
-               "<p style='font-size: 15px; text-align: left; margin-top: 30px'>" +
-               "<b>MEDIA GLOBAL DERROTAS</b>" +
+               "<p style='font-size: 15px; text-align: left; margin-top: 30px;color:#119904'>" +
+               "<b>" + txt_t2 + "</b>" +
                "</p>" +
                "</div>");
 
@@ -1614,10 +1660,10 @@
 
    var eti_der = 'Derechas';
    var eti_rev = 'Revéses';
-   var eti_glo_der = 'Globo D.';
-   var eti_glo_rev = 'Globo R.';
-   var eti_vm_glo_der = 'V.M. Glo. Der.';
-   var eti_vm_glo_rev = 'V.M. Glo. Rev.';
+   var eti_glo_der = 'Globo D';
+   var eti_glo_rev = 'Globo R';
+   var eti_vm_glo_der = 'VM Glo D';
+   var eti_vm_glo_rev = 'VM Glo R';
 
    var eti_c_d = 'Derecha:';
    var eti_c_r = 'Revés:';
@@ -1625,6 +1671,22 @@
    var eti_c_rev = 'Revéses:';
    var eti_c_glo_der = 'Globos derechas';
    var eti_c_glo_rev = 'Globo revéses';
+
+   if (lang == 'en') {
+       eti_der = 'Drive';
+       eti_rev = 'Backhand';
+       eti_glo_der = 'Lob D';
+       eti_glo_rev = 'Lob B';
+       eti_vm_glo_der = 'Av. Lob D';
+       eti_vm_glo_rev = 'Av. Lob B';
+
+       eti_c_d = 'Drive:';
+       eti_c_r = 'Backhand:';
+       eti_c_der = 'Drive:';
+       eti_c_rev = 'Backhand:';
+       eti_c_glo_der = 'Lob drive';
+       eti_c_glo_rev = 'Lob Backhand';
+   }
 
 
    function perfil() {

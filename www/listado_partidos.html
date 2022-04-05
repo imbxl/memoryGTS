@@ -76,6 +76,22 @@
         li{
             margin-top: -8px;
         }
+        
+          /**idiomas**********************/
+
+        .es,
+        .en {
+            display: none;
+        }
+
+        .es:lang(es) {
+            display: block;
+        }
+
+
+        .en:lang(en) {
+            display: block;
+        }
 
     </style>
 
@@ -96,32 +112,72 @@
 
 
             <ul class="list-unstyled menu-elements" style="margin-top: -5px">
-                <li>
+               <li>
                     <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
                 </li>
                 <li>
-                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    <span class="es">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    </span>
+                    <span class="en">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> New match</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    <span class="es">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    </span>
+                    <span class="en">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> My profile</a>
+                    </span>
                 </li>
                 <li class="active">
-                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    <span class="es">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    </span>
+                    <span class="en">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> My Matches</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    <span class="es">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivals</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    <span class="es">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Mates</a>
+                    </span>
+                </li>
+                <li class="active">
+                    <span class="es">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victories vs Losses</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    <span class="es">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    </span>
+                    <span class="en">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparative</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
-                </li>
-                <li>
-                    <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    <span class="es">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    </span>
+                    <span class="en">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Check Battery</a>
+                    </span>
                 </li>
 
             </ul>
@@ -156,9 +212,15 @@
 
             <div class="container">
                 <div class="row" style="background-color: #292d32">
-                    <div class="col-md-8" style="margin-top: 100px;color:white">
+                    <div class="col-md-12" style="margin-top: 100px;color:white">
+                        <span class="es">
                         <h1 style="color:white;text-align: center">Mis Partidos</h1>
-                        <p style="line-height: 23px">Pulsa sobre los partidos para ver los detalles...</p>
+                        <p style="line-height: 23px">Pulsa sobre los partidos para ver los detalles</p>
+                        </span>
+                         <span class="en">
+                        <h1 style="color:white;text-align: center">My Matches</h1>
+                        <p style="line-height: 23px">Click on the matches to see the details</p>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -166,45 +228,8 @@
             <div class="container">
                 <div class="row" id="resultado">
 
-
-
-                    <!-- Section 1 -->
-                    <!--   <div class="col-md-12">
-                        <a href='mi_partido.html?id='>
-                            <div class="card-box bg-warning tarjeta_partidos">
-                                <i class="fa fa-exclamation float-left text-white" style="font-size: 50px;"></i>
-                                <h1 class="text-white tarjeta_fecha">25/06/2017</h1>
-                                <h6 class="text-white tarjeta_club">Faltan datos</h6>
-                                <h1 class="text-white tarjeta_club">Pulsa para completar datos</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-12">
-                        <div class="card-box bg-secondary tarjeta_partidos">
-                            <i class="fa fa-thumbs-down float-left text-white" style="font-size: 50px;"></i>
-                            <h1 class="text-white tarjeta_fecha">25/06/2017</h1>
-                            <p class="tarjeta_club1"><span class="titulo_clubs">Villapadel</span><br>Belasteguin - Juan Martin<br>Compi: Lamperti</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-12">
-                        <div class="card-box bg-primary tarjeta_partidos">
-                            <i class="fa fa-trophy float-left text-white" style="font-size: 50px;"></i>
-                            <h1 class="text-white tarjeta_fecha">25/06/2017</h1>
-                            <h6 class="text-white tarjeta_club">Villapadel</h6>
-                            <h1 class="text-white tarjeta_club">Belasteguin - Juan Martin</h1>
-                        </div>
-                    </div>
-                -->
-
                 </div>
             </div>
-
-
-
-            <!-- <button id="guardar" type="button" class="btn btn-primary " style="padding: 10px 20px 10px 20px;"> <i class="fas fa-align-left"></i> <span>Guardar</span></button> -->
-
 
             <!-- Footer -->
             <footer class="footer-container" style="background-color: white;margin-top: 10px;">
@@ -218,8 +243,14 @@
                     </div>
                     <div class="row">
                         <div class="col" style="font-size: 13px">
+                            <span class="es">
                             La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
                             <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                        </span>
+                        <span class="en">
+                            The highest technology in padel rackets <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl all rights reserved.</span>
+                        </span>
                         </div>
 
                     </div>
@@ -245,27 +276,61 @@
     <script src="assets/js/scripts.js"></script>
 
 
+<!-- idiomas-->
+    <script src="js/js.cookie.js"></script>
+
 
     <script>
-        //http://127.0.0.1:50342/memory_v1/listado_partidos.html  averiguar borrado bbdd
-        /* 
-               //puntero raton
-               $(".tarjeta_partidos").mouseover(function() {
-                   // $(this).css("opacity", "0.5");
-                   $(this).css("cursor", "pointer");
-               });
-               $(".tarjeta_partidos").mouseout(function() {
-                   //$(this).css("opacity", "1");
-                   $(this).css("cursor", "default");
-               });
+        var lang;
 
-               //no es necesario
-               $(".tarjeta_partidos").on('click', function() {
-                     alert("hola");
+        $('.idioma_b').on('click', function() {
 
-                 });*/
+            lang = $(this).data('lang');
 
-        /****************************************************/
+            $('html').prop('lang', lang);
+
+            switch (lang) {
+                case 'es':
+                    Cookies.set('idioma', 'esp');
+                    break;
+                case 'en':
+                    Cookies.set('idioma', 'ing');
+                    break;
+            }
+        });
+
+        if (Cookies.get('idioma')) {
+
+            switch (Cookies.get('idioma')) {
+                case 'esp':
+                    lang = 'es';
+                    $('html').prop('lang', 'es');
+                    break;
+
+                case 'ing':
+                    lang = 'en';
+                    $('html').prop('lang', 'en');
+                    break;
+            }
+        } else {
+            lang = 'en';
+            $('html').prop('lang', 'en');
+            Cookies.set('idioma', 'ing');
+        }
+        
+        var txt1 = 'Aún no hay partidos jugados...';
+        var txt2 = 'Faltan datos';
+        var txt3 = 'Pulsa para completar partido';
+        var txt4 = 'Compi: ';
+        
+        if(lang=='en'){
+            txt1 = 'No games played yet...';
+            txt2 = 'Missing data';
+            txt3 = 'Press to complete match';
+            txt4 = 'Partner: ';
+        }
+        
+
 
         var seleccionar_todo = "SELECT * FROM Partidos ORDER BY id DESC";
         //var db = openDatabase("Memory", "1.0", "Pala Memory", 10 * 1024 * 1024); // Open SQLite Database 10MB
@@ -342,7 +407,7 @@
                             "<div class='col-md-12' style='margin: 100px 0px 100px 0px'>" +
                             "<div class='card-box bg-primary tarjeta_partidos'>" +
                             "<i class='fa fa-exclamation float-left text-white' style='font-size: 50px;'></i>" +
-                            "<h6 style='color:white;padding: 30px 30px 30px 60px'>Aún no hay partidos jugados...</h6>" +
+                            "<h6 style='color:white;padding: 30px 30px 30px 60px'>" + txt1 + "</h6>" +
                             "</div>" +
                             "</div>"
                         );
@@ -387,13 +452,15 @@
                                     "<div class='card-box bg-warning tarjeta_partidos' >" +
                                     "<img src='img/ico_faltan_datos.png' class='float-left'>" +
                                     "<h1 class='text-white tarjeta_fecha'>" + item['fecha'] + ' | ' + item['hora'] + "</h1>" +
-                                    "<h6 class='text-white tarjeta_club'> Faltan datos </h6>" +
-                                    "<h1 class='text-white tarjeta_club'> Pulsa para completar partido </h1>" +
+                                    "<h6 class='text-white tarjeta_club'>" + txt2 + "</h6>" +
+                                    "<h1 class='text-white tarjeta_club'>" + txt3 + "</h1>" +
                                     "</div>" +
                                     "</a>" +
                                     "</div>"
                                 );
                             }
+                            
+                          
 
                             if (victoria == true) {
 
@@ -406,7 +473,7 @@
                                     "<p class='tarjeta_club1'>" +
                                     "<span class='titulo_clubs'>" + item['club'] + "</span>" +
                                     "<br>" + item['r_derecha'] + " - " + item['r_reves'] +
-                                    "<br>Compi: " + item['compi'] + "</p>" +
+                                    "<br>" + txt4 + ' ' + item['compi'] + "</p>" +
                                     "</div>" +
                                     "</a>" +
                                     "</div>"
@@ -424,7 +491,7 @@
                                     "<p class='tarjeta_club1'>" +
                                     "<span class='titulo_clubs'>" + item['club'] + "</span>" +
                                     "<br>" + item['r_derecha'] + " - " + item['r_reves'] +
-                                    "<br>Compi: " + item['compi'] + "</p>" +
+                                    "<br>" + txt4 + ' ' + item['compi'] + "</p>" +
                                     "</div>" +
                                     "</a>" +
                                     "</div>"

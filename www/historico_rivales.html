@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Bootstrap 4 Template with Sidebar Menu</title>
+    <title>Memory</title>
 
     <!-- CSS -->
 
@@ -103,9 +103,25 @@
         hr.style3 {
             border-top: 1px dashed #8c8b8b;
         }
-        
-        li{
+
+        li {
             margin-top: -8px;
+        }
+
+        /**idiomas**********************/
+
+        .es,
+        .en {
+            display: none;
+        }
+
+        .es:lang(es) {
+            display: block;
+        }
+
+
+        .en:lang(en) {
+            display: block;
         }
 
     </style>
@@ -131,28 +147,68 @@
                     <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
                 </li>
                 <li>
-                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    <span class="es">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    </span>
+                    <span class="en">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> New match</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    <span class="es">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    </span>
+                    <span class="en">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> My profile</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    <span class="es">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    </span>
+                    <span class="en">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> My Matches</a>
+                    </span>
                 </li>
                 <li class="active">
-                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    <span class="es">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivals</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    <span class="es">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Mates</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    <span class="es">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victories vs Losses</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    <span class="es">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    </span>
+                    <span class="en">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparative</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    <span class="es">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    </span>
+                    <span class="en">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Check Battery</a>
+                    </span>
                 </li>
 
             </ul>
@@ -187,16 +243,19 @@
 
             <div class="container">
                 <div class="row" style="background-color: #292d32">
-                    <div class="col-md-8" style="margin-top: 80px;color:white">
-                        <h1 style="color:white;text-align: center">Mis Rivales de Juego</h1>
-                        <p style="line-height: 23px">Visualización sobre el nivel de tus rivales.</p>
+                    <div class="col-md-12" style="margin-top: 80px;color:white">
+                        <span class="es">
+                            <h1 style="color:white;text-align: center">Mis Rivales de Juego</h1>
+                            <p style="line-height: 23px">Histórico de victorias y derrotas de tus rivales</p>
+                        </span>
+                        <span class="en">
+                             <h1 style="color:white;text-align: center">My Game Rivals</h1>
+                            <p style="line-height: 23px">History of victories and defeats of your rivals</p>
+                        </span>
+
                     </div>
                 </div>
             </div>
-
-
-
-
 
 
 
@@ -210,13 +269,23 @@
 
                                     <img class="img-fluid" src="img/ico_pareja_blanco.png" />
                                 </div>
-                                <p class="card-category">Mis rivales de juego</p>
+                                <span class="es">
+                                    <p class="card-category">Mis rivales de juego</p>
+                                </span>
+                                <span class="en">
+                                    <p class="card-category">My game rivals</p>
+                                </span>
                             </div>
+                            <span class="es">
+                                <h1 style="font-size: 20px">Pareja objetivo a batir</h1>
 
-                            <h1 style="font-size: 20px">Pareja objetivo a batir</h1>
+                                <p style="margin: -10px 40px 10px 40px;line-height: 20px">Pareja de mayor dificultad para tu juego</p>
+                            </span>
+                            <span class="en">
+                                <h1 style="font-size: 20px">Target rival to beat</h1>
 
-                            <p style="margin: -10px 40px 10px 40px;line-height: 20px">Pareja de mayor dificultad para tu juego...</p>
-
+                                <p style="margin: -10px 40px 10px 40px;line-height: 20px">Rival of greater difficulty for your game </p>
+                            </span>
                             <div style="text-align: center">
                                 <img class="img-fluid" src="img/ico-pareja-rojo.png" width="61" height="58" />
                             </div>
@@ -224,11 +293,16 @@
                             <p style="font-size: 18px;margin-top:10px;"><span id="vd1">-</span></p>
 
                             <hr class="style3" style="margin: 0px 50px 0px 50px;">
+                            <span class="es">
+                                <h1 style="font-size: 20px">Pareja Superada</h1>
 
-                            <h1 style="font-size: 20px">Pareja Superada</h1>
+                                <p style="margin: -10px 40px 20px 40px; line-height: 20px">Pareja de juego que no entraña dificultades para tu juego</p>
+                            </span>
+                            <span class="en">
+                                <h1 style="font-size: 20px">Overtaken Rivals</h1>
 
-                            <p style="margin: -10px 40px 20px 40px; line-height: 20px">Pareja de juego que no entraña dificultades para tu juego...</p>
-
+                                <p style="margin: -10px 40px 20px 40px; line-height: 20px">Gaming rivals that do not entail difficulties for your game</p>
+                            </span>
                             <div style="text-align: center">
                                 <img class="img-fluid" src="img/ico-pareja-verde.png" width="61" height="58" />
                             </div>
@@ -241,13 +315,23 @@
                     </div>
                 </div>
             </div>
-
-            <h1><b>MIS RIVALES</b></h1>
+            <span class="es">
+                <h1><b>MIS RIVALES</b></h1>
+            </span>
+            <span class="en">
+                <h1><b>MY RIVALS</b></h1>
+            </span>
 
             <div class="col-md-12">
                 <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
                     <img style="float: left" src="img/ico-pareja-rojo.png" width="46" height="40" />
-                    <h3 class="tj_titulo">Rivales de mayor dificultad:</h3>
+                    <span class="es">
+                        <h3 class="tj_titulo">Rivales de mayor dificultad:</h3>
+                    </span>
+                    <span class="en">
+                        <h3 class="tj_titulo">Rivals of greater difficulty:</h3>
+                    </span>
+
                     <p class="tj_dato_medias">
                         <b><span id="vd3">-</span></b><br>
                         <span class="tam_txt" id="j1">-</span> <br>
@@ -255,18 +339,25 @@
                         <span class="tam_txt" id="d1">-</span> <br>
                     </p>
                 </div>
+
             </div>
 
             <div class="col-md-12">
                 <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
                     <img style="float: left" src="img/ico-pareja-verde.png" width="46" height="40" />
-                    <h3 class="tj_titulo">Rivales que no entrañan dificultad:</h3>
+                    <span class="es">
+                        <h3 class="tj_titulo">Rivales que no entrañan dificultad:</h3>
+                    </span>
+                    <span class="en">
+                        <h3 class="tj_titulo">Rivals that do not involve difficulty:</h3>
+                    </span>
                     <p class="tj_dato_medias">
                         <b><span id="vd4">-</span></b><br>
                         <span class="tam_txt" id="j2">-</span> <br>
                         <span class="tam_txt" id="v2">-</span> <br>
                         <span class="tam_txt" id="d2">-</span> <br>
                     </p>
+
                 </div>
             </div>
 
@@ -279,11 +370,20 @@
 
                     <hr style="margin-top: 40px">
                     <div style="margin: 0px 20px 0px 20px">
-                        <h1>Victorias Rivales</h1>
-                        <h6 style="font-size:15px">De mayor a menor número de victorias de tus rivales que han logrado sobre ti...</h6>
-                        <div style="font-size:12px">
-                            <i class="fa fa-square" style="color:#c20000"></i> <span> Victorias rivales</span>
-                            <i class="fa fa-square" style="color:#2ca91c"></i> <span> Mis Victorias</span></div>
+                        <span class="es">
+                            <h1>Victorias Rivales</h1>
+                            <h6 style="font-size:15px">De mayor a menor número de victorias de tus rivales que han logrado sobre ti</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#c20000"></i> <span> Victorias rivales</span>
+                                <i class="fa fa-square" style="color:#2ca91c"></i> <span> Mis Victorias</span></div>
+                        </span>
+                        <span class="en">
+                            <h1>Rivals Victories</h1>
+                            <h6 style="font-size:15px">From highest to lowest number of victories your rivals have achieved over you</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#c20000"></i> <span> Rivals victories</span>
+                                <i class="fa fa-square" style="color:#2ca91c"></i> <span> My victories</span></div>
+                        </span>
                     </div>
 
                     <!-- Morris: Bar -->
@@ -299,11 +399,20 @@
                 <div class="col-md-12">
                     <hr style="margin-top: 40px">
                     <div style="margin: 0px 20px 0px 20px">
-                        <h1>Mis Victorias</h1>
-                        <h6 style="font-size:15px">De mayor a menor número de victorias que has obtenido a las siguientes parejas...</h6>
-                        <div style="font-size:12px">
-                            <i class="fa fa-square" style="color:#c20000"></i> <span> Victorias rivales</span>
-                            <i class="fa fa-square" style="color:#2ca91c"></i> <span> Mis Victorias</span></div>
+                        <span class="es">
+                            <h1>Mis Victorias</h1>
+                            <h6 style="font-size:15px">De mayor a menor número de victorias que has obtenido a las siguientes parejas</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#c20000"></i> <span> Victorias rivales</span>
+                                <i class="fa fa-square" style="color:#2ca91c"></i> <span> Mis Victorias</span></div>
+                        </span>
+                        <span class="en">
+                            <h1>My victories</h1>
+                            <h6 style="font-size:15px">From highest to lowest number of victories you have obtained to the following rivals</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#c20000"></i> <span> Rival victories</span>
+                                <i class="fa fa-square" style="color:#2ca91c"></i> <span> My victories</span></div>
+                        </span>
                     </div>
 
 
@@ -319,11 +428,20 @@
                 <div class="col-md-12">
                     <hr style="margin-top: 40px">
                     <div style="margin: 0px 20px 0px 20px">
-                        <h1>Partidos jugados</h1>
-                        <h6 style="font-size:15px">De mayor a menor número de partidos disputados...</h6>
-                        <div style="font-size:12px">
-                            <i class="fa fa-square" style="color:#c20000"></i> <span> Victorias rivales</span>
-                            <i class="fa fa-square" style="color:#2ca91c"></i> <span> Mis Victorias</span></div>
+                        <span class="es">
+                            <h1>Partidos jugados</h1>
+                            <h6 style="font-size:15px">De mayor a menor número de partidos disputados</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#c20000"></i> <span> Victorias rivales</span>
+                                <i class="fa fa-square" style="color:#2ca91c"></i> <span> Mis Victorias</span></div>
+                        </span>
+                        <span class="en">
+                            <h1>Games played</h1>
+                            <h6 style="font-size:15px">From highest to lowest number of matches played</h6>
+                            <div style="font-size:12px">
+                                <i class="fa fa-square" style="color:#c20000"></i> <span>Rivals victories</span>
+                                <i class="fa fa-square" style="color:#2ca91c"></i> <span> My victories</span></div>
+                        </span>
                     </div>
                     <!-- Morris: Bar -->
                     <div class="chart chart-md" id="bar-example" style="z-index: 1"></div>
@@ -345,8 +463,14 @@
                     </div>
                     <div class="row">
                         <div class="col" style="font-size: 13px">
-                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
-                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            <span class="es">
+                                La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            </span>
+                            <span class="en">
+                                The highest technology in padel rackets <a href="https://www.gaftafsport.com"> Gaftaf Sport </a>
+                                <br> <span style="font-size: 11px; color: black"> &copy; Gaftaf Sport sl all rights reserved.</span>
+                            </span>
                         </div>
 
                     </div>
@@ -372,10 +496,65 @@
     <script src="assets/js/scripts.js"></script>
     <script src="assets/vendor/raphael/raphael.js"></script>
     <script src="assets/javascripts/ui-elements/morris_barras_laterales.js"></script>
-
+    <!-- idiomas-->
+    <script src="js/js.cookie.js"></script>
 
 
     <script>
+        var lang;
+
+        $('.idioma_b').on('click', function() {
+
+            lang = $(this).data('lang');
+
+            $('html').prop('lang', lang);
+
+            switch (lang) {
+                case 'es':
+                    Cookies.set('idioma', 'esp');
+                    break;
+                case 'en':
+                    Cookies.set('idioma', 'ing');
+                    break;
+            }
+        });
+
+        if (Cookies.get('idioma')) {
+
+            switch (Cookies.get('idioma')) {
+                case 'esp':
+                    lang = 'es';
+                    $('html').prop('lang', 'es');
+                    break;
+
+                case 'ing':
+                    lang = 'en';
+                    $('html').prop('lang', 'en');
+                    break;
+            }
+        } else {
+            lang = 'en';
+            $('html').prop('lang', 'en');
+            Cookies.set('idioma', 'ing');
+        }
+
+        var txt_1 = 'Mis Victorias';
+        var txt_2 = 'Victorias Rivales';
+        var txt_3 = 'Partidos jugados: ';
+        var txt_4 = 'Te han ganado: ';
+        var txt_5 = 'Les has ganado: ';
+        var txt_6 = ' veces';
+
+        if (lang == 'en') {
+            txt_1 = 'My Victories';
+            txt_2 = 'Rivals Victories';
+            txt_3 = 'Games played: ';
+            txt_4 = 'They beat you: ';
+            txt_5 = 'You won: ';
+            txt_6 = ' times';
+        }
+
+
         function calcular_victoria_derrota(set1, set2, set3) {
 
             arr_set1 = set1.split("/");
@@ -465,14 +644,14 @@
 
                     dataset = result.rows;
                     var item = null;
-                    var x=0;
+                    var x = 0;
 
                     for (var i = 0; i < dataset.length; i++) {
 
                         item = dataset.item(i);
 
                         if (item['r_derecha'] == null || item['r_derecha'] == "" || item['r_reves'] == null || item['r_reves'] == "" || item['set1'] == null || item['set2'] == "" || item['set2'] == null || item['set2'] == "" || item['r_derecha'] == undefined || item['r_reves'] == undefined || item['set1'] == undefined || item['set2'] == undefined) {
-                           
+
                         } else {
 
 
@@ -516,7 +695,7 @@
             var res = new Array();
 
             arr_compis_unicos = arr_compis.unique();
-            
+
             for (i = 0; i < arr_compis_unicos.length; i++) {
 
                 for (x = 0; x < arr_compis_vd.length; x++) {
@@ -547,7 +726,7 @@
                 derrotas = 0;
             }
 
-            
+
             //ejecuto grafica
             grafico_1();
             grafico_2();
@@ -587,7 +766,7 @@
                 data: grafica_compis,
                 xkey: 'y',
                 ykeys: ['v', 'd'],
-                labels: ['Mis Victorias', 'V. Rivales'],
+                labels: [txt_1, txt_2],
                 horizontal: true,
                 stacked: true,
                 hideHover: true,
@@ -605,7 +784,7 @@
                 data: grafica_compis,
                 xkey: 'y',
                 ykeys: ['v', 'd'],
-                labels: ['Mis Victorias', 'V. Rivales'],
+                labels: [txt_1, txt_2],
                 horizontal: true,
                 hideHover: true,
                 stacked: true,
@@ -623,7 +802,7 @@
                 data: grafica_compis,
                 xkey: 'y',
                 ykeys: ['d', 'v'],
-                labels: ['V. Rivales', 'Mis Victorias'],
+                labels: [txt_2, txt_1],
                 horizontal: true,
                 stacked: true,
                 hideHover: true,
@@ -639,9 +818,9 @@
             if (grafica_compis[0].v != 0) {
                 $("#vd2").html(grafica_compis[0].y);
                 $("#vd4").html(grafica_compis[0].y);
-                $("#j2").html('Partidos jugados: ' + grafica_compis[0].p + ' veces');
-                $("#v2").html('Te han ganado: ' + grafica_compis[0].d + ' veces');
-                $("#d2").html('Les has ganado: ' + grafica_compis[0].v + ' veces');
+                $("#j2").html(txt_3 + grafica_compis[0].p + txt_6);
+                $("#v2").html(txt_4 + grafica_compis[0].d + txt_6);
+                $("#d2").html(txt_5 + grafica_compis[0].v + txt_6);
 
             }
 
@@ -651,9 +830,9 @@
             if (grafica_compis[0].d != 0) {
                 $("#vd1").html(grafica_compis[0].y);
                 $("#vd3").html(grafica_compis[0].y);
-                $("#j1").html('Partidos jugados: ' + grafica_compis[0].p + ' veces');
-                $("#v1").html('Te han ganado: ' + grafica_compis[0].d + ' veces');
-                $("#d1").html('Les has ganado: ' + grafica_compis[0].v + ' veces');
+                $("#j1").html(txt_3 + grafica_compis[0].p + txt_6);
+                $("#v1").html(txt_4 + grafica_compis[0].d + txt_6);
+                $("#d1").html(txt_5 + grafica_compis[0].v + txt_6);
             }
 
 

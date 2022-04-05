@@ -98,17 +98,31 @@
             color: #000;
         }
 
-
-
-
         /**************END CARDS**************/
-        li{
+
+        li {
             margin-top: -8px;
         }
 
 
         hr.style3 {
             border-top: 1px dashed #8c8b8b;
+        }
+
+        /**idiomas**********************/
+
+        .es,
+        .en {
+            display: none;
+        }
+
+        .es:lang(es) {
+            display: block;
+        }
+
+
+        .en:lang(en) {
+            display: block;
         }
 
     </style>
@@ -128,35 +142,75 @@
                 <img src="img/ico-arrow-left.png" />
             </div>
 
-          
+
 
             <ul class="list-unstyled menu-elements" style="margin-top: -5px">
                 <li>
                     <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
                 </li>
                 <li>
-                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    <span class="es">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    </span>
+                    <span class="en">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> New match</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    <span class="es">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    </span>
+                    <span class="en">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> My profile</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    <span class="es">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    </span>
+                    <span class="en">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> My Matches</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    <span class="es">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivals</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    <span class="es">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Mates</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    <span class="es">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victories vs Losses</a>
+                    </span>
                 </li>
                 <li class="active">
-                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    <span class="es">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    </span>
+                    <span class="en">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparative</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    <span class="es">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    </span>
+                    <span class="en">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Check Battery</a>
+                    </span>
                 </li>
 
             </ul>
@@ -192,10 +246,14 @@
             <div class="container">
                 <div class="row" style="background-color: #292d32">
                     <div class="col-12" style="margin-top: 80px;margin-bottom: 20px;color:white">
+                        <span class="es">
+                            <h1 style="color:white;text-align: center">Comparativa</h1>
+                        </span>
+                        <span class="en">
+                            <h1 style="color:white;text-align: center">Comparative</h1>
+                        </span>
 
-                        <h1 style="color:white;text-align: center">Comparativa</h1>
-
-                        <button id="volver" type="button" class="btn btn-primary" style="font-size:12px"><img src="img/ico-pelota.png"> Volver al listado</button>
+                        <button id="volver" type="button" class="btn btn-primary" style="font-size:12px"><img src="img/ico-pelota.png"> VOLVER / BACK</button>
                     </div>
                 </div>
             </div>
@@ -219,12 +277,22 @@
 
                                     <div class="col-4">
                                         <p style="font-size: 15px; line-height: 20px;text-align: right; padding-left: 15px;margin-top: 15px">
-                                            Fecha/hora:<br>
-                                            Club:<br>
-                                            Rivales: <br>
-                                            Compañero: <br>
-                                            Lado: <br>
-                                            Resultado: <br>
+                                            <span class="es">
+                                                Fecha/hora:<br>
+                                                Club:<br>
+                                                Rivales: <br>
+                                                Compañero: <br>
+                                                Lado: <br>
+                                                Resultado: <br>
+                                            </span>
+                                            <span class="en">
+                                                Date/Time: <br>
+                                                Club: <br>
+                                                Rivals: <br>
+                                                Partner: <br>
+                                                Side: <br>
+                                                Result: <br>
+                                            </span>
                                         </p>
                                     </div>
                                     <div class="col-8">
@@ -243,16 +311,26 @@
                                 <p style="text-align: center">VS</p>
                                 <hr class="style3" style="margin: -18px 50px 10px 50px;">
 
-                                <div class="row" id="contenedor_b">
+                                <div class="row" id="contenedor_b" style="padding-bottom: 25px">
 
                                     <div class="col-4">
                                         <p style="font-size: 15px; line-height: 20px;text-align: right; padding-left: 15px;margin-top: 15px">
-                                            Fecha/hora:<br>
-                                            Club:<br>
-                                            Rivales: <br>
-                                            Compañero: <br>
-                                            Lado: <br>
-                                            Resultado: <br>
+                                            <span class="es">
+                                                Fecha/hora:<br>
+                                                Club:<br>
+                                                Rivales: <br>
+                                                Compañero: <br>
+                                                Lado: <br>
+                                                Resultado: <br>
+                                            </span>
+                                            <span class="en">
+                                                Date/Time: <br>
+                                                Club: <br>
+                                                Rivals: <br>
+                                                Partner: <br>
+                                                Side: <br>
+                                                Result: <br>
+                                            </span>
                                         </p>
                                     </div>
                                     <div class="col-8">
@@ -275,34 +353,37 @@
                         </div>
                     </div>
                 </div>
-
-                <h1><b>COMPARATIVA MÉTRICAS</b></h1>
-
+                <span class="es">
+                    <h1><b>COMPARATIVA MÉTRICAS</b></h1>
+                </span>
+                <span class="en">
+                    <h1><b>METRIC COMPARISON</b></h1>
+                </span>
                 <div class="col-md-12">
                     <div class="tj_partidos shadow-sm">
                         <img style="float: left" src="img/ico-reloj.png">
-                        <h3 class="tj_titulo">Duración partido:</h3>
+                        <h3 class="tj_titulo" id="idi-1">Duración partido:</h3>
                         <h1 class="tj_dato" id="tiempo">-</h1>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="tj_partidos shadow-sm">
                         <img style="float: left" src="img/corriendo.png">
-                        <h3 class="tj_titulo">Metros recorridos:</h3>
+                        <h3 class="tj_titulo" id="idi-2">Metros recorridos:</h3>
                         <h1 class="tj_dato" id="metros">-</h1>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
                         <i class="fa fa-fire float-left tj_cat tj_icono"></i>
-                        <h3 class="tj_titulo">Calorías consumidas:</h3>
+                        <h3 class="tj_titulo" id="idi-3">Calorías consumidas:</h3>
                         <p class="tj_dato_medias" id="calorias">-</p>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="tj_partidos shadow-sm">
                         <img style="float: left" src="img/totalgolpes.png">
-                        <h3 class="tj_titulo">Total golpes:</h3>
+                        <h3 class="tj_titulo" id="idi-4">Total golpes:</h3>
                         <h1 class="tj_dato" id="golpes">-</h1>
                     </div>
                 </div>
@@ -337,18 +418,18 @@
                 <div class="col-md-12">
                     <div class="tj_partidos shadow-sm">
                         <img style="float: left" src="img/remate.png">
-                        <h3 class="tj_titulo">Remates:</h3>
+                        <h3 class="tj_titulo" id="idi-5">Remates:</h3>
                         <h1 class="tj_dato" id="remate">-</h1>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
                         <img style="float: left" src="img/ico_velocidad_maxima.png">
-                        <h3 class="tj_titulo">Velocidad máxima de impacto:</h3>
+                        <h3 class="tj_titulo" id="idi-6">Velocidad máxima de impacto:</h3>
                         <p class="tj_dato_medias" id="velocidad_m">
                             <b><span class="tam_txt t_derecha_p">Derecha:</span> <span>-</span></b><br>
                             <b><span class="tam_txt t_reves_p">Revés:</span> <span>-</span></b><br>
-                            <b><span class="tam_txt">Remate:</span> <span>-</span></b><br>
+                            <b><span class="tam_txt" id="idi-5">Remate:</span> <span>-</span></b><br>
                         </p>
                     </div>
                 </div>
@@ -356,7 +437,7 @@
                 <div class="col-md-12">
                     <div class="tj_partidos shadow-sm" style="padding-bottom: 1px">
                         <img style="float: left" src="img/ico_velocidad_media.png">
-                        <h3 class="tj_titulo">Velocidad media de impacto:</h3>
+                        <h3 class="tj_titulo" id="idi-7">Velocidad media de impacto:</h3>
                         <p class="tj_dato_medias" id="medias">
                             <b><span class="tam_txt">Derechas:</span> <span>-</span></b><br>
                             <b><span class="tam_txt">Revéses:</span> <span>-</span></b><br>
@@ -377,8 +458,14 @@
 
                         <hr style="margin-top: 40px">
                         <div style="margin: 0px 20px 0px 20px">
-                            <h1 class="t_cc_d">Golpes Derechas</h1>
-                            <h6 style="font-size:15px">Comparativa de golpes de derechas en intervalos de 10 min.</h6>
+                            <span class="es">
+                                <h1 class="t_cc_d">Golpes Derechas</h1>
+                                <h6 style="font-size:15px">Comparativa de golpes de derechas en intervalos de 10 min</h6>
+                            </span>
+                            <span class="en">
+                                <h1 class="t_cc_d">Drive Strokes</h1>
+                                <h6 style="font-size:15px">Comparison of drive strokes in 10 min intervals</h6>
+                            </span>
                             <div style="font-size:12px">
                                 <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label t_derechas"> Derechas</span>
                                 <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label t_derechas"> Derechas</span>
@@ -395,8 +482,14 @@
 
                         <hr style="margin-top: 40px">
                         <div style="margin: 0px 20px 0px 20px">
-                            <h1 class="t_cc_r">Golpes Revéses</h1>
-                            <h6 style="font-size:15px">Comparativa de golpes de revéses en intervalos de 10 min.</h6>
+                            <span class="es">
+                                <h1 class="t_cc_r">Golpes Revéses</h1>
+                                <h6 style="font-size:15px">Comparativa de golpes de revéses en intervalos de 10 min</h6>
+                            </span>
+                            <span class="en">
+                                <h1 class="t_cc_r">Backhand Strokes</h1>
+                                <h6 style="font-size:15px">Comparison of backhand strokes in 10 min intervals</h6>
+                            </span>
                             <div style="font-size:12px">
                                 <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label t_reveses"> Revéses</span>
                                 <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label t_reveses"> Revéses</span>
@@ -413,8 +506,14 @@
 
                         <hr style="margin-top: 40px">
                         <div style="margin: 0px 20px 0px 20px">
-                            <h1>Golpes de Globo</h1>
-                            <h6 style="font-size:15px">Comparativa de golpes de globo derecha y globo revés en intervalos de 10 min.</h6>
+                            <span class="es">
+                                <h1>Golpes de Globo</h1>
+                                <h6 style="font-size:15px">Comparativa de golpes de globo derecha y globo revés en intervalos de 10 min</h6>
+                            </span>
+                            <span class="en">
+                                <h1>Lobs</h1>
+                                <h6 style="font-size:15px">Comparison of drive lobs and backhand lobs at 10 min intervals</h6>
+                            </span>
                             <div style="font-size:12px">
                                 <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label t_g_derecha_reves"> Globos derecha/revés</span>
                                 <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label t_g_derecha_reves"> Globos derecha/revés</span>
@@ -432,8 +531,14 @@
 
                         <hr style="margin-top: 40px">
                         <div style="margin: 0px 20px 0px 20px">
-                            <h1>Golpes Remate</h1>
-                            <h6 style="font-size:15px">Comparativa de golpes de remate en intervalos de 10 min.</h6>
+                            <span class="es">
+                                <h1>Golpes Remate</h1>
+                                <h6 style="font-size:15px">Comparativa de golpes de remate en intervalos de 10 min</h6>
+                            </span>
+                            <span class="en">
+                                <h1>Smashes</h1>
+                                <h6 style="font-size:15px">Comparison of smashes in 10 min intervals</h6>
+                            </span>
                             <div style="font-size:12px">
                                 <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Remate</span>
                                 <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label"> Remate</span>
@@ -451,8 +556,14 @@
 
                         <hr style="margin-top: 40px">
                         <div style="margin: 0px 20px 0px 20px">
-                            <h1>Total Golpes</h1>
-                            <h6 style="font-size:15px">Comparativa total de golpes realizados en intervalos de 10 min.</h6>
+                            <span class="es">
+                                <h1>Total Golpes</h1>
+                                <h6 style="font-size:15px">Comparativa total de golpes realizados en intervalos de 10 min.</h6>
+                            </span>
+                            <span class="en">
+                                <h1>Total Strokes</h1>
+                                <h6 style="font-size:15px">Total comparison of strokes made in 10 min intervals</h6>
+                            </span>
                             <div style="font-size:12px">
                                 <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Total golpes</span>
                                 <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label"> Total golpes</span>
@@ -469,8 +580,14 @@
                     <div class="col-md-12">
                         <hr style="margin-top: 40px">
                         <div style="margin: 0px 20px 0px 20px">
-                            <h1>Metros recorridos</h1>
-                            <h6 style="font-size:15px">Distancia recorrida en intervalos de 10 min.</h6>
+                            <span class="es">
+                                <h1>Metros recorridos</h1>
+                                <h6 style="font-size:15px">Distancia recorrida en intervalos de 10 min</h6>
+                            </span>
+                            <span class="en">
+                                <h1>Meters traveled</h1>
+                                <h6 style="font-size:15px">Distance traveled in 10 min intervals</h6>
+                            </span>
                             <div style="font-size:12px">
                                 <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Distancia recorrida</span>
                                 <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label"> Distancia recorrida</span>
@@ -504,8 +621,15 @@
                     <div class="col-md-12">
                         <hr style="margin-top: 40px">
                         <div style="margin: 0px 20px 0px 20px">
-                            <h1 class="t_cc_v_d">Velocidad Derechas</h1>
-                            <h6 style="font-size:15px">Número de golpes, velocidad media y velocidad máxima golpes de derecha en intervalos de 10 min.</h6>
+                            <span class="es">
+                                <h1 class="t_cc_v_d">Velocidad Derechas</h1>
+                                <h6 style="font-size:15px">Número de golpes, velocidad media y velocidad máxima golpes de derecha en intervalos de 10 min.</h6>
+                            </span>
+                            <span class="en">
+                                <h1 class="t_cc_v_d">Drive Speed</h1>
+                                <h6 style="font-size:15px">Number of strokes, average speed and maximum speed drive strokes in 10 min intervals</h6>
+                            </span>
+
                             <div style="font-size:12px">
                                 <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Velocidad Máxima</span>
                                 <i class="fa fa-square" style="color:#34bcd5"></i> <span class="tipo-label t_vmderechas"> V.M. Derechas</span>
@@ -522,8 +646,14 @@
                     <div class="col-md-12">
                         <hr style="margin-top: 40px">
                         <div style="margin: 0px 20px 0px 20px">
-                            <h1 class="t_cc_v_r">Velocidad Revéses</h1>
-                            <h6 style="font-size:15px">Comparativa de velocidad media y velocidad máxima de revéses en intervalos de 10 min.</h6>
+                            <span class="es">
+                                <h1 class="t_cc_v_r">Velocidad Revéses</h1>
+                                <h6 style="font-size:15px">Comparativa de velocidad media y velocidad máxima de revéses en intervalos de 10 min.</h6>
+                            </span>
+                            <span class="en">
+                                <h1 class="t_cc_v_r">Backhand Speed</h1>
+                                <h6 style="font-size:15px">Comparison of average speed and maximum backhand speed in 10 min intervals</h6>
+                            </span>
                             <div style="font-size:12px">
                                 <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Velocidad Máxima</span>
                                 <i class="fa fa-square" style="color:#34bcd5"></i> <span class="tipo-label t_vmreveses"> V.M. Revéses</span>
@@ -540,8 +670,14 @@
                     <div class="col-md-12">
                         <hr style="margin-top: 40px">
                         <div style="margin: 0px 20px 0px 20px">
-                            <h1>Velocidad Globos</h1>
-                            <h6 style="font-size:15px">Comparativa de velocidad media de globos de derecha y revés en intervalos de 10 min.</h6>
+                            <span class="es">
+                                <h1>Velocidad Globos</h1>
+                                <h6 style="font-size:15px">Comparativa de velocidad media de globos de derecha y revés en intervalos de 10 min</h6>
+                            </span>
+                            <span class="en">
+                                <h1>Lob Speed</h1>
+                                <h6 style="font-size:15px">Comparison of average speed of drive and backhand lobs in 10 min intervals</h6>
+                            </span>
                             <div style="font-size:12px">
                                 <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label t_g_vmderechas"> V.M. Globos de derecha</span>
                                 <i class="fa fa-square" style="color:#34bcd5"></i> <span class="tipo-label t_g_vmreveses"> V.M. Globos de revés</span>
@@ -553,20 +689,27 @@
                         <div class="chart chart-md" id="grafica_10" style="z-index: 1"></div>
                     </div>
                 </div>
-               
+
                 <!-- grafica 11 REMATES golpes vs velocidad  -->
                 <div class="row">
                     <div class="col-md-12">
                         <hr style="margin-top: 40px">
                         <div style="margin: 0px 20px 0px 20px">
-                            <h1>Velocidad Remates</h1>
-                            <h6 style="font-size:15px">Comparativa velocidad media y velocidad máxima golpes de remate en intervalos de 10 min.</h6>
+                            <span class="es">
+                                <h1>Velocidad Remates</h1>
+                                <h6 style="font-size:15px">Comparativa velocidad media y velocidad máxima golpes de remate en intervalos de 10 min.</h6>
+                            </span>
+                            <span class="en">
+                                <h1>Smash Speed</h1>
+                                <h6 style="font-size:15px">Comparison of average speed and maximum speed of smash strokes in 10 min intervals</h6>
+                            </span>
+
                             <div style="font-size:12px">
                                 <i class="fa fa-square" style="color:#0088cc"></i> <span class="tipo-label"> Velocidad Máxima</span>
                                 <i class="fa fa-square" style="color:#34bcd5"></i> <span class="tipo-label"> V.M. Remates</span>
                                 <i class="fa fa-square" style="color:#119904"></i> <span class="tipo-label"> Velocidad Máxima</span>
                                 <i class="fa fa-square" style="color:#18d105"></i> <span class="tipo-label"> V.M. Remates</span>
-                         
+
                             </div>
                         </div>
                         <!-- Morris: Line -->
@@ -591,8 +734,14 @@
                     </div>
                     <div class="row">
                         <div class="col" style="font-size: 13px">
-                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
-                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            <span class="es">
+                                La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            </span>
+                            <span class="en">
+                                The highest technology in padel rackets <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl all rights reserved.</span>
+                            </span>
                         </div>
 
                     </div>
@@ -642,6 +791,8 @@
     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 
+    <!-- idiomas-->
+    <script src="js/js.cookie.js"></script>
 
     <!-- graficas -->
 
@@ -650,8 +801,17 @@
 
     <script src="js/funciones_comparativa.js"></script>
 
-
     <script>
+        if (lang == 'en') {
+            $('#idi-1').html('Match duration:');
+            $('#idi-2').html('Meters traveled:');
+            $('#idi-3').html('Calories consumed:');
+            $('#idi-4').html('Total hits:');
+            $('#idi-5').html('Smash:');
+            $('#idi-6').html('Maximum impact speed:');
+            $('#idi-7').html('Average impact speed:');
+        }
+
         //grafica golpes
         function grafica_1() {
 
@@ -778,7 +938,7 @@
                 data: morrisBarData,
                 xkey: 'x',
                 ykeys: ['a', 'b'],
-                labels: ['Remate', 'Remate'],
+                labels: ['Smash', 'Smash'],
                 barColors: ['#0088cc', '#119904'],
                 hideHover: false,
                 smooth: false,
@@ -806,10 +966,10 @@
                 morrisBarData.push(file);
                 tiempo_freq += 10; //10 min
             }
-            
-      
-            
-            
+
+
+
+
 
             Morris.Bar({
                 element: 'grafica_5',
@@ -817,7 +977,7 @@
                 data: morrisBarData,
                 xkey: 'x',
                 ykeys: ['a', 'b'],
-                labels: ['Total Golpes', 'Total Golpes'],
+                labels: ['Total Hits', 'Total Hits'],
                 barColors: ['#0088cc', '#119904'],
                 hideHover: false,
                 smooth: false,
@@ -848,7 +1008,7 @@
                 data: morrisLineData,
                 xkey: 'y',
                 ykeys: ['a', 'b'],
-                labels: ['Metros', 'Metros'],
+                labels: ['Meters', 'Meters'],
                 hideHover: false,
                 lineColors: ['#0088cc', '#119904'],
                 lineWidth: ['3', '3'],
@@ -921,7 +1081,7 @@
                 data: morrisLineData,
                 xkey: 'y',
                 ykeys: ['a', 'b'],
-                labels: ['Porcentaje', 'Porcentaje'],
+                labels: ['Percentage', 'Percentage'],
                 hideHover: false,
                 lineColors: ['#0088cc', '#119904'],
                 lineWidth: ['5', '5'],
@@ -932,9 +1092,9 @@
 
         }
 
-//derechas velocidad
+        //derechas velocidad
 
-        function grafica_8(){
+        function grafica_8() {
 
             //tiempo en minutos
             var morrisLineData = [];
@@ -961,7 +1121,7 @@
                 data: morrisLineData,
                 xkey: 'y',
                 ykeys: ['a', 'b', 'c', 'd'],
-                labels: ['Max Vel.', 'Vel. Media', 'Max Vel.', 'Vel. Media'],
+                labels: ['Max Sp', 'Av Sp', 'Max Sp', 'Av Sp'],
                 hideHover: false,
                 lineColors: ['#0088cc', '#34bcd5', '#119904', '#18d105'],
                 lineWidth: ['1', '1', '1', '1'],
@@ -981,9 +1141,9 @@
                 file = {
                     y: tiempo_freq + ' min.',
                     a: a_max_reves.toFixed(1),
-                    b: a_arr_v_reve [i].toFixed(1),
+                    b: a_arr_v_reve[i].toFixed(1),
                     c: b_max_reves.toFixed(1),
-                    d: b_arr_v_reve [i].toFixed(1)
+                    d: b_arr_v_reve[i].toFixed(1)
                 };
 
                 morrisLineData.push(file);
@@ -997,7 +1157,7 @@
                 data: morrisLineData,
                 xkey: 'y',
                 ykeys: ['a', 'b', 'c', 'd'],
-                labels: ['Max Vel.', 'Vel. Media', 'Max Vel.', 'Vel. Media'],
+                labels: ['Max Sp', 'Av Sp', 'Max Sp', 'Av Sp'],
                 hideHover: false,
                 lineColors: ['#0088cc', '#34bcd5', '#119904', '#18d105'],
                 lineWidth: ['1', '1', '1', '1'],
@@ -1008,7 +1168,7 @@
 
         function grafica_10() {
 
-           //tiempo en minutos
+            //tiempo en minutos
             var morrisLineData = [];
             var tiempo_freq = 10;
 
@@ -1045,7 +1205,7 @@
 
         function grafica_11() {
 
-           //tiempo en minutos
+            //tiempo en minutos
             var morrisLineData = [];
             var tiempo_freq = 10;
 
@@ -1070,7 +1230,7 @@
                 data: morrisLineData,
                 xkey: 'y',
                 ykeys: ['a', 'b', 'c', 'd'],
-                labels: ['Max Vel.', 'Vel. Media', 'Max Vel.', 'Vel. Media'],
+                labels: ['Max Sp', 'Av Sp', 'Max Sp', 'Av Sp'],
                 hideHover: false,
                 lineColors: ['#0088cc', '#34bcd5', '#119904', '#18d105'],
                 lineWidth: ['1', '1', '1', '1'],
@@ -1078,9 +1238,9 @@
             });
         }
 
-       
+
         /*********************************************************************************/
-        
+
         $('#volver').on("click", function() {
             location.href = 'comparativa_listado.html';
         });

@@ -68,11 +68,25 @@
         }
 
         /************************************/
-        li{
+        li {
             margin-top: -8px;
         }
 
-       
+        /**idiomas**********************/
+
+        .es,
+        .en {
+            display: none;
+        }
+
+        .es:lang(es) {
+            display: block;
+        }
+
+
+        .en:lang(en) {
+            display: block;
+        }
 
     </style>
 
@@ -97,25 +111,68 @@
                     <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
                 </li>
                 <li>
-                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    <span class="es">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    </span>
+                    <span class="en">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> New match</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    <span class="es">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    </span>
+                    <span class="en">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> My profile</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    <span class="es">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    </span>
+                    <span class="en">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> My Matches</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    <span class="es">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivals</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    <span class="es">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Mates</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    <span class="es">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victories vs Losses</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    <span class="es">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    </span>
+                    <span class="en">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparative</a>
+                    </span>
+                </li>
+                <li>
+                    <span class="es">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    </span>
+                    <span class="en">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Check Battery</a>
+                    </span>
                 </li>
 
             </ul>
@@ -151,8 +208,14 @@
             <div class="container">
                 <div class="row" style="background-color: #292d32">
                     <div class="col-md-8" style="margin-top: 100px;color:white">
-                        <h1 style="color:white;text-align: center">Datos del Partido</h1>
-                        <p style="line-height: 23px">Rellena los campos con los datos del partido...</p>
+                        <span class="es">
+                            <h1 style="color:white;text-align: center">Datos del Partido</h1>
+                            <p style="line-height: 23px">Rellena los campos con los datos del partido</p>
+                        </span>
+                        <span class="en">
+                            <h1 style="color:white;text-align: center">Match Data</h1>
+                            <p style="line-height: 23px">Fill in the fields with the match data</p>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -169,9 +232,14 @@
                             <div class="card card-stats">
                                 <div class="card-header card-header-success card-header-icon">
                                     <div class="card-icon">
-                                        <img src="img/ico-pareja-blanco.png" >
+                                        <img src="img/ico-pareja-blanco.png">
                                     </div>
-                                    <p class="card-category">Datos del partido</p>
+                                    <span class="es">
+                                        <p class="card-category">Datos del partido</p>
+                                    </span>
+                                    <span class="en">
+                                        <p class="card-category">Match data</p>
+                                    </span>
                                 </div>
 
 
@@ -186,71 +254,102 @@
                                                 <form method="get">
 
                                                     <div class="col-md-12" style="margin-top:20px;">
-                                                        <label>NOMBRE CONTRINCANTES</label>
-                                                        <input type="text" id="r_reves" name="r_reves" class="form-control amigos" placeholder="Rival REVÉS" style="background-color: #eee; border: 1px solid #8f9091;">
+                                                        <span class="es">
+                                                            <label><b>ADVERSARIOS</b></label>
+                                                        </span>
+                                                        <span class="en">
+                                                            <label><b>ADVERSARY</b></label>
+                                                        </span>
+                                                        <input type="text" id="r_reves" name="r_reves" class="form-control amigos" placeholder="Rival revés / Backhand adversary" style="background-color: #eee; border: 1px solid #8f9091;">
                                                     </div>
 
 
                                                     <div class="col-md-12" style="margin-top: 20px">
-                                                        <input type="text" id="r_derecha" name="r_derecha" class="form-control amigos" placeholder="Rival DERECHA" style="background-color: #eee;border: 1px solid #8f9091;">
+                                                        <input type="text" id="r_derecha" name="r_derecha" class="form-control amigos" placeholder="Rival derecha / Drive adversary" style="background-color: #eee;border: 1px solid #8f9091">
                                                     </div>
 
 
                                                     <div class="col-md-12" style="margin-top: 25px">
-                                                        <label>NOMBRE DE TU COMPAÑERO</label>
-                                                        <input type="text" id="compi" name="compi" class="form-control amigos" placeholder="Nombre COMPI">
+                                                        <span class="es">
+                                                            <label><b>NOMBRE DE TU COMPAÑERO</b></label>
+                                                        </span>
+                                                        <span class="en">
+                                                            <label><b>NAME OF YOUR PARTNER</b></label>
+                                                        </span>
+                                                        <input type="text" id="compi" name="compi" class="form-control amigos" placeholder="Compañero / Partner">
                                                     </div>
 
 
                                                     <div class="form-group" style="margin-top: 30px;">
-                                                        <label>DINOS EN QUE POSICIÓN JUGASTE</label>
+                                                        <span class="es">
+                                                            <label>EN QUE POSICIÓN JUGASTE</label>
+                                                        </span>
+                                                        <span class="en">
+                                                            <label>WHAT POSITION DID YOU PLAY?</label>
+                                                        </span>
 
                                                         <div class="col-md-12" style="margin-top: -20px;">
                                                             <label>
                                                                 <input type="radio" id="reves" name="posicion" value="reves">
-                                                                Jugué al REVÉS
+                                                                Revés / Backhand
                                                             </label>
 
                                                         </div>
 
-                                                        <div class="col-md-12" style="margin-top: -20px; margin-left:18px">
+                                                        <div class="col-md-12" style="margin-top: -20px; margin-left:-12px">
                                                             <label>
                                                                 <input type="radio" id="derecha" name="posicion" value="derecha">
-                                                                Jugué a la DERECHA
+                                                                Derecha / Drive
                                                             </label>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-12">
-                                                        <label>CLUB DONDE JUGASTEIS</label>
-                                                        <input type="text" id="club" name="club" class="form-control clubs" placeholder="NOMBRE DEL CLUB">
+                                                        <span class="es">
+                                                            <label><b>CLUB DONDE JUGASTEIS</b></label>
+                                                        </span>
+                                                        <span class="en">
+                                                            <label><b>CLUB WHERE YOU PLAYED</b></label>
+                                                        </span>
+                                                        <input type="text" id="club" name="club" class="form-control clubs" placeholder="Nombre del club / Club name">
                                                     </div>
 
 
                                                     <div class="col-md-12" style="margin-top: 25px;margin-left: -6px">
                                                         <label>
                                                             <input type="radio" id="indoor" name="tipo_pista" value="indoor">
-                                                            Jugamos en pista INDOOR
+                                                            Indoor
                                                         </label>
                                                     </div>
 
                                                     <div class="col-md-12" style="margin-top: -25px">
                                                         <label>
                                                             <input type="radio" id="outdoor" name="tipo_pista" value="outdoor">
-                                                            Jugamos en pista OUTDOOR
+                                                            Outdoor
                                                         </label>
 
                                                     </div>
-
-                                                    <h2 style="font-size: 20px; margin-top: 25px"><b>RESULTADO DEL PARTIDO</b></h2>
+                                                    <span class="es">
+                                                        <h2 style="font-size: 20px; margin-top: 25px"><b>RESULTADO DEL PARTIDO</b></h2>
+                                                    </span>
+                                                    <span class="en">
+                                                        <h2 style="font-size: 20px; margin-top: 25px"><b>GAME RESULTS</b></h2>
+                                                    </span>
 
                                                     <hr style="margin: 0px 70px 0px 70px;border-top: dotted 1px;">
 
 
                                                     <div class="row" style="padding: 0px  12px  0px  12px">
                                                         <div class="col-6">
+                                                            <span class="es">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px">
+                                                                    <span style="font-size: 20px;font-weight: 400">SET 1</span><br>MI RESULTADO</div>
+                                                            </span>
+                                                            <span class="en">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px">
+                                                                    <span style="font-size: 20px;font-weight: 400">SET 1</span><br>MY RESULT</div>
+                                                            </span>
 
-                                                            <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 1</span><br>Mi compi y yo</div>
                                                             <select class="form-control" name="set1" id="set1">
                                                                 <option value="-">-</option>
                                                                 <option value="0">0</option>
@@ -266,7 +365,12 @@
 
 
                                                         <div class="col-6">
-                                                            <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 1</span><br>Mis rivales</div>
+                                                            <span class="es">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 1</span><br>RESULTADO RIVALES</div>
+                                                            </span>
+                                                            <span class="en">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 1</span><br>MY ADVERSARIES RESULT</div>
+                                                            </span>
                                                             <select class="form-control" name="set1_rivales" id="set1r" style="background-color: #343a40; color: white">
                                                                 <option value="-">-</option>
                                                                 <option value="0">0</option>
@@ -292,7 +396,14 @@
                                                         <div class="row" style="padding: 0px  12px  0px  12px">
 
                                                             <div class="col-6">
-                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 2</span><br>Mi compi y yo</div>
+                                                                <span class="es">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px">
+                                                                    <span style="font-size: 20px;font-weight: 400">SET 2</span><br>MI RESULTADO</div>
+                                                            </span>
+                                                            <span class="en">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px">
+                                                                    <span style="font-size: 20px;font-weight: 400">SET 2</span><br>MY RESULT</div>
+                                                            </span>
                                                                 <select class="form-control" name="set2" id="set2">
                                                                     <option value="-">-</option>
                                                                     <option value="0">0</option>
@@ -307,7 +418,12 @@
                                                             </div>
 
                                                             <div class="col-6">
-                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 2</span><br>Mis rivales</div>
+                                                                 <span class="es">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 2</span><br>RESULTADO RIVALES</div>
+                                                            </span>
+                                                            <span class="en">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 2</span><br>MY ADVERSARIES RESULT</div>
+                                                            </span>
                                                                 <select class="form-control" name="set2_rivales" id="set2r" style="background-color: #343a40; color: white">
                                                                     <option value="-">-</option>
                                                                     <option value="0">0</option>
@@ -330,7 +446,14 @@
                                                         <div class="row" style="padding: 0px  12px  0px  12px">
 
                                                             <div class="col-6">
-                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 3</span><br>Mi compi y yo</div>
+                                                                <span class="es">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px">
+                                                                    <span style="font-size: 20px;font-weight: 400">SET 3</span><br>MI RESULTADO</div>
+                                                            </span>
+                                                            <span class="en">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px">
+                                                                    <span style="font-size: 20px;font-weight: 400">SET 3</span><br>MY RESULT</div>
+                                                            </span>
                                                                 <select class="form-control" name="set3" id="set3">
                                                                     <option value="-">-</option>
                                                                     <option value="0">0</option>
@@ -345,7 +468,12 @@
                                                             </div>
 
                                                             <div class="col-6">
-                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 3</span><br>Mis rivales</div>
+                                                                 <span class="es">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 3</span><br>RESULTADO RIVALES</div>
+                                                            </span>
+                                                            <span class="en">
+                                                                <div style="line-height: 23px;margin: 20px 0px 10px 0px"><span style="font-size: 20px;font-weight: 400">SET 3</span><br>MY ADVERSARIES RESULT</div>
+                                                            </span>
                                                                 <select class="form-control" name="set3_rivales" id="set3r" style="background-color: #343a40; color: white">
                                                                     <option value="-">-</option>
                                                                     <option value="0">0</option>
@@ -364,7 +492,7 @@
 
 
                                                     <div class="col-md-12 text-center" style="margin-top: 40px">
-                                                        <button id="enviar" type="button" class="btn btn-success" style="padding: 10px 20px 10px 20px;"> <img src="img/ico_guardar.png" > <span> Guardar Datos</span></button>
+                                                        <button id="enviar" type="button" class="btn btn-success" style="padding: 10px 20px 10px 20px;"> <img src="img/ico_guardar.png"> <span> Guardar / Save</span></button>
                                                     </div>
 
                                                 </form>
@@ -398,7 +526,7 @@
 
             <div class="row">
                 <div class="col-md-12 text-center" style="margin:-60px 0px 20px 0px">
-                    <button id="mi_partido" type="button" class="btn btn-primary" style="padding: 0px 20px 0px 20px;"> <img class="img-fluid" src="img/ico-volver.png" /><span> Volver a Mi Partido</span></button>
+                    <button id="mi_partido" type="button" class="btn btn-primary" style="padding: 0px 20px 0px 0px;"> <img class="img-fluid" src="img/ico-volver.png" /><span>Volver / Back</span></button>
                 </div>
             </div>
 
@@ -415,8 +543,14 @@
                     </div>
                     <div class="row">
                         <div class="col" style="font-size: 13px">
-                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
-                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            <span class="es">
+                                La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            </span>
+                            <span class="en">
+                                The highest technology in padel rackets <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl all rights reserved.</span>
+                            </span>
                         </div>
 
                     </div>
@@ -442,7 +576,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <span class="es">
                     <h5 class="modal-title" id="exampleModalLabel" style="color:#0088cc">¡Datos guardados!</h5>
+                        </span>
+                    <span class="en">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color:#0088cc">¡Saved data!</h5>
+                        </span>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
@@ -457,7 +596,7 @@
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="plugins/cordova-sqlite-storage/www/SQLitePlugin.js"></script>
     <!-- Javascript -->
-     <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/vendor/jquery-ui-v1/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
     <script src="assets/vendor/bootstrap4/js/bootstrap.js"></script>
     <script src="assets/js/jquery.backstretch.min.js"></script>
@@ -467,13 +606,52 @@
     <script src="assets/js/scripts.js"></script>
     <script src="js/funciones_nuevo_partido.js"></script>
 
+    <!-- idiomas-->
+    <script src="js/js.cookie.js"></script>
+
 
     <script>
+        var lang;
+
+        $('.idioma_b').on('click', function() {
+
+            lang = $(this).data('lang');
+
+            $('html').prop('lang', lang);
+
+            switch (lang) {
+                case 'es':
+                    Cookies.set('idioma', 'esp');
+                    break;
+                case 'en':
+                    Cookies.set('idioma', 'ing');
+                    break;
+            }
+        });
+
+        if (Cookies.get('idioma')) {
+
+            switch (Cookies.get('idioma')) {
+                case 'esp':
+                    lang = 'es';
+                    $('html').prop('lang', 'es');
+                    break;
+
+                case 'ing':
+                    lang = 'en';
+                    $('html').prop('lang', 'en');
+                    break;
+            }
+        } else {
+            lang = 'en';
+            $('html').prop('lang', 'en');
+            Cookies.set('idioma', 'ing');
+        }
+
+
         $("#mi_partido").on('click', function() {
             ir_a_mi_partido();
         });
-
-
 
 
         function ocultar_set2() {

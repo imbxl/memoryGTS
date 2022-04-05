@@ -186,8 +186,30 @@
                 width: 92%;
             }
         }
-        
-        .open-menu-r { position: fixed; top: 20px; left: 10px; z-index: 997; box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.2); }
+
+        .open-menu-r {
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            z-index: 997;
+            box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.2);
+        }
+
+        /**idiomas**********************/
+
+        .es,
+        .en {
+            display: none;
+        }
+
+        .es:lang(es) {
+            display: block;
+        }
+
+
+        .en:lang(en) {
+            display: block;
+        }
 
     </style>
 
@@ -204,7 +226,7 @@
             <!-- open sidebar menu -->
             <div id="desconectar" class="fixed-top bg-dark" style="height: 80px;">
                 <a class="btn btn-primary btn-customized open-menu-r" href="index.html" role="button">
-                    <img src="img/ico-arrow-left-peq.png" /> <span>Volver</span>
+                    <img src="img/ico-arrow-left-peq.png" /> <span>Volver/Back</span>
                 </a>
                 <div style="position: absolute; margin-top:27px;right: 10px;">
                     <img class="img-fluid " src="assets/img/logo.png" alt="Logo memory" />
@@ -221,8 +243,14 @@
 
                         <div class="container">
                             <div class="aks-accordion" itemscope itemtype="" data-accordion="">
-                                <h1>Ayuda</h1>
-                                <p style="line-height: 19px">A continuación te hemos preparado una pequeña guía con la que podrás resolver las principales dudas para comenzar a utilizar la pala Memory junto con la aplicación.</p>
+                                <span class="es">
+                                    <h1>Ayuda</h1>
+                                    <p style="line-height: 19px">A continuación te hemos preparado una pequeña guía con la que podrás resolver las principales dudas para comenzar a utilizar la pala Memory junto con la aplicación.</p>
+                                </span>
+                                <span class="en">
+                                    <h1>Help</h1>
+                                    <p style="line-height: 19px">Below we have prepared a small guide with which you can solve the main doubts to start using the Memory shovel together with the application.</p>
+                                </span>
                                 <div class="aks-accordion-row">
                                     <div class="aks-accordion-item" itemscope itemprop="mainEntity" itemtype="" data-accordion-item="" data-ripple="#00000026">
                                         <div class="aks-accordion-item-row">
@@ -235,14 +263,27 @@
 
                                             </div>
                                             <div class="aks-accordion-item-title">
-                                                <h4 itemprop="name">ANTES QUE NADA</h4>
+                                                <span class="es">
+                                                    <h4 itemprop="name">ANTES QUE NADA</h4>
+                                                </span>
+                                                <span class="en">
+                                                    <h4 itemprop="name">FIRST OF ALL</h4>
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="aks-accordion-item-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-accordion-content="">
-                                            <p itemprop="text">Lo primero que debes de hacer es acceder a la opción de "Mi perfil" y rellenar todos los campos que te solicitan para que la aplicación pueda calcular correctamente las métricas de tus partidos.
-                                            </p>
-                                            <p itemprop="text">Una vez que hayas guardado los datos se desbloquearán todos las opciones del menú principal.
-                                            </p>
+                                            <span class="es">
+                                                <p itemprop="text">Lo primero que debes de hacer es acceder a la opción de "Mi perfil" y rellenar todos los campos que te solicitan para que la aplicación pueda calcular correctamente las métricas de tus partidos.
+                                                </p>
+                                                <p itemprop="text">Una vez que hayas guardado los datos se desbloquearán todos las opciones del menú principal.
+                                                </p>
+                                            </span>
+                                            <span class="en">
+                                                <p itemprop="text">The first thing you should do is access the "My profile" option and fill in all the fields that are requested so that the application can correctly calculate the metrics of your matches.
+                                                </p>
+                                                <p itemprop="text">Once you have saved the data, all the main menu options will be unlocked.
+                                                </p>
+                                            </span>
                                         </div>
 
                                     </div>
@@ -258,23 +299,42 @@
 
                                             </div>
                                             <div class="aks-accordion-item-title">
-                                                <h4 itemprop="name">COMPROBAR BATERÍA DE MI PALA MEMORY</h4>
+                                                <span class="es">
+                                                    <h4 itemprop="name">COMPROBAR BATERÍA DE MI PALA MEMORY</h4>
+                                                </span>
+                                                <span class="en">
+                                                    <h4 itemprop="name">CHECK THE BATTERY OF MY MEMORY RACKET</h4>
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="aks-accordion-item-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-accordion-content="">
-                                            <p itemprop="text">La batería de tu pala Memory cargada al 100% tiene una capacidad de 2 partidos de 1 hora y media de duración sin necesidad de cargarla.
-                                            </p>
-                                            <p>
-                                               Para averiguar el estado de la carga de la batería puedes realizarlo pulsando la opción de "comprobar batería" del menú principal y siguiendo las instrucciones de conexión.
-                                            </p>
-                                            <p itemprop="text">Una vez finalizada la comprobación apaga la pala.
-                                            </p>
-                                            <p>
-                                            Si durante el partido el led de estado del tapón parpadea significa que te quedan aproximadamente 15 minutos de carga antes de apagarse. 
-                                            </p>
-                                         
-                                        
-                                            
+                                            <span class="es">
+                                                <p itemprop="text">La batería de tu pala Memory cargada al 100% tiene una capacidad de 2 partidos de 1 hora y media de duración sin necesidad de cargarla.
+                                                </p>
+                                                <p>
+                                                    Para averiguar el estado de la carga de la batería puedes realizarlo pulsando la opción de "comprobar batería" del menú principal y siguiendo las instrucciones de conexión.
+                                                </p>
+                                                <p itemprop="text">Una vez finalizada la comprobación apaga la pala.
+                                                </p>
+                                                <p>
+                                                    Si durante el partido el led de estado del tapón parpadea significa que te quedan aproximadamente 15 minutos de carga antes de apagarse.
+                                                </p>
+                                            </span>
+                                            <span class="en">
+                                                <p itemprop="text">The battery of your Memory racket charged to 100% has a capacity of 2 games of 1 hour and a half of duration without the need to charge it.
+                                                </p>
+                                                <p>
+                                                    To find out the battery charge status, you can do so by pressing the "check battery" option from the main menu and following the connection instructions.
+                                                </p>
+                                                <p itemprop="text"> Once the check is finished, turn off the racket.
+                                                </p>
+                                                <p>
+                                                    If during the match the status led of the cap flashes, it means that you have approximately 15 minutes of charge before turning off.
+                                                </p>
+                                            </span>
+
+
+
                                         </div>
 
                                     </div>
@@ -290,38 +350,75 @@
 
                                             </div>
                                             <div class="aks-accordion-item-title">
-                                                <h4 itemprop="name">MI PRIMER PARTIDO</h4>
+                                                <span class="es">
+                                                    <h4 itemprop="name">MI PRIMER PARTIDO</h4>
+                                                </span>
+                                                <span class="en">
+                                                    <h4 itemprop="name">MY FIRST MATCH</h4>
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="aks-accordion-item-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-accordion-content="">
-                                            <ol>
-                                                <li>
-                                                    Comprobar el estado de la batería de tu pala Memory
-                                                </li>
-                                                <li>
-                                                    Durante el calentamiento no encender la pala
-                                                </li>
-                                                <li>
-                                                    Encender la pala Memory al comenzar el partido
-                                                </li>
-                                                <li>
-                                                    Tras finalizar el partido, coge tu móvil y comprueba que el bluetooth está encendido
-                                                </li>
-                                                 <li>
-                                                    Arranca la aplicación MemoryGTS de tu Smartphone y en el menú pulsa la opción "Nuevo partido"
-                                                </li>
-            
-                                                <li>
-                                                    Sigue las instrucciones de conexión a la pala y pulsar descargar datos
-                                                </li>
-                                                <li>
-                                                    Una vez finalizada la descarga, aparecerá un botón que nos permitirá navegar al listado de partidos donde aparecerá un botón de color naranja. Pulsamos sobre este botón y completamos los datos del partido. Nuestros oponentes, donde jugamos y el resultado.
-                                                </li>
-                                                <li>
-                                                    Completados los datos pulsamos el botón de ir a mi partido y visualizaremos las metricas recogidas del partido.
-                                                </li>
+                                            <span class="es">
+                                                <ol>
+                                                    <li>
+                                                        Comprobar el estado de la batería de tu pala Memory
+                                                    </li>
+                                                    <li>
+                                                        Durante el calentamiento no encender la pala
+                                                    </li>
+                                                    <li>
+                                                        Encender la pala Memory al comenzar el partido
+                                                    </li>
+                                                    <li>
+                                                        Tras finalizar el partido, coge tu móvil y comprueba que el bluetooth está encendido
+                                                    </li>
+                                                    <li>
+                                                        Arranca la aplicación MemoryGTS de tu Smartphone y en el menú pulsa la opción "Nuevo partido"
+                                                    </li>
 
-                                            </ol>
+                                                    <li>
+                                                        Sigue las instrucciones de conexión a la pala y pulsar descargar datos
+                                                    </li>
+                                                    <li>
+                                                        Una vez finalizada la descarga, aparecerá un botón que nos permitirá navegar al listado de partidos donde aparecerá un botón de color naranja. Pulsamos sobre este botón y completamos los datos del partido. Nuestros oponentes, donde jugamos y el resultado.
+                                                    </li>
+                                                    <li>
+                                                        Completados los datos pulsamos el botón de ir a mi partido y visualizaremos las metricas recogidas del partido.
+                                                    </li>
+
+                                                </ol>
+                                            </span>
+                                            <span class="en">
+                                                <ol>
+                                                    <li>
+                                                        Check the battery status of your Memory shovel
+                                                    </li>
+                                                    <li>
+                                                        During heating do not turn on the paddle
+                                                    </li>
+                                                    <li>
+                                                        Turn on the Memory paddle at the start of the game
+                                                    </li>
+                                                    <li>
+                                                        After finishing the game, take your mobile and check that the bluetooth is on
+                                                    </li>
+                                                    <li>
+                                                        Start the MemoryGTS application on your Smartphone and in the menu press the option "New game"
+                                                    </li>
+
+                                                    <li>
+                                                        Follow the instructions for connecting to the shovel and press download data
+                                                    </li>
+                                                    <li>
+                                                        Once the download is finished, a button will appear that will allow us to navigate to the list of matches where an orange button will appear. We click on this button and complete the match data. Our opponents, where we play and the result.
+                                                    </li>
+                                                    <li>
+                                                        Once the data is completed, we press the button to go to my match and we will view the metrics collected from the match.
+                                                    </li>
+
+                                                </ol>
+                                            </span>
                                         </div>
 
                                     </div>
@@ -337,16 +434,30 @@
 
                                             </div>
                                             <div class="aks-accordion-item-title">
-                                                <h4 itemprop="name">NOTIFICACIÓN: "PALA DESCONECTADA"</h4>
+                                                <span class="es">
+                                                    <h4 itemprop="name">NOTIFICACIÓN: "PALA DESCONECTADA"</h4>
+                                                </span>
+                                                <span class="en">
+                                                    <h4 itemprop="name">NOTICE: "RACKET DISCONNECTED"</h4>
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="aks-accordion-item-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-accordion-content="">
-                                            <p itemprop="text">Si durante el proceso de conexión a la pala apareciera el mensaje de pala desconectada, pulsar aceptar para ocultar la notificación y despues deberemos de pulsar el botón de desconectar y volver a repetir el proceso de conexión.
-                                            </p>
-                                            <p>
-                                                Si volviera aparecer el mensaje de pala desconectada salir de la opción principal de "Nuevo partido" y volver a entrar en esta opción y comenzar de nuevo el proceso de conexión.
-                                            </p>
-                     
+                                            <span class="es">
+                                                <p itemprop="text">Si durante el proceso de conexión a la pala apareciera el mensaje de pala desconectada, pulsar aceptar para ocultar la notificación y despues deberemos de pulsar el botón de desconectar y volver a repetir el proceso de conexión.
+                                                </p>
+                                                <p>
+                                                    Si volviera aparecer el mensaje de pala desconectada salir de la opción principal de "Nuevo partido" y volver a entrar en esta opción y comenzar de nuevo el proceso de conexión.
+                                                </p>
+                                            </span>
+                                            <span class="en">
+                                                <p itemprop="text">If during the process of connecting to the racket the message of disconnected racket appears, press accept to hide the notification and then we must press the disconnect button and repeat the connection process.
+                                                </p>
+                                                <p>
+                                                    If the racket disconnected message appears again, exit the main option "New match" and re-enter this option and start the connection process again.
+                                                </p>
+                                            </span>
+
                                         </div>
 
                                     </div>
@@ -362,12 +473,23 @@
 
                                             </div>
                                             <div class="aks-accordion-item-title">
-                                                <h4 itemprop="name">¿CÓMO CARGAR MI PALA MEMORY?</h4>
+                                                <span class="es">
+                                                    <h4 itemprop="name">¿CÓMO CARGAR MI PALA MEMORY?</h4>
+                                                </span>
+                                                <span class="en">
+                                                    <h4 itemprop="name">HOW DO I CHARGE MY RACKET MEMORY?</h4>
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="aks-accordion-item-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" data-accordion-content="">
-                                            <p itemprop="text">Si tras comprobar el estado de carga de batería la recomendación es cargar la pala Memory, simplemente coge el cable que cargador conéctalo a la red eléctrica y conecta el extremo del micro-usb a la entrada micro-usb del tapón de la pala Memory. Una vez conectados aparecerá un led rojo, cuando cambie a color verde indicará que la pala está cargada y lista para jugar.
-                                            </p>
+                                            <span class="es">
+                                                <p itemprop="text">Si tras comprobar el estado de carga de batería, la recomendación es cargar la pala Memory, simplemente coge el cable cargador y conéctalo a la entrada micro-usb del tapón de la pala Memory. Una vez conectados aparecerá un led rojo, cuando cambie a color verde indicará que la pala está cargada y lista para jugar.
+                                                </p>
+                                            </span>
+                                            <span class="en">
+                                                <p itemprop="text">If after checking the battery charge status, the recommendation is to charge the Memory racket, simply take the charger cable and connect it to the micro-usb input of the Memory racket cap. Once connected, a red led will appear, when it turns green it will indicate that the racket is charged and ready to play.
+                                                </p>
+                                            </span>
                                         </div>
 
                                     </div>
@@ -383,28 +505,36 @@
             </div>
 
 
-        <div id="ver" style="margin-bottom: 10px;margin-top: -20px">-</div>
+            <!-- PANTALLA DE CONECTAR ID= p_iniciar -->
+
+            <div id="ver" style="margin-bottom: 10px;margin-top: -20px">-</div>
 
 
-        <!-- Footer -->
-        <footer class="footer-container" style="background-color: white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 offset-3">
-                        <img class="img-fluid " src="img/logo_gts_alta.png" alt="Logo gaftaf Sport" />
+            <!-- Footer -->
+            <footer class="footer-container" style="background-color: white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            <img class="img-fluid " src="img/logo_gts_alta.png" alt="Logo gaftaf Sport" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="font-size: 13px">
+                            <span class="es">
+                                La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            </span>
+                            <span class="en">
+                                The highest technology in padel rackets <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl all rights reserved.</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col" style="font-size: 13px">
-                        La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
-                        <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
+            </footer>
 
-    </div>
-    <!-- End content -->
+        </div>
+        <!-- End content -->
 
     </div>
     <!-- End wrapper -->
@@ -419,6 +549,9 @@
     <script src="assets/js/jquery.waypoints.min.js"></script>
     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+
+    <!-- idiomas-->
+    <script src="js/js.cookie.js"></script>
 
 
     <script>
@@ -492,6 +625,45 @@
             $.fn.Ripple_Button = jQueryPlugin("Ripple_Button", Ripple_Button);
             $("[data-ripple]").Ripple_Button();
         })();
+
+
+         var lang;
+
+        $('.idioma_b').on('click', function() {
+
+            lang = $(this).data('lang');
+
+            $('html').prop('lang', lang);
+
+            switch (lang) {
+                case 'es':
+                    Cookies.set('idioma', 'esp');
+                    break;
+                case 'en':
+                    Cookies.set('idioma', 'ing');
+                    break;
+            }
+        });
+
+        if (Cookies.get('idioma')) {
+
+            switch (Cookies.get('idioma')) {
+                case 'esp':
+                    lang = 'es';
+                    $('html').prop('lang', 'es');
+                    break;
+
+                case 'ing':
+                    lang = 'en';
+                    $('html').prop('lang', 'en');
+                    break;
+            }
+        } else {
+            lang = 'en';
+            $('html').prop('lang', 'en');
+            Cookies.set('idioma', 'ing');
+
+        }
 
     </script>
 

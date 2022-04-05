@@ -87,13 +87,29 @@
 
 
         /**************END CARDS**************/
-        li{
+        li {
             margin-top: -8px;
         }
 
 
         hr.style3 {
             border-top: 1px dashed #8c8b8b;
+        }
+
+        /**idiomas**********************/
+
+        .es,
+        .en {
+            display: none;
+        }
+
+        .es:lang(es) {
+            display: block;
+        }
+
+
+        .en:lang(en) {
+            display: block;
         }
 
     </style>
@@ -119,28 +135,68 @@
                     <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
                 </li>
                 <li>
-                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    <span class="es">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    </span>
+                    <span class="en">
+                        <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> New match</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    <span class="es">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    </span>
+                    <span class="en">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> My profile</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    <span class="es">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    </span>
+                    <span class="en">
+                        <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> My Matches</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    <span class="es">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivals</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    <span class="es">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Mates</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    <span class="es">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    </span>
+                    <span class="en">
+                        <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victories vs Losses</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    <span class="es">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    </span>
+                    <span class="en">
+                        <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparative</a>
+                    </span>
                 </li>
                 <li class="active">
-                    <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    <span class="es">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    </span>
+                    <span class="en">
+                        <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Check Battery</a>
+                    </span>
                 </li>
 
             </ul>
@@ -175,9 +231,15 @@
 
             <div class="container">
                 <div class="row" style="background-color: #292d32">
-                    <div class="col-md-8" style="margin-top: 80px;color:white">
-                        <h1 style="color:white;text-align: center">Comprobar Batería</h1>
-                        <p style="line-height: 23px;margin-top: -10px">Conecta tu Móvil a la pala Memory y comprueba el nivel de carga de tu pala...</p>
+                    <div class="col-md-12" style="margin-top: 80px;color:white">
+                        <span class="es">
+                            <h1 style="color:white;text-align: center">Comprobar Batería</h1>
+                            <p style="line-height: 23px;margin-top: -10px">Conecta tu Móvil a la pala Memory y comprueba el nivel de carga de la batería.</p>
+                        </span>
+                        <span class="en">
+                            <h1 style="color:white;text-align: center">Check Battery</h1>
+                            <p style="line-height: 23px;margin-top: -10px">Connect your Mobile to the Memory racket and check the battery charge level.</p>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -197,26 +259,43 @@
                                 <div class="card-icon sombra" style="background-color: #0088cc">
                                     <img id="ico_conect" class="img-fluid" src="img/ico_pala-movil.png" />
                                 </div>
+                                <span class="es">
                                 <p class="card-category">Conectar</p>
+                                    </span>
+                                <span class="en">
+                                <p class="card-category">Connect</p>
+                                    </span>
                             </div>
                             <div id="menu_botones" class="col-md-12 text-center" style="margin: 20px 0px 20px 0px;background-color: #d7d7d7;padding-bottom: 5px; padding-top: 5px">
-                                <button id="refreshButton" type="button" class="btn btn-primary">Buscar</button>
-                                <button id="conectar" type="button" class="btn btn-primary">Conectar</button>
-                                <button id="disconnectButton" type="button" class="btn btn-secondary">Desconect</button>
+                                <button id="refreshButton" type="button" class="btn btn-primary">Buscar/Search</button>
+                                <button id="conectar" type="button" class="btn btn-primary">Connect</button>
+                                <button id="disconnectButton" type="button" class="btn btn-secondary">Disconnect</button>
                             </div>
 
 
                             <!-- DEVICE LIST MENSAJES -->
 
                             <div id="deviceList" style="margin:  0px 30px 30px 30px; ">
-                                <h3 style="font-size:15px;margin-top: 17px;">COMPROBAR BATERÍA DE TU PALA MEMORY</h3>
-                                <hr class="style3" style="margin: 0px 10px 15px 10px;">
-                                <ol style="text-align: left; line-height: 26px;font-size:17px">
-                                    <li>Asegúrate de tener activado el <b>Bluetooth</b> de tu <b>Móvil</b></li>
-                                    <li>Mantén tu pala <b>Memory</b> dentro de un radio de 2 metros del móvil</li>
-                                    <li>Enciende tu pala <b>Memory</b></li>
-                                    <li>Pulsa el botón <b>"Buscar"</b> pala Memory":</li>
-                                </ol>
+                                <span class="es">
+                                    <h3 style="font-size:15px;margin-top: 17px;">COMPROBAR BATERÍA DE TU PALA MEMORY</h3>
+                                    <hr class="style3" style="margin: 0px 10px 15px 10px;">
+                                    <ol style="text-align: left; line-height: 26px;font-size:17px">
+                                        <li>Asegúrate de tener activado el <b>Bluetooth</b> de tu <b>Móvil</b></li>
+                                        <li>Mantén tu pala <b>Memory</b> dentro de un radio de 2 metros del móvil</li>
+                                        <li>Enciende tu pala <b>Memory</b></li>
+                                        <li>Pulsa el botón <b>"Buscar"</b> pala Memory":</li>
+                                    </ol>
+                                </span>
+                                <span class="en">
+                                    <h3 style="font-size:15px;margin-top: 17px;">CHECK THE BATTERY OF YOUR MEMORY RACKET</h3>
+                                    <hr class="style3" style="margin: 0px 10px 15px 10px;">
+                                    <ol style="text-align: left; line-height: 26px;font-size:17px">
+                                        <li>Make sure you have activated the <b> Bluetooth </b> of your <b> Mobile </b> </li>
+                                        <li>Keep your racket <b> Memory </b> within a radius of 2 meters from the mobile </li>
+                                        <li>Turn on your racket <b> Memory </b> </li>
+                                        <li>Press the <b> "Buscar/Search" </b> button for Memory ":</li>
+                                    </ol>
+                                </span>
                             </div>
                             <!-- FIN DEVICE LIST MENSAJES-->
 
@@ -224,18 +303,27 @@
 
                             <div id="descargar">
                                 <div id="titulos">
-                                    <h3 style="font-size:15px;margin-top: 17px">PALA MEMORY CONECTADA</h3>
-                                    <hr class="style3" style="margin: 0px 10px 15px 10px;">
-                                    <p style="text-align: center; font-size:17px">
-                                        Pulsa el botón para comprobar la carga de la batería de tu pala Memory
-                                    </p>
+                                    <span class="es">
+                                        <h3 style="font-size:15px;margin-top: 17px">PALA MEMORY CONECTADA</h3>
+                                        <hr class="style3" style="margin: 0px 10px 15px 10px;">
+                                        <p style="text-align: center; font-size:17px">
+                                            Pulsa el botón para comprobar la carga de la batería de tu pala Memory
+                                        </p>
+                                    </span>
+                                    <span class="en">
+                                        <h3 style="font-size:15px;margin-top: 17px">MEMORY RACKET CONNECTED</h3>
+                                        <hr class="style3" style="margin: 0px 10px 15px 10px;">
+                                        <p style="text-align: center; font-size:17px">
+                                            Press the button to check the battery charge of your Memory racket
+                                        </p>
+                                    </span>
                                 </div>
                                 <p style="text-align: center" id="etiqueta">0% de CARGA</p>
                                 <div class="progress" style="margin: -15px 40px 10px 40px">
                                     <div id="descarga" class="progress-bar progress-bar-striped progress-bar-animated"></div>
                                 </div>
                                 <div class="col-md-12 text-center" style="margin: 5px 0px 20px 0px;">
-                                    <button id="sendButton" type="button" class="btn btn-success"><img src="img/ico-bateria.png"> Comprobar Batería</button>
+                                    <button id="sendButton" type="button" class="btn btn-success"><img src="img/ico-bateria.png"> Check Battery</button>
                                 </div>
                             </div>
 
@@ -245,9 +333,16 @@
 
                             <div id="descarga_completada" style="margin-bottom: 40px;">
                                 <hr class="style3" style="margin: 0px 10px 15px 10px;">
+                                <span class="es">
                                 <h1 style="text-align: center;margin-top: 3px;"><b>¡Batería comprobada!</b></h1>
                                 <p style="text-align: center" class="mensajes">-</p>
-                                <p style="line-height: 20px">Apaga tu pala Memory.</p>
+                                <p style="line-height: 20px">Apaga tu pala Memory</p>
+                                </span>
+                                <span class="en">
+                                <h1 style="text-align: center;margin-top: 3px;"><b>¡Battery checked!</b></h1>
+                                <p style="text-align: center" class="mensajes">-</p>
+                                <p style="line-height: 20px">Turn off your Memory racket</p>
+                                </span>
                             </div>
 
                             <!-- FIN DESCARGA DATOS -->
@@ -271,8 +366,14 @@
                     </div>
                     <div class="row">
                         <div class="col" style="font-size: 13px">
-                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
-                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            <span class="es">
+                                La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            </span>
+                            <span class="en">
+                                The highest technology in padel rackets <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl all rights reserved.</span>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -295,13 +396,56 @@
     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 
+    <!-- idiomas-->
+    <script src="js/js.cookie.js"></script>
+
     <script type="text/javascript" src="cordova.js"></script>
 
     <script>
+        var lang;
+
+        $('.idioma_b').on('click', function() {
+
+            lang = $(this).data('lang');
+
+            $('html').prop('lang', lang);
+
+            switch (lang) {
+                case 'es':
+                    Cookies.set('idioma', 'esp');
+                    break;
+                case 'en':
+                    Cookies.set('idioma', 'ing');
+                    break;
+            }
+        });
+
+        if (Cookies.get('idioma')) {
+
+            switch (Cookies.get('idioma')) {
+                case 'esp':
+                    lang = 'es';
+                    $('html').prop('lang', 'es');
+                    break;
+
+                case 'ing':
+                    lang = 'en';
+                    $('html').prop('lang', 'en');
+                    break;
+            }
+        } else {
+            lang = 'en';
+            $('html').prop('lang', 'en');
+            Cookies.set('idioma', 'ing');
+
+        }
+
+
+
         function fin_comprobar_bateria() {
             mensaje_3();
         }
-        
+
         function onError(tx, error) { // Function for Hendeling Error...
             alert(error.message);
         }
@@ -320,7 +464,7 @@
 
         /**************************************************/
 
-        function iniciar(){
+        function iniciar() {
             $("#conectar").prop("disabled", true);
             $("#conectar").css("background-color", "#6c757d");
             $('#descargar').hide();
@@ -363,22 +507,34 @@
         $("#descarga").addClass("bg-success");
 
         function barra_descarga_datos(porcentaje) {
+
+            var idi_1 = 'Batería cargada y lista para jugar';
+            var idi_2 = 'Debes Cargar la Batería';
+            var idi_3 = ' % de carga';
+
+            if (lang == 'en') {
+                idi_1 = 'Battery charged and ready to play';
+                idi_2 = 'You must charge the battery';
+                idi_3 = ' % load';
+
+            }
+
             porcentaje = Number(porcentaje);
-             if (porcentaje >= 50) {
+            if (porcentaje >= 50) {
                 $("#descarga").addClass("bg-success");
-                $(".mensajes").html('Batería cargada y lista para jugar partido.');
-            } 
-            if (porcentaje < 50) {
-                
+                $(".mensajes").html(idi_1);
+            }
+            if (porcentaje < 25) {
+
                 $("#descarga").addClass("bg-danger");
-                $(".mensajes").html('Debes Cargar la Batería.');
+                $(".mensajes").html(idi_2);
             }
 
             $("#descarga").css("width", porcentaje + '%');
-            $("#etiqueta").html(porcentaje + ' % de CARGA');
+            $("#etiqueta").html(porcentaje + idi_3);
         };
-        
-      
+
+
 
         //*** ACCIONES BOTONES **********************************
 
@@ -467,7 +623,7 @@
                     };
 
                 ble.connect(deviceId, onConnect, app.onError);
-               
+
             },
             onData: function(data) {
 
@@ -485,12 +641,12 @@
                 var dator = 'b'; //BATERÍA
                 var success = function() {
 
-                    $("#ver").append("Porcentaje batería recibido");
+                    $("#ver").append("Battery percentage received");
                     $("#sendButton").prop("disabled", true);
                 };
 
                 var failure = function() {
-                    alert("¡Inténtalo de nuevo pulsa comprobar batería!");
+                    alert("Try again press check battery!");
                 };
 
                 var data = stringToBytes(dator);
@@ -501,7 +657,7 @@
             disconnect: function() {
                 var deviceId = cc;
                 ble.disconnect(deviceId, app.showMainPage, app.onError);
-                alert("Pala Memory Desconectada");
+                alert("Memory racket disconnected");
             },
             showMainPage: function() {
 
@@ -510,12 +666,11 @@
 
             },
             onError: function(reason) {
-				console.log(reason);
                 //alert("ERROR: deconectado:" + reason); // real apps should use notification.alert
-                //alert("Pala Memory Desconectada e:e");
+                alert("Memory racket disconnected e:e");
             }
         };
-        
+
         $(document).ready(function() {
             iniciar();
         });

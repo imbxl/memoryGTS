@@ -11,12 +11,6 @@
 
   for (i = 0; i < arrVariables.length; i++) {
       arrVariableActual = arrVariables[i].split("=");
-
-      /*if (isNaN(parseFloat(arrVariableActual[1]))){
-				document.write(arrVariableActual[0]+"='"+arrVariableActual[1]+"';");
-			}else{
-				document.write(arrVariableActual[0]+"="+arrVariableActual[1]+";");
-			}*/
   }
 
   var id = arrVariableActual[1];
@@ -200,7 +194,7 @@
                       }
                   }
 
-                  console.log("set1= " + item['set1'])
+                  
 
 
                   if (item['set1'] == '' || item['set1'] == null) {} else { //si lee por primera vez y no hay datos evita un error

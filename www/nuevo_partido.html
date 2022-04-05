@@ -93,6 +93,22 @@
         li{
             margin-top: -8px;
         }
+        
+         /**idiomas**********************/
+
+        .es,
+        .en {
+            display: none;
+        }
+
+        .es:lang(es) {
+            display: block;
+        }
+
+
+        .en:lang(en) {
+            display: block;
+        }
 
     </style>
 
@@ -114,31 +130,71 @@
 
             <ul class="list-unstyled menu-elements" style="margin-top: -5px">
                 <li>
-                    <a href="index.html"><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
+                    <a href="index.html" class=" "><img src="img/iconos_menu_home.png" style="margin-left: -15px;" /> Home</a>
                 </li>
                 <li class="active">
-                    <a href="nuevo_partido.html"><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    <span class="es">
+                        <a href="nuevo_partido.html" class="desactivar "><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> Nuevo partido</a>
+                    </span>
+                    <span class="en">
+                        <a href="nuevo_partido.html" class="desactivar "><img src="img/iconos_menu_nuevo_partido.png" style="margin-left: -15px;" /> New match</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    <span class="es">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> Mi perfil</a>
+                    </span>
+                    <span class="en">
+                        <a href="mi_perfil.html"><img src="img/iconos_menu_mi_perfil.png" style="margin-left: -15px;" /> My profile</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="listado_partidos.html"><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    <span class="es">
+                    <a href="listado_partidos.html" class="desactivar "><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> Mis Partidos</a>
+                    </span>
+                    <span class="en">
+                    <a href="listado_partidos.html" class="desactivar "><img src="img/iconos_menu_listado_partidos.png" style="margin-left: -15px;" /> My Matches</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_rivales.html"><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    <span class="es">
+                    <a href="historico_rivales.html" class="desactivar "><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivales</a>
+                    </span>
+                    <span class="en">
+                    <a href="historico_rivales.html" class="desactivar "><img src="img/iconos_menu_rivales.png" style="margin-left: -15px;" /> Rivals</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_compis.html"><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    <span class="es">
+                    <a href="historico_compis.html" class="desactivar "><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Compañeros</a>
+                    </span>
+                    <span class="en">
+                    <a href="historico_compis.html" class="desactivar "><img src="img/iconos_menu_mi_compi.png" style="margin-left: -15px;" /> Mates</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="historico_victorias_derrotas.html"><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    <span class="es">
+                    <a href="historico_victorias_derrotas.html" class="desactivar "><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victorias vs Derrotas</a>
+                    </span>
+                    <span class="en">
+                    <a href="historico_victorias_derrotas.html" class="desactivar "><img src="img/iconos_menu_victorias_derrotas.png" style="margin-left: -15px;" /> Victories vs Losses</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="comparativa_listado.html"><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    <span class="es">
+                    <a href="comparativa_listado.html" class="desactivar "><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparativa</a>
+                    </span>
+                    <span class="en">
+                    <a href="comparativa_listado.html" class="desactivar "><img src="img/ico-comp-menu.png" style="margin-left: -15px;" /> Comparative</a>
+                    </span>
                 </li>
                 <li>
-                    <a href="comprobar_bateria.html"><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    <span class="es">
+                    <a href="comprobar_bateria.html" class="desactivar "><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Comprobar Batería</a>
+                    </span>
+                    <span class="en">
+                    <a href="comprobar_bateria.html" class="desactivar "><img src="img/iconos_menu_bateria.png" style="margin-left: -15px;" /> Check Battery</a>
+                    </span>
                 </li>
 
             </ul>
@@ -173,9 +229,15 @@
 
             <div class="container">
                 <div class="row" style="background-color: #292d32">
-                    <div class="col-md-8" style="margin-top: 80px;color:white">
+                    <div class="col-md-12" style="margin-top: 80px;color:white">
+                        <span class="es">
                         <h1 style="color:white;text-align: center">Nuevo Partido</h1>
-                        <p style="line-height: 23px;margin-top: -10px">Conecta tu Smartphone a la pala memory y comienza a grabar tu partido de padel...</p>
+                        <p style="line-height: 23px;margin-top: -10px">Conecta tu Smartphone a la pala memory y comienza a grabar tu partido de padel</p>
+                            </span>
+                        <span class="en">
+                        <h1 style="color:white;text-align: center">New Match</h1>
+                        <p style="line-height: 23px;margin-top: -10px">Connect your Smartphone to the memory racket and start recording your padel game </p>
+                            </span>
                     </div>
                 </div>
             </div>
@@ -195,25 +257,41 @@
                                 <div class="card-icon sombra" style="background-color: #0088cc">
                                     <img id="ico_conect" class="img-fluid" src="img/ico_pala-movil.png" />
                                 </div>
+                                <span class="es">
                                 <p class="card-category">Conectar</p>
+                                    </span>
+                                <span class="en">
+                                <p class="card-category">Connect</p>
+                                    </span>
                             </div>
                             <div id="menu_botones" class="col-md-12 text-center" style="margin: 20px 0px 20px 0px;background-color: #d7d7d7;padding-bottom: 7px;padding-top: 7px">
-                                <button id="refreshButton" type="button" class="btn btn-primary">Buscar</button>
-                                <button id="conectar" type="button" class="btn btn-secondary">Conectar</button>
-                                <button id="disconnectButton" type="button" class="btn btn-secondary">Desconect</button>
+                                <button id="refreshButton" type="button" class="btn btn-primary">Buscar/Search</button>
+                                <button id="conectar" type="button" class="btn btn-secondary">Connect</button>
+                                <button id="disconnectButton" type="button" class="btn btn-secondary">Disconnect</button>
                             </div>
 
 
                             <!-- DEVICE LIST MENSAJES -->
 
                             <div id="deviceList" style="margin:  0px 30px 30px 30px; ">
+                                <span class="es">
                                 <h3 style="font-size:15px;margin-top: 17px;">DESCARGAR DATOS DE TU PALA MEMORY</h3>
                                 <hr class="style3" style="margin: 0px 10px 15px 10px;">
                                 <ol style="text-align: left; line-height: 26px;font-size:17px">
                                     <li>Asegúrate de tener activado el <b>Bluetooth</b> de tu <b>Móvil</b></li>
                                     <li>Mantén tu pala <b>Memory</b> dentro de un radio de 2 metros del móvil</li>
-                                    <li>Pulsa el botón <b>"Buscar"</b> pala Memory":</li>
+                                    <li>Pulsa el botón <b>"Buscar"</b> pala Memory:</li>
                                 </ol>
+                                </span>
+                                <span class="en">
+                                <h3 style="font-size:15px;margin-top: 17px;">DOWNLOAD DATA FROM YOUR MEMORY RACKET</h3>
+                                <hr class="style3" style="margin: 0px 10px 15px 10px;">
+                                <ol style="text-align: left; line-height: 26px;font-size:17px">
+                                    <li>Make sure you have activated the <b> Bluetooth </b> of your <b> Mobile</b></li>
+                                    <li>Keep your <b> Memory </b> racket within a radius of 2 meters from the mobile </li>
+                                     <li> Press the <b> "Buscar/Search" </b> button:</li>
+                                </ol>
+                                </span>
                             </div>
                             <!-- FIN DEVICE LIST MENSAJES-->
 
@@ -221,18 +299,27 @@
 
                             <div id="descargar">
                                 <div id="titulos">
+                                    <span class="es">
                                     <h3 style="font-size:15px;margin-top: 17px">PALA MEMORY CONECTADA</h3>
                                     <hr class="style3" style="margin: 0px 10px 15px 10px;">
                                     <p style="text-align: center; font-size:17px">
                                         Pulsa el botón para iniciar la descarga de datos de tu partido
                                     </p>
+                                    </span>
+                                    <span class="en">
+                                    <h3 style="font-size:15px;margin-top: 17px">MEMORY RACKET CONNECTED</h3>
+                                    <hr class="style3" style="margin: 0px 10px 15px 10px;">
+                                    <p style="text-align: center; font-size:17px">
+                                        Press the button to start downloading your match data
+                                    </p>
+                                    </span>
                                 </div>
                                 <p style="text-align: center" id="etiqueta">0% Descargado</p>
                                 <div class="progress" style="margin: -15px 40px 10px 40px">
                                     <div id="descarga" class="progress-bar progress-bar-striped progress-bar-animated bg-success"></div>
                                 </div>
                                 <div class="col-md-12 text-center" style="margin: 5px 0px 20px 0px;">
-                                    <button id="sendButton" type="button" class="btn btn-success"><img src="img/ico-descargar.png"> Iniciar descarga</button>
+                                    <button id="sendButton" type="button" class="btn btn-success"><img src="img/ico-descargar.png"> Descargar/Download</button>
                                 </div>
                             </div>
 
@@ -244,11 +331,17 @@
                             <div id="descarga_completada" style="margin-bottom: 40px;">
 
                                 <hr class="style3" style="margin: 0px 10px 15px 10px;">
+                                <span class="es">
                                 <h1 style="text-align: center;margin-top: 3px;"><b>¡Descarga completada!</b></h1>
-                                <p style="line-height: 20px">Ya puedes apagar tu pala Memory.<br>Pulsa el siguiente botón para ver los resultados...</p>
+                                <p style="line-height: 20px">Ya puedes apagar tu pala Memory.<br>Pulsa el siguiente botón para ver los resultados</p>
+                                </span>
+                                <span class="en">
+                                <h1 style="text-align: center;margin-top: 3px;"><b>Download complete!</b></h1>
+                                <p style="line-height: 20px">You can now turn off your Memory racket. <br> Press the following button to see the results</p>
+                                </span>
 
                                 <a class="btn btn-primary " href="listado_partidos.html" role="button">
-                                    <img class="img-fluid" src="img/iconos_menu_listado_partidos.png" width="41" height="28" /> <span style="margin-left: 9px">Mis Partidos</span>
+                                    <img class="img-fluid" src="img/iconos_menu_listado_partidos.png" width="41" height="28" /> <span style="margin-left: 9px">Mi Partido/My Game</span>
                                 </a>
                             </div>
 
@@ -278,8 +371,14 @@
                     </div>
                     <div class="row">
                         <div class="col" style="font-size: 13px">
-                            La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
-                            <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                           <span class="es">
+                                La más alta tecnología en palas de padel <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl todos los derechos reservados.</span>
+                            </span>
+                            <span class="en">
+                                The highest technology in padel rackets <a href="https://www.gaftafsport.com">Gaftaf Sport</a>
+                                <br><span style="font-size: 11px;color: black">&copy; Gaftaf Sport sl all rights reserved.</span>
+                            </span>
                         </div>
 
                     </div>
@@ -303,9 +402,53 @@
     <script src="assets/js/jquery.waypoints.min.js"></script>
     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+    
+    <!-- idiomas-->
+    <script src="js/js.cookie.js"></script>
+
+
 
 
     <script>
+        var lang;
+
+        $('.idioma_b').on('click', function() {
+
+            lang = $(this).data('lang');
+
+            $('html').prop('lang', lang);
+
+            switch (lang) {
+                case 'es':
+                    Cookies.set('idioma', 'esp');
+                    break;
+                case 'en':
+                    Cookies.set('idioma', 'ing');
+                    break;
+            }
+        });
+
+        if (Cookies.get('idioma')) {
+
+            switch (Cookies.get('idioma')) {
+                case 'esp':
+                    lang = 'es';
+                    $('html').prop('lang', 'es');
+                    break;
+
+                case 'ing':
+                    lang = 'en';
+                    $('html').prop('lang', 'en');
+                    break;
+            }
+        } else {
+            lang = 'en';
+            $('html').prop('lang', 'en');
+            Cookies.set('idioma', 'ing');
+
+        }
+        
+        
         //***** PREPARAR BBDD *************************
 
         var insertar_golpes = "INSERT INTO Partidos (fecha, hora, tiempo, g_derechas, g_reveses, g_globo_der, g_globo_rev, g_remates, v_derechas, v_reveses, v_globo_der, v_globo_rev, v_remates, max_derecha, max_reves, max_remate, pasos) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";

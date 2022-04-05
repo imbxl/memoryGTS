@@ -1,0 +1,10 @@
+{
+    "androidAlias": "key0",
+    "androidAliasPassword": "SCHellen_2021",
+    "androidKeystore": "certificates/android.p12",
+    "androidKeystorePassword": "SCHellen_2021",
+    "androidPackageType": "bundle",
+    "googlePlayTrack": "production",
+    "platform": "android",
+    "release": "release"
+}
